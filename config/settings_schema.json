@@ -86,7 +86,7 @@
         "id": "gradient_color",
         "type": "color_background",
         "label": "Gradient Color"
-      },
+      }
     ]
   },
   {
@@ -128,7 +128,7 @@
         "type": "range",
         "id": "body_scale",
         "min": 100,
-        "max": 130,
+        "max": 150,
         "step": 5,
         "unit": "%",
         "label": "t:settings_schema.typography.settings.body_scale.label",

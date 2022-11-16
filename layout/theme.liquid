@@ -46,17 +46,7 @@
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
       :root {
-        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
-        --font-body-style: {{ settings.type_body_font.style }};
-        --font-body-weight: {{ settings.type_body_font.weight }};
-        --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
-
-        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
-        --font-heading-style: {{ settings.type_header_font.style }};
-        --font-heading-weight: {{ settings.type_header_font.weight }};
-
-        --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
-        --font-heading-scale: {{ settings.heading_scale | divided_by: 100.0 }};
+        {% render 'root-css' %}
       }
     {% endstyle %}
 
@@ -94,17 +84,8 @@
     {% section 'header' %}
     {%- endcomment -%}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {% comment %} {{ content_for_layout }} {% endcomment %}
-      <p>Body Scale: {{settings.body_scale}}</p>
-      <p class="test">Body Scale: {{ settings.body_scale | divided_by: 100.0 }};</p>
-      <p>Heading Scale: {{settings.heading_scale}}</p>
-      <p>Heading Scale: {{settings.heading_scale | divided_by: 100.0}}</p>
-      <p>Heading Scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};</p>
-      <style>
-        .test {
-          font-size: var(--font-heading-scale);
-        }
-      </style>
+      {{ content_for_layout }}
+      <p>hopify Themes are the templates our merchants use on their ecommerce stores. Every month thousands of business owners download these templates — many of which are created by our partner community. You can rely on our blog for frequent posts about how to design themes and get them listed in the S</p>
     </main>
 
     {% section 'footer' %}
