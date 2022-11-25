@@ -1,8 +1,8 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Dawn",
-    "theme_version": "7.0.1",
+    "theme_name": "Kama",
+    "theme_version": "1.0.0",
     "theme_author": "Shopify",
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
     "theme_support_url": "https://support.shopify.com/"
@@ -12,77 +12,53 @@
     "settings": [
       {
         "type": "header",
-        "content": "t:settings_schema.colors.settings.header__1.content"
+        "content": "Main"
       },
       {
         "type": "color",
-        "id": "colors_solid_button_labels",
-        "default": "#FFFFFF",
-        "label": "t:settings_schema.colors.settings.colors_solid_button_labels.label",
-        "info": "t:settings_schema.colors.settings.colors_solid_button_labels.info"
+        "id": "colors_primary",
+        "default": "#ffd7d7",
+        "label": "Primary Color",
+        "info": "Used for backgrounds."
       },
       {
         "type": "color",
-        "id": "colors_accent_1",
-        "default": "#121212",
-        "label": "t:settings_schema.colors.settings.colors_accent_1.label",
-        "info": "t:settings_schema.colors.settings.colors_accent_1.info"
-      },
-      {
-        "id": "gradient_accent_1",
-        "type": "color_background",
-        "label": "t:settings_schema.colors.settings.gradient_accent_1.label"
+        "id": "colors_dark",
+        "default": "#232323",
+        "label": "Dark Color",
+        "info": "Used for headings."
       },
       {
         "type": "color",
-        "id": "colors_accent_2",
-        "default": "#334FB4",
-        "label": "t:settings_schema.colors.settings.colors_accent_2.label"
-      },
-      {
-        "id": "gradient_accent_2",
-        "type": "color_background",
-        "label": "t:settings_schema.colors.settings.gradient_accent_2.label"
+        "id": "colors_body",
+        "default": "#4C4C4B",
+        "label": "Text Color",
+        "info": "Used for text."
       },
       {
         "type": "header",
-        "content": "t:settings_schema.colors.settings.header__2.content"
+        "content": "Button"
       },
       {
         "type": "color",
-        "id": "colors_text",
-        "default": "#121212",
-        "label": "t:settings_schema.colors.settings.colors_text.label",
-        "info": "t:settings_schema.colors.settings.colors_text.info"
+        "id": "button_primary_color",
+        "default": "#232323",
+        "label": "Dark Color",
+        "info": "Used as foreground color on accent colors.."
       },
       {
         "type": "color",
-        "id": "colors_outline_button_labels",
-        "default": "#121212",
-        "label": "t:settings_schema.colors.settings.colors_outline_button_labels.label",
-        "info": "t:settings_schema.colors.settings.colors_outline_button_labels.info"
+        "id": "button_primary_background_color",
+        "default": "#ffd7d7",
+        "label": "Primary Color",
+        "info": "Used for solid button background."
       },
       {
         "type": "color",
-        "id": "colors_background_1",
-        "default": "#FFFFFF",
-        "label": "t:settings_schema.colors.settings.colors_background_1.label"
-      },
-      {
-        "id": "gradient_background_1",
-        "type": "color_background",
-        "label": "t:settings_schema.colors.settings.gradient_background_1.label"
-      },
-      {
-        "type": "color",
-        "id": "colors_background_2",
-        "default": "#F3F3F3",
-        "label": "t:settings_schema.colors.settings.colors_background_2.label"
-      },
-      {
-        "id": "gradient_background_2",
-        "type": "color_background",
-        "label": "t:settings_schema.colors.settings.gradient_background_2.label"
+        "id": "button_secondary_color",
+        "default": "#232323",
+        "label": "Dark Color",
+        "info": "Used for button border and foreground, when button background is transparent."
       }
     ]
   },
@@ -102,13 +78,33 @@
       },
       {
         "type": "range",
-        "id": "heading_scale",
-        "min": 100,
-        "max": 150,
-        "step": 5,
+        "id": "heading_font_line_height",
+        "min": 1,
+        "max": 2,
+        "step": 1,
         "unit": "%",
+        "label": "Headings line height",
+        "default": 1
+      },
+      {
+        "type": "range",
+        "id": "heading_font_letter_spacing",
+        "min": -1,
+        "max": 2,
+        "step": 0.1,
+        "unit": "em",
+        "label": "Headings letter spacing",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "heading_scale",
+        "min": 40,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
         "label": "t:settings_schema.typography.settings.heading_scale.label",
-        "default": 100
+        "default": 50
       },
       {
         "type": "header",
