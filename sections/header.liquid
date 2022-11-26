@@ -1,0 +1,50 @@
+{{ 'header.css' | asset_url | stylesheet_tag }}
+
+<header class="header-wrapper">
+  <nav class="header-bar">
+    <div class="page-width">
+      <a class="header-brand" href="#">
+        <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/Kama.png?v=1669457708" alt="Kama"/>
+      </a>
+      <button class="header-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="header-toggler-icon"></span>
+      </button>
+      <div class="header-collapse mx-auto">
+        <ul class="menu-wrapper">
+          <li class="menu-item">
+            <a class="menu-link" href="#">Home</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#">Men</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#">Women</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#">About us</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#">Shop</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#">Blog</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#">Contact us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header-right">
+        <button type="button" class="header-search-btn">{% render 'icon-search' %}</button>
+        <div class="cart-icon-wrap">
+          <button type="button" class="cart-icon-btn">
+            {% render 'icon-cart' %}
+            <span class="cart-icon-badge">2</span>
+          </button>
+        </div>
+        <button class="account-btn">{% render 'icon-user' %}</button>
+
+      </div>
+    </div>
+  </nav>
+</header>

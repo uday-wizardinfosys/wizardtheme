@@ -2126,3 +2126,30 @@ button, .btn {
   --bg-opacity: 1;
   background-color: rgba(var(--color-primary-rgb), var(--bg-opacity))!important;
 }
+.annoucement-bar-wrapper {
+  padding: 10px 0;
+}
+.annoucement-bar-content {
+  font-size: var(--body-small-font-size);
+  line-height: var(--body-small-line-height);
+  letter-spacing: var(--body-small-letter-spacing);
+  text-transform: uppercase;
+}
+.annoucement-bar-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
