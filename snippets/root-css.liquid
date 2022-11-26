@@ -1,0 +1,57 @@
+{% style %}
+    :root {
+        /*-=-=- Theme Color -=-=-*/
+        --color-white: #ffffff;
+        --color-black:#000000;
+        --color-primary: {{ settings.colors_primary }};
+        --color-dark: {{ settings.colors_dark }};
+        --color-body: {{ settings.colors_body }};
+        
+        --color-white-rgb: 255, 255, 255;
+        --color-black-rgb: 0, 0, 0;
+        --color-primary-rgb: {{ settings.colors_primary.red }}, {{ settings.colors_primary.green }}, {{ settings.colors_primary.blue }};
+        --color-dark-rgb: {{ settings.colors_dark.red }}, {{ settings.colors_dark.green }}, {{ settings.colors_dark.blue }};
+        --color-body-rgb: {{ settings.colors_body.red }}, {{ settings.colors_body.green }}, {{ settings.colors_body.blue }};
+
+        /*-=-=- Buttons -=-=-*/
+        --button-primary-color: {{ settings.button_primary_color }};
+        --button-primary-background-color: {{ settings.button_primary_background_color }};
+        --button-secondary-color: {{ settings.button_secondary_color }};
+        --button-border-width: {{settings.buttons_border_thickness}}px;
+        --button-border-style: solid;
+        --button-border-radius: {{settings.buttons_radius}}px;
+
+        --button-font-family: {{ settings.button_font_family.family }}, {{ settings.button_font_family.fallback_families }};
+        --button-font-style: {{ settings.button_font_family.style }};
+        --button-font-weight: {{ settings.button_font_family.weight }};
+        --button-font-size: {{ settings.button_font_size }}px;
+        --button-font-line-height: {{ settings.button_font_line_height | divided_by: 100.0 }};
+        --button-font-letter-spacing: {{ settings.button_font_letter_spacing | divided_by: 10.0 }}em;
+
+
+        /*-=-=- Fonts -=-=-*/
+        --heading-font-family: {{ settings.heading_font_family.family }}, {{ settings.heading_font_family.fallback_families }};
+        --heading-font-style: {{ settings.heading_font_family.style }};
+        --heading-font-weight: {{ settings.heading_font_family.weight }};
+        --heading-font-line-height: {{ settings.heading_font_line_height | divided_by: 100.0 }};
+        --heading-font-letter-spacing: {{ settings.heading_font_letter_spacing | divided_by: 10.0 }}em;
+
+        --heading-h1-font-size: {{settings.heading_h1}}px;
+        --heading-h2-font-size: {{settings.heading_h2}}px;
+        --heading-h3-font-size: {{settings.heading_h3}}px;
+        --heading-h4-font-size: {{settings.heading_h4}}px;
+        --heading-h5-font-size: {{settings.heading_h5}}px;
+        --heading-h6-font-size: {{settings.heading_h6}}px;
+
+        --body-font-family: {{ settings.body_font_family.family }}, {{ settings.body_font_family.fallback_families }};
+        --body-font-style: {{ settings.body_font_family.style }};
+        --body-font-weight: {{ settings.body_font_family.weight }};
+        --body-font-size: {{ settings.body_font_size }}px;
+        --body-font-line-height: {{ settings.body_font_line_height | divided_by: 100.0 }};
+        --body-font-letter-spacing: {{ settings.body_font_letter_spacing | divided_by: 10.0 }}em;
+
+        --body-small-font-size: 13px;
+        --body-small-line-height: 1.23;
+        --body-small-letter-spacing: 0.05em;
+    }
+{% endstyle %}
