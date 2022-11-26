@@ -1,0 +1,37 @@
+
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+
+
+<div class="banner_image_wrapper banner_image_large bg_cover bg_right_top" style="background-image: url(https://cdn.shopify.com/s/files/1/0618/9232/9644/files/Banner.jpg);">
+    <div class="page-width">
+        
+    </div>
+</div>
+<div class="banner_image_wrapper banner_image_large bg_cover bg_right_top" style="background-image: url(https://cdn.shopify.com/s/files/1/0618/9232/9644/files/Banner.jpg);">
+    <div class="page-width">
+        
+    </div>
+</div>
+<div class="banner_image_wrapper banner_image_large bg_cover bg_right_top" style="background-image: url(https://cdn.shopify.com/s/files/1/0618/9232/9644/files/Banner.jpg);">
+    <div class="page-width">
+        
+    </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "t:sections.image-banner.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+  ],
+
+  "presets": [
+    {
+      "name": "t:sections.image-banner.presets.name"
+    }
+  ]
+}
+{% endschema %}

@@ -8,6 +8,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   :root {
+    --base-transition: all .25s ease-in-out;
     scroll-behavior: smooth;
   }
 }
@@ -865,17 +866,19 @@ button, .btn {
   border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
   border-radius: var(--bs-btn-border-radius);
   background-color: var(--bs-btn-bg);
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: var(--base-transition);
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn {
+  button, .btn {
     transition: none;
   }
 }
-.btn:hover {
+button:hover, .btn:hover,
+button:focus, .btn:focus {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
+  outline: 0;
 }
 .fixed-top {
   position: fixed;
@@ -1211,6 +1214,52 @@ button, .btn {
 
 .order-last {
   order: 6 !important;
+}
+.m-0 {
+  margin: 0 !important;
+}
+.m-auto {
+  margin: auto !important;
+}
+.mx-0 {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.my-auto {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+.mt-auto {
+  margin-top: auto !important;
+}
+.mr-0 {
+  margin-right: 0 !important;
+}
+.mr-auto {
+  margin-right: auto !important;
+}
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.mb-auto {
+  margin-bottom: auto !important;
+}
+.ml-0 {
+  margin-left: 0 !important;
+}
+.ml-auto {
+  margin-left: auto !important;
 }
 .fw-light {
   font-weight: 300 !important;
@@ -2126,6 +2175,51 @@ button, .btn {
   --bg-opacity: 1;
   background-color: rgba(var(--color-primary-rgb), var(--bg-opacity))!important;
 }
+.bg_cover {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.bg_contain {
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.bg_left_top {
+    background-position: left top;
+}
+.bg_left_middle {
+    background-position: left center;
+}
+.bg_left_bottom {
+    background-position: left bottom;
+}
+.bg_right_top {
+    background-position: right top;
+}
+.bg_right_middle {
+    background-position: right center;
+}
+.bg_right_bottom {
+    background-position: right bottom;
+}
+.bg_middle_top {
+    background-position: center top;
+}
+.bg_center {
+    background-position: 50% 50%;
+}
+.bg_middle_bottom {
+    background-position: center bottom;
+}
+
+
+
+
+
+
+
+
+
+/*-=-=- Section css -=-=-*/
 .annoucement-bar-wrapper {
   padding: 10px 0;
 }

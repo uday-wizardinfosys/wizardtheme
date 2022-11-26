@@ -241,6 +241,17 @@
         "unit": "em",
         "label": "Letter spacing",
         "default": 0.8
+      },
+      {
+        "type": "header",
+        "content": "Navigation"
+      },
+      {
+        "type": "font_picker",
+        "id": "navigation_font_family",
+        "default": "poppins_n5",
+        "label": "t:settings_schema.typography.settings.type_body_font.label",
+        "info": "t:settings_schema.typography.settings.type_body_font.info"
       }
     ]
   },
