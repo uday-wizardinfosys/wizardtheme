@@ -1,5 +1,6 @@
 .image_with_text_vertical_wrapper {
-    padding: 100px 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 .image_with_text_vertical_container {
     display: flex;

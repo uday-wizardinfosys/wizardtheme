@@ -19,12 +19,24 @@
       "type": "image-with-text",
       "settings": {
       }
+    },
+    "01e535df-28db-4304-be3c-179b84947b19": {
+      "type": "featured-blog",
+      "settings": {
+      }
+    },
+    "80a4dd7f-bcd1-4766-92b8-27a19521d623": {
+      "type": "brands",
+      "settings": {
+      }
     }
   },
   "order": [
     "377a8443-4733-420e-8752-53ed3c4323f2",
     "030a76a4-3c61-459a-8a12-ef0ded7e1e79",
     "284794f4-7e42-4b35-b1fa-3265d453c443",
-    "60e8c1fd-bf78-4609-80e4-3061f997865a"
+    "60e8c1fd-bf78-4609-80e4-3061f997865a",
+    "01e535df-28db-4304-be3c-179b84947b19",
+    "80a4dd7f-bcd1-4766-92b8-27a19521d623"
   ]
 }

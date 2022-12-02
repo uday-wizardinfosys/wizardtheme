@@ -1,4 +1,13 @@
-{{ 'image-with-text-vertical.css' | asset_url | stylesheet_tag }}
+{{ 'section-image-with-text-vertical.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+@media (min-width:992px) {
+    .image_with_text_vertical_wrapper {
+        padding-top: 100px;
+        padding-bottom:100px;
+    }
+}
+{% endstyle %}
 
 
 <div class="image_with_text_vertical_wrapper">

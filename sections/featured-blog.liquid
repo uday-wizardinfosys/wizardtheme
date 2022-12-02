@@ -1,0 +1,47 @@
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}
+
+
+<div class="featured_blog_wrapper">
+    <div class="page-width">
+        <div class="featured_blog_title_wrapper">
+            <h2 class="featured_blog_title">
+                From the Blog
+            </h2>
+            <div class="featured_blog_btn">
+                <a href="#" class="btn btn-arrow">View all {% render 'icon-arrow-right' %}</a>
+            </div>
+        </div>
+        <div class="grid-row">
+            <div class="grid-col-lg-4 grid-col-md-6 grid-col-12">
+                {% render 'article-card' %}
+            </div>
+            <div class="grid-col-lg-4 grid-col-md-6 grid-col-12">
+                {% render 'article-card' %}
+            </div>
+            <div class="grid-col-lg-4 grid-col-md-6 grid-col-12">
+                {% render 'article-card' %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% schema %}
+{
+  "name": "Featured blog",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+  ],
+
+  "presets": [
+    {
+      "name": "Featured blog"
+    }
+  ]
+}
+{% endschema %}
+

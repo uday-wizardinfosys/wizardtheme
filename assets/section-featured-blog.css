@@ -1,0 +1,11 @@
+.featured_blog_wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.featured_blog_title_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+    margin-bottom: 45px;
+}

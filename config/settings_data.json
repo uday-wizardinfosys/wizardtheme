@@ -1,5 +1,6 @@
 {
   "current": {
+    "colors_primary": "#ffd7d7",
     "heading_font_family": "americana_n4",
     "heading_font_line_height": 126,
     "heading_font_letter_spacing": 0,
@@ -144,8 +145,8 @@
           "annoucement-bar-text": "Welcome to store",
           "annoucement-bar-link": "",
           "annoucement-bar-alignment": "",
-          "annoucement-bar-bg-color": "#ffd7d7",
-          "annoucement-bar-text-color": "#232323"
+          "annoucement-bar-bg-color": "#912945",
+          "annoucement-bar-text-color": "#ffffff"
         }
       }
     },
