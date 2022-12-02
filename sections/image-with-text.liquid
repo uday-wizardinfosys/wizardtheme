@@ -1,0 +1,43 @@
+{{ 'image-with-text.css' | asset_url | stylesheet_tag }}
+
+
+<div class="image_with_text_wrapper bg-primary">
+    <div class="page-width">
+        <div class="grid-row align-items-center">
+            <div class="grid-col-lg-6 grid-col-12">
+                <div class="image_with_text--img">
+                    <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/girls.jpg?v=1669798474" alt="girls"/>
+                </div>
+            </div>
+            <div class="grid-col-lg-6 grid-col-12">
+                <div class="image_with_text--content">
+                    <h2>Everything we create is inspired by real girls, real life.</h2>
+                    <div class="content">
+                        <p>We don't accept ordinary. We believe everyone has the power to be ordinary. Our clothing and accessories provide a platform for self-expression served up with a slice of keeping it real.</p>
+                    </div>
+                    <div class="btn_wrap">
+                        <a href="#" class="btn btn-white btn-arrow">Women collection {% render 'icon-arrow-right' %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Image with text",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+  ],
+
+  "presets": [
+    {
+      "name": "Image with text"
+    }
+  ]
+}
+{% endschema %}

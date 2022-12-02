@@ -4,9 +4,27 @@
       "type": "image-banner",
       "settings": {
       }
+    },
+    "030a76a4-3c61-459a-8a12-ef0ded7e1e79": {
+      "type": "image-block",
+      "settings": {
+      }
+    },
+    "284794f4-7e42-4b35-b1fa-3265d453c443": {
+      "type": "image-with-text-vertical",
+      "settings": {
+      }
+    },
+    "60e8c1fd-bf78-4609-80e4-3061f997865a": {
+      "type": "image-with-text",
+      "settings": {
+      }
     }
   },
   "order": [
-    "377a8443-4733-420e-8752-53ed3c4323f2"
+    "377a8443-4733-420e-8752-53ed3c4323f2",
+    "030a76a4-3c61-459a-8a12-ef0ded7e1e79",
+    "284794f4-7e42-4b35-b1fa-3265d453c443",
+    "60e8c1fd-bf78-4609-80e4-3061f997865a"
   ]
 }

@@ -1,16 +1,20 @@
 {% style %}
     {%- liquid
         assign body_font_family_italic = settings.body_font_family | font_modify: 'style', 'italic'
+        assign body_font_family_normal = settings.body_font_family | font_modify: 'weight', 'normal'
+        assign body_font_family_normal_italic = body_font_family_normal | font_modify: 'style', 'italic'
         assign body_font_family_bold = settings.body_font_family | font_modify: 'weight', 'bold'
         assign body_font_family_bold_italic = body_font_family_bold | font_modify: 'style', 'italic'
     %}
     {{ settings.body_font_family | font_face: font_display: 'swap' }}
     {{ body_font_family_italic | font_face: font_display: 'swap' }}
+    {{ body_font_family_normal | font_face: font_display: 'swap' }}
+    {{ body_font_family_normal_italic | font_face: font_display: 'swap' }}
     {{ body_font_family_bold | font_face: font_display: 'swap' }}
     {{ body_font_family_bold_italic | font_face: font_display: 'swap' }}
-    {{ settings.heading_font_family | font_face: font_display: 'swap' }}
-    {{ settings.button_font_family | font_face: font_display: 'swap' }}
     {{ settings.navigation_font_family | font_face: font_display: 'swap' }}
+    {{ settings.button_font_family | font_face: font_display: 'swap' }}
+    {{ settings.heading_font_family | font_face: font_display: 'swap' }}
 
     :root {
         /*-=-=- Theme Color -=-=-*/
@@ -33,6 +37,7 @@
         --button-border-width: {{settings.buttons_border_thickness}}px;
         --button-border-style: solid;
         --button-border-radius: {{settings.buttons_radius}}px;
+        --button-text-transform: uppercase;
 
         --button-font-family: {{ settings.button_font_family.family }}, {{ settings.button_font_family.fallback_families }};
         --button-font-style: {{ settings.button_font_family.style }};
@@ -59,6 +64,8 @@
         --body-font-family: {{ settings.body_font_family.family }}, {{ settings.body_font_family.fallback_families }};
         --body-font-style: {{ settings.body_font_family.style }};
         --body-font-weight: {{ settings.body_font_family.weight }};
+        --body-font-weight-normal: {{ body_font_family_normal.weight }};
+        --body-font-weight-bold: {{ body_font_family_bold.weight }};
         --body-font-size: {{ settings.body_font_size }}px;
         --body-font-line-height: {{ settings.body_font_line_height | divided_by: 100.0 }};
         --body-font-letter-spacing: {{ settings.body_font_letter_spacing | divided_by: 10.0 }}em;

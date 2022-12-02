@@ -118,7 +118,7 @@
         "step": 1,
         "unit": "px",
         "label": "Headings H2",
-        "default": 38
+        "default": 40
       },
       {
         "type": "range",
@@ -220,17 +220,17 @@
         "step": 1,
         "unit": "px",
         "label": "Font size",
-        "default": 16
+        "default": 14
       },
       {
         "type": "range",
         "id": "button_font_line_height",
-        "min": 150,
-        "max": 250,
+        "min": 100,
+        "max": 200,
         "step": 2,
         "unit": "%",
         "label": "Line height",
-        "default": 162
+        "default": 126
       },
       {
         "type": "range",

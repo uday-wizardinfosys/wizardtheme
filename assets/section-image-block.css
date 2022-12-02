@@ -1,0 +1,13 @@
+.image_block_wrapper {
+    padding: 100px 0;
+}
+.image_block--block {
+    max-width: 321px;
+    margin: 0 auto 20px;
+}
+.image_block--block-img {
+    margin-bottom: 20px;
+}
+.image_block--content-title {
+    margin-bottom: 15px;
+}

@@ -31,7 +31,7 @@ body {
   font-style: var(--body-font-style);
   font-size: var(--body-font-size);
   font-weight: var(--body-font-weight);
-  line-height: var(--body-line-height);
+  line-height: var(--body-font-line-height);
   color: var(--color-body);
   background-color: var(--color-white);
   -webkit-text-size-adjust: 100%;
@@ -52,9 +52,11 @@ hr {
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--heading-font-family);
   font-weight: var(--heading-font-weight);
   line-height: var(--heading-font-line-height);
+  color: var(--color-dark);
 }
 h1, .h1 {
   font-size: 40px;
@@ -64,7 +66,6 @@ h1, .h1 {
     font-size: var(--heading-h1-font-size);
   }
 }
-
 h2, .h2 {
   font-size: 33px;
 }
@@ -81,7 +82,6 @@ h3, .h3 {
     font-size: var(--heading-h3-font-size);
   }
 }
-
 h4, .h4 {
   font-size: 22px;
 }
@@ -99,6 +99,7 @@ h6, .h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  letter-spacing: var(--body-font-letter-spacing);
 }
 p:empty{
 	display: none;
@@ -834,28 +835,19 @@ textarea.form-control {
 }
 /*-=-=- Buttons -=-=-*/
 button, .btn {
-  --bs-btn-padding-x: 0.75rem;
-  --bs-btn-padding-y: 0.375rem;
-  --bs-btn-font-family: ;
-  --bs-btn-font-size: 1rem;
-  --bs-btn-font-weight: 400;
-  --bs-btn-line-height: 1.5;
-  --bs-btn-color: #212529;
-  --bs-btn-bg: transparent;
-  --bs-btn-border-width: 1px;
-  --bs-btn-border-color: transparent;
-  --bs-btn-border-radius: 0.375rem;
-  --bs-btn-hover-border-color: transparent;
-  --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  --bs-btn-disabled-opacity: 0.65;
-  --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
   display: inline-block;
-  padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
-  font-family: var(--bs-btn-font-family);
-  font-size: var(--bs-btn-font-size);
-  font-weight: var(--bs-btn-font-weight);
-  line-height: var(--bs-btn-line-height);
-  color: var(--bs-btn-color);
+  padding: 16px 25px;
+  font-family: var(--button-font-family);
+  font-style: var(--button-font-style);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: var(--button-font-line-height);
+  letter-spacing: var(--button-font-letter-spacing);
+  text-transform: var(--button-text-transform);
+  color: var(--button-secondary-color);
+  border: var(--button-border-width) var(--button-border-style) var(--button-secondary-color);
+  border-radius: var(--button-border-radius);
+  background-color: transparent;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -863,9 +855,6 @@ button, .btn {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
-  border-radius: var(--bs-btn-border-radius);
-  background-color: var(--bs-btn-bg);
   transition: var(--base-transition);
 }
 @media (prefers-reduced-motion: reduce) {
@@ -875,11 +864,27 @@ button, .btn {
 }
 button:hover, .btn:hover,
 button:focus, .btn:focus {
-  color: var(--bs-btn-hover-color);
-  background-color: var(--bs-btn-hover-bg);
-  border-color: var(--bs-btn-hover-border-color);
+  color: var(--button-secondary-color);
+  background-color: transparent;
+  border-color: var(--button-secondary-color);
   outline: 0;
 }
+.btn-arrow svg {
+  margin-left: 6px;
+  vertical-align: 0.01em;
+  transition: var(--base-transition);
+}
+.btn-primary {
+  color: var(--button-primary-color);
+  background-color: var(--button-primary-background-color);
+  border-color: var(--button-primary-background-color);
+}
+.btn-white {
+  color: var(--button-primary-color);
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+}
+
 .fixed-top {
   position: fixed;
   top: 0;
@@ -2210,14 +2215,27 @@ button:focus, .btn:focus {
 .bg_middle_bottom {
     background-position: center bottom;
 }
-
-
-
-
-
-
-
-
+/*-=-=- Keyframes css -=-=-*/
+@-webkit-keyframes rotate {
+  from { -webkit-transform: rotate(360deg); }
+  to { -webkit-transform: rotate(0); }
+}
+@-moz-keyframes rotate {
+  from { -moz-transform: rotate(360deg); }
+  to { -moz-transform: rotate(0); }
+}
+@-ms-keyframes rotate {
+  from { -ms-transform: rotate(360deg); }
+  to { -ms-transform: rotate(0); }
+}
+@-o-keyframes rotate {
+  from { -o-transform: rotate(360deg); }
+  to { -o-transform: rotate(0); }
+}
+@keyframes rotate {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0); }
+}
 
 /*-=-=- Section css -=-=-*/
 .annoucement-bar-wrapper {

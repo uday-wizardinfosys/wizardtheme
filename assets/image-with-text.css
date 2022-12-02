@@ -1,0 +1,20 @@
+.image_with_text_wrapper {
+    padding: 120px 0;
+}
+.image_with_text--content .content {
+    max-width: 480px;
+}
+.image_with_text--content .btn_wrap {
+    margin-top: 30px;
+}
+
+
+
+@media (min-width: 992px) {
+    .image_with_text--content {
+        padding-left: 30px;
+    }
+    .image_with_text--content .btn_wrap {
+        margin-top: 50px;
+    }
+}
