@@ -29,6 +29,11 @@
       "type": "brands",
       "settings": {
       }
+    },
+    "ada81cef-849e-4867-a9a8-5b58b80cdc2b": {
+      "type": "reviews",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -37,6 +42,7 @@
     "284794f4-7e42-4b35-b1fa-3265d453c443",
     "60e8c1fd-bf78-4609-80e4-3061f997865a",
     "01e535df-28db-4304-be3c-179b84947b19",
-    "80a4dd7f-bcd1-4766-92b8-27a19521d623"
+    "80a4dd7f-bcd1-4766-92b8-27a19521d623",
+    "ada81cef-849e-4867-a9a8-5b58b80cdc2b"
   ]
 }
