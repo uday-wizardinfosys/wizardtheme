@@ -6,15 +6,15 @@
   }
 {% endstyle %}
 
-
+{% if section.settings.annoucement-bar-text != blank %}
 <div class="annoucement-bar-wrapper">
   <div class="page-width">
-    <div class="annoucement-bar-content text-center">
-      <p>Free Shipping World wide for all orders over $199.</p>
+    <div class="annoucement-bar-content {{section.settings.annoucement-bar-alignment}}">
+      <p>{{section.settings.annoucement-bar-text}}</p>
     </div>
   </div>
 </div>
-
+{% endif %}
 
 {% schema %}
   {
@@ -25,24 +25,26 @@
         "id": "annoucement-bar-text",
         "label": "Text",
         "default": "Welcome to store"
-      },
-      {
-        "type": "link_list",
-        "id": "annoucement-bar-link",
-        "label": "Link"
-      },
+      },      
       {
         "type": "select",
         "id": "annoucement-bar-alignment",
         "label": "Text alignment",
         "options": [
-          {
-            "group": "text-alignment",
-            "value": "",
-            "label": ""
+          {            
+            "value": "text-left",
+            "label": "Left"
+          },
+          {            
+            "value": "text-center",
+            "label": "Center"
+          },
+          {            
+            "value": "text-right",
+            "label": "Right"
           }
         ],
-        "default": ""
+        "default": "text-center"
       },
       {
         "type": "color",
