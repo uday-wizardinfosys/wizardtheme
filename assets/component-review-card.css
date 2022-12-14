@@ -1,5 +1,5 @@
 .review_card {
-    background-color: rgba(var(--color-primary-rgb), 0.5);
+    background-color: rgba(var(--color-primary-rgb), 0.4);
     border-radius: 5px;
 }
 .review_card__top {

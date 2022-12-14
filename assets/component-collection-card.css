@@ -1,0 +1,9 @@
+.collection_card__image {
+    margin-bottom: 25px;
+}
+.collection_card__image img {
+    width: 100%;
+}
+.collection_card__title {
+    margin-bottom: 3px;
+}
