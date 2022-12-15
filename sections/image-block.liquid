@@ -1,58 +1,85 @@
 {{ 'section-image-block.css' | asset_url | stylesheet_tag }}
-
+{% if section.blocks.size != 0 %}
 <div class="image_block_wrapper">
     <div class="page-width">
         <div class="grid-row">
+          {% for block in section.blocks %}
             <div class="grid-col-lg-4 grid-col-md-6 grid-col-12">
                 <div class="image_block--block text-center">
                     <div class="image_block--block-img">
-                        {% render 'icon-tree' %}
+                    {% if block.settings.image != blank %}
+                        {%-liquid assign image_height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio -%}
+                        {{ block.settings.image | image_url: width: 1500 | image_tag:
+                          loading: 'lazy',
+                          width: block.settings.image.width,
+                          height: image_height,
+                          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                          alt: block.settings.image.alt | escape
+                        }}
+                    {% else %}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {% endif %}    
                     </div>
                     <div class="image_block--content">
-                      <h4 class="h5 image_block--content-title">Sustainably sourced</h5>
-                      <p>Made in Canada using 100% ethically-sourced and sustainable materials. We believe in the long term.</p>
+                      {% if block.settings.title != blank %}
+                        <h4 class="h5 image_block--content-title">{{block.settings.title}}</h4>
+                      {% endif %}
+                      {{block.settings.description}}
                     </div>
                 </div>
             </div>
-            <div class="grid-col-lg-4 grid-col-md-6 grid-col-12">
-              <div class="image_block--block text-center">
-                  <div class="image_block--block-img">
-                      {% render 'icon-wallet' %}
-                  </div>
-                  <div class="image_block--content">
-                    <h4 class="h5 image_block--content-title">Fair pricing</h5>
-                    <p>We're able to keep quality high and costs low by selling direct to you and avoiding traditional markups.</p>
-                  </div>
-              </div>
-          </div>
-          <div class="grid-col-lg-4 grid-col-md-6 grid-col-12">
-            <div class="image_block--block text-center">
-                <div class="image_block--block-img">
-                    {% render 'icon-chat' %}
-                </div>
-                <div class="image_block--content">
-                  <h4 class="h5 image_block--content-title">24h Support</h5>
-                <p>Our amazing support team is always happy to help with your order, shipping and return.</p>
-              </div>
-            </div>
-        </div>
+          {% endfor %}            
         </div>
     </div>
 </div>
-
+{% endif %}
 
 
 {% schema %}
 {
   "name": "Image block",
   "tag": "section",
-  "class": "section",
-  "settings": [
+  "class": "section-image-block",
+  "blocks": [
+    {
+      "type":"box",
+      "name":"Blocks",
+      "settings":[
+        {
+          "type":"image_picker",
+          "id":"image",
+          "label":"Image"
+        },
+        {
+          "type":"text",
+          "id":"title",
+          "label":"Title",
+          "default":"Loream ipsum"
+        },
+        {
+          "type":"richtext",
+          "id":"description",
+          "label":"Description",
+          "default":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+        }
+      ]
+    }  
   ],
 
   "presets": [
     {
-      "name": "Image block"
+      "name": "Image block",
+      "blocks": [
+        {
+          "type": "box"
+        },
+        {
+          "type": "box"
+        },
+        {
+          "type": "box"
+        }
+      ]
     }
   ]
 }

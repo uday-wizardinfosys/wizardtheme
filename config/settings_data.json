@@ -4,9 +4,9 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "annoucement-bar-text": "Welcome to store",
+          "annoucement-bar-text": "Free Shipping World wide for all orders over $199.",
           "annoucement-bar-alignment": "text-center",
-          "annoucement-bar-bg-color": "#FFD7D7",
+          "annoucement-bar-bg-color": "#ffd7d7",
           "annoucement-bar-text-color": "#232323"
         }
       },

@@ -13,19 +13,84 @@
         "text-align": "style1"
       }
     },
-    "030a76a4-3c61-459a-8a12-ef0ded7e1e79": {
+    "a31f1109-5377-416c-882b-07fbe52e4592": {
       "type": "image-block",
+      "blocks": {
+        "template--15992652431532__a31f1109-5377-416c-882b-07fbe52e4592-167109475059fa1a59-0": {
+          "type": "box",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-tree.png",
+            "title": "Sustainably sourced",
+            "description": "<p>Made in Canada using 100% ethically-sourced and sustainable materials. We believe in the long term.<\/p>"
+          }
+        },
+        "template--15992652431532__a31f1109-5377-416c-882b-07fbe52e4592-167109475059fa1a59-1": {
+          "type": "box",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-wallet.png",
+            "title": "Fair Pricing",
+            "description": "<p>We're able to keep quality high and costs low by selling direct to you and avoiding traditional markups.<\/p>"
+          }
+        },
+        "template--15992652431532__a31f1109-5377-416c-882b-07fbe52e4592-167109475059fa1a59-2": {
+          "type": "box",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-chat.png",
+            "title": "24h Support",
+            "description": "<p>Our amazing support team is always happy to help with your order, shipping and return.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15992652431532__a31f1109-5377-416c-882b-07fbe52e4592-167109475059fa1a59-0",
+        "template--15992652431532__a31f1109-5377-416c-882b-07fbe52e4592-167109475059fa1a59-1",
+        "template--15992652431532__a31f1109-5377-416c-882b-07fbe52e4592-167109475059fa1a59-2"
+      ],
       "settings": {
       }
     },
     "284794f4-7e42-4b35-b1fa-3265d453c443": {
       "type": "image-with-text-vertical",
+      "blocks": {
+        "44df096f-f822-44f0-9fa9-3373148a17ee": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/woman-in-summer-floral-fashion.jpg",
+            "title": "Effortlessly refined styles",
+            "sub-title": "for celebrating",
+            "btn-name": "Women Collection",
+            "btn-link": "#"
+          }
+        },
+        "d2491f2c-fbd4-4498-84a6-ecbc9676bc12": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/man-in-summer-floral-fashion.jpg",
+            "image-icon": "shopify:\/\/shop_images\/brand-logo.png",
+            "title": "A stand out shirt is a one-and-done autumn look",
+            "sub-title": "",
+            "btn-name": "Men Collection",
+            "btn-link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "44df096f-f822-44f0-9fa9-3373148a17ee",
+        "d2491f2c-fbd4-4498-84a6-ecbc9676bc12"
+      ],
       "settings": {
       }
     },
     "60e8c1fd-bf78-4609-80e4-3061f997865a": {
       "type": "image-with-text",
       "settings": {
+        "column-reverse": false,
+        "position": "align-items-center",
+        "image": "shopify:\/\/shop_images\/girls.jpg",
+        "title": "Everything we create is inspired by real girls, real life.",
+        "description": "<p>We don't accept ordinary. We believe everyone has the power to be ordinary.  Our clothing and accessories provide a platform for self-expression served up with a slice of keeping it real.<\/p>",
+        "btn-name": "Women Collection",
+        "btn-link": "#"
       }
     },
     "1287781c-4d29-4eeb-af07-ddc70c359f4c": {
@@ -51,7 +116,7 @@
   },
   "order": [
     "377a8443-4733-420e-8752-53ed3c4323f2",
-    "030a76a4-3c61-459a-8a12-ef0ded7e1e79",
+    "a31f1109-5377-416c-882b-07fbe52e4592",
     "284794f4-7e42-4b35-b1fa-3265d453c443",
     "60e8c1fd-bf78-4609-80e4-3061f997865a",
     "1287781c-4d29-4eeb-af07-ddc70c359f4c",

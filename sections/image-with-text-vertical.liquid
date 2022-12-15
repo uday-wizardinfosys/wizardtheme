@@ -9,67 +9,116 @@
 }
 {% endstyle %}
 
-
+{% if section.blocks.size != blank %}
 <div class="image_with_text_vertical_wrapper">
     <div class="page-width">
         <div class="grid-row">
-            <div class="grid-col-lg-6 grid-col-12">
-                <div class="image_with_text_vertical_container flex-column">
-                    <div class="image_with_text_vertical--content">
-                        <h2>Effortlessly refined styles <br/> for celebrating</h2>
-                        <div class="btn_wrap">
-                            <a href="#" class="btn btn-primary btn-arrow">Women collection {% render 'icon-arrow-right' %}</a>
+            {% for block in section.blocks %}
+                <div class="grid-col-lg-6 grid-col-12">
+                    <div class="image_with_text_vertical_container {% cycle 'flex-column', 'flex-column-reverse' %}">
+                        <div class="image_with_text_vertical--content">
+                            {% if block.settings.title != blank or block.settings.sub-title != blank %}
+                                <h2>{{block.settings.title}}<br/> {{block.settings.sub-title}}</h2>
+                            {% endif %}
+                            {% if block.settings.btn-name != blank %}
+                                <div class="btn_wrap">
+                                    <a href="{{block.settings.btn-link}}" class="btn btn-primary btn-arrow">{{block.settings.btn-name}} {% render 'icon-arrow-right' %}</a>
+                                </div>
+                            {% endif %}
                         </div>
-                    </div>
-                    <div class="image_with_text_vertical--img">
-                        <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/woman-in-summer-floral-fashion.jpg?v=1669962119" alt="girls"/>
+                        <div class="image_with_text_vertical--img">
+                            {% if block.settings.image-icon != blank %}
+                                <div class="image_with_text_vertical--circletext">
+                                    {%-liquid assign image_height = block.settings.image-icon.width | divided_by: block.settings.image-icon.aspect_ratio -%}
+                                    {{ block.settings.image-icon | image_url: width: 1500 | image_tag:
+                                    loading: 'lazy',
+                                    width: block.settings.image-icon.width,
+                                    height: image_height,
+                                    widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                                    alt: block.settings.image-icon.alt | escape
+                                    }}
+                                </div>
+                            {% endif %}
+                            {% if block.settings.image != blank %}
+                                {%-liquid assign image_height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio -%}
+                                {{ block.settings.image | image_url: width: 1500 | image_tag:
+                                    loading: 'lazy',
+                                    width: block.settings.image.width,
+                                    height: 625,
+                                    widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                                    alt: block.settings.image.alt | escape
+                                }}                                
+                            {% else %}
+                                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}    
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="grid-col-lg-6 grid-col-12">
-                <div class="image_with_text_vertical_container flex-column-reverse">
-                    <div class="image_with_text_vertical--content">
-                        <h2>A stand out shirt is a one-and-done autumn look</h2>
-                        <div class="btn_wrap">
-                            <a href="#" class="btn btn-primary btn-arrow">Men collection {% render 'icon-arrow-right' %}</a>
-                        </div>
-                    </div>
-                    <div class="image_with_text_vertical--img">
-                        <div class="image_with_text_vertical--circletext">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150px" height="150px" viewBox="0 0 150 150" enable-background="new 0 0 150 150" xml:space="preserve">
-                                <defs>
-                                    <path id="circlePath" d=" M 75, 75 m -30, 0 a 30,30 0 0,1 60,0 a 30,30 0 0,1 -60,0 "/>
-                                </defs>
-                                <circle cx="75" cy="50" r="37.5" fill="none"/>
-                                <g>
-                                    <use xlink:href="#circlePath" fill="none"/>
-                                    <text fill="#000">
-                                        <textPath xlink:href="#circlePath">Store-FASHION-STYLE-</textPath>
-                                    </text>
-                                </g>
-                            </svg>
-                        </div>
-                        <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/man-in-summer-floral-fashion.jpg?v=1669962122" alt="girls"/>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}            
         </div>
     </div>
 </div>
-
+{% endif %}
 
 
 {% schema %}
 {
   "name": "Image with text vertical",
   "tag": "section",
-  "class": "section",
-  "settings": [
+  "class": "section-image-with-text-vertical",
+  "max_blocks":2,
+  "blocks": [
+    {
+        "type":"image",
+        "name":"Image Style",
+        "settings":[            
+            {
+                "type":"image_picker",
+                "id":"image",
+                "label":"Image"
+            },
+            {
+                "type":"image_picker",
+                "id":"image-icon",
+                "label":"Brand Logo"
+            },
+            {
+                "type":"text",
+                "id":"title",
+                "label":"Title",
+                "default":"Lorem ipsum"
+            },
+            {
+                "type":"text",
+                "id":"sub-title",
+                "label":"Sub Title"
+            },
+            {
+                "type":"text",
+                "id":"btn-name",
+                "label":"Button Name",
+                "default":"Learn More"
+            },
+            {
+                "type":"url",
+                "id":"btn-link",
+                "label":"Button Link"
+            }
+        ]
+    }
   ],
 
   "presets": [
     {
-      "name": "Image with text vertical"
+      "name": "Image with text vertical",
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
     }
   ]
 }
