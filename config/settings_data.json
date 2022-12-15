@@ -1,4 +1,32 @@
 {
   "current": {
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "annoucement-bar-text": "Welcome to store",
+          "annoucement-bar-alignment": "text-center",
+          "annoucement-bar-bg-color": "#FFD7D7",
+          "annoucement-bar-text-color": "#232323"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/Kama.png",
+          "logo_width": 100,
+          "menu": "main-menu",
+          "enable_sticky_header": true
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
   }
 }

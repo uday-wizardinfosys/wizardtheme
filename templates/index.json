@@ -3,6 +3,14 @@
     "377a8443-4733-420e-8752-53ed3c4323f2": {
       "type": "image-banner",
       "settings": {
+        "image": "shopify:\/\/shop_images\/Banner.jpg",
+        "title": "Further Reductions",
+        "sub-title": "Up To 70% Off On Sale",
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.In rhoncus augue nibh, at ullamcorper orci ullamcorper ut.<\/p>",
+        "btn-name": "Explore Collection",
+        "btn-link": "",
+        "position": "align-items-center",
+        "text-align": "style1"
       }
     },
     "030a76a4-3c61-459a-8a12-ef0ded7e1e79": {
