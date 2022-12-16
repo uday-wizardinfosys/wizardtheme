@@ -14,24 +14,26 @@
 <div class="reviews_wrapper">
     <div class="page-width">
         <div class="reviews__title_wrapper">
-            <h2 class="reviews_title">
-                What Our Clients Says
-            </h2>
-            <div class="reviews__btn">
-                <a href="#" class="btn btn-arrow">View more {% render 'icon-arrow-right' %}</a>
-            </div>
+            {% if section.settings.title != blank %}
+                <h2 class="reviews_title">
+                    {{section.settings.title}}
+                </h2>
+            {% endif %}
+            {% if section.settings.btn-name != blank %}
+                <div class="reviews__btn">
+                    <a href="{{section.settings.btn-link}}" class="btn btn-arrow">{{section.settings.btn-name}} {% render 'icon-arrow-right' %}</a>
+                </div>
+            {% endif %}
         </div>
-        <div class="grid-row">
-            <div class="grid-col-lg-4 grid-col-md-6 grid-col-12">
-                {% render 'review-card' %}
+        {% if section.blocks.size != blank %}
+            <div class="grid-row">
+                {% for block in section.blocks %}
+                    <div class="grid-col-lg-4 grid-col-md-6 grid-col-12">
+                        {% render 'review-card', card_block: block %}
+                    </div>
+                {% endfor %}                
             </div>
-            <div class="grid-col-lg-4 grid-col-md-6 grid-col-12">
-                {% render 'review-card' %}
-            </div>
-            <div class="grid-col-lg-4 grid-col-md-6 grid-col-12">
-                {% render 'review-card' %}
-            </div>
-        </div>
+        {% endif %}
     </div>
 </div>
 
@@ -44,8 +46,79 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+        "type":"text",
+        "id":"title",
+        "label":"Title",
+        "default":"What Our Clients Says"
+    },
+    {
+        "type":"text",
+        "id":"btn-name",
+        "label":"Button Name",
+        "default":"View All"
+    },
+    {
+        "type":"url",
+        "id":"btn-link",
+        "label":"Button Link"
+    }
   ],
-
+  "blocks":[
+    {
+        "type":"review",
+        "name":"Review",
+        "settings":[
+            {
+                "type":"image_picker",
+                "id":"image",
+                "label":"Author Image"
+            },
+            {
+                "type":"text",
+                "id":"name",
+                "label":"Name"
+            },
+            {
+                "type":"text",
+                "id":"designation",
+                "label":"Designation"
+            },
+            {
+                "type":"richtext",
+                "id":"description",
+                "label":"Description"
+            },
+            {
+                "type":"select",
+                "options":[
+                    {
+                        "value":"1",
+                        "label":"1"
+                    },
+                    {
+                        "value":"2",
+                        "label":"2"
+                    },
+                    {
+                        "value":"3",
+                        "label":"3"
+                    },
+                    {
+                        "value":"4",
+                        "label":"4"
+                    },
+                    {
+                        "value":"5",
+                        "label":"5"
+                    }
+                ],
+                "id":"review",
+                "label":"Select Review"
+            }
+        ]
+    }
+  ],
   "presets": [
     {
       "name": "Reviews slider"
