@@ -1,0 +1,50 @@
+{{ 'component-product-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-featured-products.css' | asset_url | stylesheet_tag }}
+
+<div class="featured_collections_wrapper">
+    <div class="page-width">
+        <div class="featured_collections_top">
+            <div class="featured_collections_title_wrapper">
+                <h2 class="featured_collections_title">Discover Our products</h2>
+                <p>Believe what you see!</p>
+            </div>
+            <div class="featured_collections_btns">
+                
+            </div>
+        </div>
+        <div class="grid-row">
+            <div class="grid-col-lg-4 grid-col-md-6 grid-col-12">
+                {% render 'product-card' %}
+            </div>
+            <div class="grid-col-lg-4 grid-col-md-6 grid-col-12">
+                {% render 'product-card' %}
+            </div>
+            <div class="grid-col-lg-4 grid-col-md-6 grid-col-12">
+                {% render 'product-card' %}
+            </div>
+        </div>
+        <div class="btn_wrap text-center">
+            <a href="#" class="btn btn-arrow">VIEW MORE {% render 'icon-arrow-right' %}</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% schema %}
+{
+  "name": "Featured products",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+  ],
+
+  "presets": [
+    {
+      "name": "Featured products"
+    }
+  ]
+}
+{% endschema %}
+

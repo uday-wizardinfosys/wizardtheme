@@ -15,6 +15,11 @@
       "settings": {
       }
     },
+    "52156f5c-a12a-4150-8f80-2e5a87a6bfcb": {
+      "type": "featured-products",
+      "settings": {
+      }
+    },
     "60e8c1fd-bf78-4609-80e4-3061f997865a": {
       "type": "image-with-text",
       "settings": {
@@ -45,6 +50,7 @@
     "377a8443-4733-420e-8752-53ed3c4323f2",
     "030a76a4-3c61-459a-8a12-ef0ded7e1e79",
     "284794f4-7e42-4b35-b1fa-3265d453c443",
+    "52156f5c-a12a-4150-8f80-2e5a87a6bfcb",
     "60e8c1fd-bf78-4609-80e4-3061f997865a",
     "1287781c-4d29-4eeb-af07-ddc70c359f4c",
     "80a4dd7f-bcd1-4766-92b8-27a19521d623",
