@@ -1,13 +1,13 @@
 <div class="collection_card">
     <div class="collection_card__image">
         {% if card_collection.image != blank %}           
-            {{ card_collection.image | image_url: width: 1500 | image_tag:
+            {% comment %} {{ card_collection.image | image_url: width: 1500 | image_tag:
                 loading: 'lazy',
-                width: card_collection.image.width,
-                height: 450,
+                width: card_collection.image.width,           
                 widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
                 alt: card_collection.image.alt | escape
-            }}
+            }} {% endcomment %}
+            <img src="{{card_collection.image | img_url:'master'}}">
         {% else %}
             {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
         {% endif %}

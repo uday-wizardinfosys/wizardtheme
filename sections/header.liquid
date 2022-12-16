@@ -13,12 +13,17 @@
 .header-fixed.header-scroll-bg {
   background-color: var(--color-white);
 }
-
+.header-unfixed {
+  background-color: {{section.settings.back-color}};
+}
+.header-unfixed .menu-link {
+  color: {{section.settings.text-color}};
+}
 
 {% endstyle %}
 
 <header>
-  <div class="header-wrapper {% if section.settings.enable_sticky_header %}header-fixed header-fixed-bg{% endif %}">
+  <div class="header-wrapper {% if section.settings.enable_sticky_header %}header-fixed header-fixed-bg{% else %}header-unfixed{% endif %}">
     <nav class="header-bar">
       <div class="page-width">
         <a class="header-brand" href="{{ routes.root_url }}">
@@ -97,7 +102,7 @@
           "step": 10,
           "default": 100,
           "unit": "px",
-          "label": "Custom logo width"
+          "label": "logo width"
         },
         {
           "type": "link_list",
@@ -111,6 +116,18 @@
           "default": true,
           "label": "Enable sticky header",
           "info": "Header shows on the screen as customers scroll up."
+        },
+        {
+          "type":"color",
+          "id":"back-color",
+          "label":"Background Color",
+          "default":"#ffffff"
+        },
+        {
+          "type":"color",
+          "id":"text-color",
+          "label":"Text Color",
+          "default":"#000000"
         }
      ]
   }

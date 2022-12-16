@@ -3,8 +3,7 @@
       {% if article.image.src != blank %}         
           {{ article.image | image_url: width: 1500 | image_tag:
                 loading: 'lazy',
-                width: article.image.width,
-                height: article.image.height,
+                width: article.image.width,                
                 widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
                 alt: article.image.alt | escape
             }}

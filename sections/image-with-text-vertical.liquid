@@ -43,8 +43,7 @@
                                 {%-liquid assign image_height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio -%}
                                 {{ block.settings.image | image_url: width: 1500 | image_tag:
                                     loading: 'lazy',
-                                    width: block.settings.image.width,
-                                    height: 625,
+                                    width: block.settings.image.width,                                    
                                     widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
                                     alt: block.settings.image.alt | escape
                                 }}                                
