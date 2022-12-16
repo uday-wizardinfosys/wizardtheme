@@ -13,6 +13,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 80px;
 }
 .footer_localization_button {
     font-size: 14px;
@@ -23,5 +24,18 @@ footer {
     background-position: right 15% center;
     background-size: auto;
   }
-
-
+.footer_newslatter_wrap {
+    padding-left: 80px;
+}
+.footer_newslatter_title {
+    margin-bottom: 9px;
+}
+.footer_newslatter_wrap p {
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--color-dark);
+}
+.footer_newslatter_wrap .btn {
+    min-width: 256px;
+    margin-top: 16px;
+}

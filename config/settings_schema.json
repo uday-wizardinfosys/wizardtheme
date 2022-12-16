@@ -26,7 +26,7 @@
         "id": "colors_dark",
         "default": "#232323",
         "label": "Dark Color",
-        "info": "Used for headings."
+        "info": "Used for headings, forms and highlight text."
       },
       {
         "type": "color",
