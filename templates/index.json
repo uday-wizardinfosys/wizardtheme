@@ -13,6 +13,38 @@
         "text-align": "style1"
       }
     },
+    "284794f4-7e42-4b35-b1fa-3265d453c443": {
+      "type": "image-with-text-vertical",
+      "blocks": {
+        "44df096f-f822-44f0-9fa9-3373148a17ee": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/woman-in-summer-floral-fashion.jpg",
+            "title": "Effortlessly refined styles",
+            "sub-title": "for celebrating",
+            "btn-name": "Women Collection",
+            "btn-link": "#"
+          }
+        },
+        "d2491f2c-fbd4-4498-84a6-ecbc9676bc12": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/man-in-summer-floral-fashion.jpg",
+            "image-icon": "shopify:\/\/shop_images\/brand-logo.png",
+            "title": "A stand out shirt is a one-and-done autumn look",
+            "sub-title": "",
+            "btn-name": "Men Collection",
+            "btn-link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "44df096f-f822-44f0-9fa9-3373148a17ee",
+        "d2491f2c-fbd4-4498-84a6-ecbc9676bc12"
+      ],
+      "settings": {
+      }
+    },
     "a31f1109-5377-416c-882b-07fbe52e4592": {
       "type": "image-block",
       "blocks": {
@@ -49,38 +81,6 @@
       "settings": {
       }
     },
-    "284794f4-7e42-4b35-b1fa-3265d453c443": {
-      "type": "image-with-text-vertical",
-      "blocks": {
-        "44df096f-f822-44f0-9fa9-3373148a17ee": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/woman-in-summer-floral-fashion.jpg",
-            "title": "Effortlessly refined styles",
-            "sub-title": "for celebrating",
-            "btn-name": "Women Collection",
-            "btn-link": "#"
-          }
-        },
-        "d2491f2c-fbd4-4498-84a6-ecbc9676bc12": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/man-in-summer-floral-fashion.jpg",
-            "image-icon": "shopify:\/\/shop_images\/brand-logo.png",
-            "title": "A stand out shirt is a one-and-done autumn look",
-            "sub-title": "",
-            "btn-name": "Men Collection",
-            "btn-link": "#"
-          }
-        }
-      },
-      "block_order": [
-        "44df096f-f822-44f0-9fa9-3373148a17ee",
-        "d2491f2c-fbd4-4498-84a6-ecbc9676bc12"
-      ],
-      "settings": {
-      }
-    },
     "60e8c1fd-bf78-4609-80e4-3061f997865a": {
       "type": "image-with-text",
       "settings": {
@@ -93,11 +93,37 @@
         "btn-link": "#"
       }
     },
-    "1287781c-4d29-4eeb-af07-ddc70c359f4c": {
-      "type": "featured-blogs",
+    "c0b6095c-9669-4c76-97b6-9f980ed9e426": {
+      "type": "featured-collections",
+      "blocks": {
+        "5c7a9e32-0436-47b2-bf74-bf0b35bb7211": {
+          "type": "collection",
+          "settings": {
+            "coll": "women"
+          }
+        },
+        "8bb96de3-2859-462a-a8a8-017d560b7470": {
+          "type": "collection",
+          "settings": {
+            "coll": "frontpage"
+          }
+        },
+        "6738e3d6-ceef-4a27-b664-463e18c9c9ad": {
+          "type": "collection",
+          "settings": {
+            "coll": "women"
+          }
+        }
+      },
+      "block_order": [
+        "5c7a9e32-0436-47b2-bf74-bf0b35bb7211",
+        "8bb96de3-2859-462a-a8a8-017d560b7470",
+        "6738e3d6-ceef-4a27-b664-463e18c9c9ad"
+      ],
       "settings": {
-        "title": "From the Blog",
-        "btn-name": "View All",
+        "title": "Discover Our products",
+        "description": "<p>Believe what you see!<\/p>",
+        "btn-title": "View More",
         "btn-link": ""
       }
     },
@@ -205,49 +231,23 @@
         "btn-link": "#"
       }
     },
-    "c0b6095c-9669-4c76-97b6-9f980ed9e426": {
-      "type": "featured-collections",
-      "blocks": {
-        "5c7a9e32-0436-47b2-bf74-bf0b35bb7211": {
-          "type": "collection",
-          "settings": {
-            "coll": "women"
-          }
-        },
-        "8bb96de3-2859-462a-a8a8-017d560b7470": {
-          "type": "collection",
-          "settings": {
-            "coll": "frontpage"
-          }
-        },
-        "6738e3d6-ceef-4a27-b664-463e18c9c9ad": {
-          "type": "collection",
-          "settings": {
-            "coll": "women"
-          }
-        }
-      },
-      "block_order": [
-        "5c7a9e32-0436-47b2-bf74-bf0b35bb7211",
-        "8bb96de3-2859-462a-a8a8-017d560b7470",
-        "6738e3d6-ceef-4a27-b664-463e18c9c9ad"
-      ],
+    "1287781c-4d29-4eeb-af07-ddc70c359f4c": {
+      "type": "featured-blogs",
       "settings": {
-        "title": "Discover Our products",
-        "description": "<p>Believe what you see!<\/p>",
-        "btn-title": "View More",
+        "title": "From the Blog",
+        "btn-name": "View All",
         "btn-link": ""
       }
     }
   },
   "order": [
     "377a8443-4733-420e-8752-53ed3c4323f2",
-    "a31f1109-5377-416c-882b-07fbe52e4592",
     "284794f4-7e42-4b35-b1fa-3265d453c443",
+    "a31f1109-5377-416c-882b-07fbe52e4592",
     "60e8c1fd-bf78-4609-80e4-3061f997865a",
-    "1287781c-4d29-4eeb-af07-ddc70c359f4c",
+    "c0b6095c-9669-4c76-97b6-9f980ed9e426",
     "80a4dd7f-bcd1-4766-92b8-27a19521d623",
     "ada81cef-849e-4867-a9a8-5b58b80cdc2b",
-    "c0b6095c-9669-4c76-97b6-9f980ed9e426"
+    "1287781c-4d29-4eeb-af07-ddc70c359f4c"
   ]
 }
