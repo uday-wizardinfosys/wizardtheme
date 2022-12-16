@@ -1,0 +1,27 @@
+footer {
+    padding: 60px 0 55px;
+}
+.footer_title {
+    margin-bottom: 24px;
+}
+.footer_link {
+    font-size: 14px;
+    line-height: 32px;
+    color: var(--color-dark);
+}
+.footer_middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer_localization_button {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 8px 51px 8px 21px;
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 1C5.95238 1.71053 3.85714 3.51053 3.85714 5.02632C3.7619 4 2.6 1.75789 1 1' stroke='%23232323' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right 15% center;
+    background-size: auto;
+  }
+
+
