@@ -16,7 +16,9 @@
           "logo": "shopify:\/\/shop_images\/Kama.png",
           "logo_width": 100,
           "menu": "main-menu",
-          "enable_sticky_header": true
+          "enable_sticky_header": false,
+          "back-color": "#f1b3c3",
+          "text-color": "#000000"
         }
       },
       "footer": {
