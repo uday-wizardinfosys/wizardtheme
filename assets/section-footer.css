@@ -9,11 +9,15 @@ footer {
     line-height: 32px;
     color: var(--color-dark);
 }
+.footer_top {
+    margin-bottom: 40px;
+}
 .footer_middle {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .footer_localization_button {
     font-size: 14px;
@@ -23,7 +27,7 @@ footer {
     background-repeat: no-repeat;
     background-position: right 15% center;
     background-size: auto;
-  }
+}
 .footer_newslatter_wrap {
     padding-left: 80px;
 }
@@ -35,7 +39,28 @@ footer {
     line-height: 26px;
     color: var(--color-dark);
 }
-.footer_newslatter_wrap .btn {
+.newslatter_form {
+    margin-top: 50px;
+}
+.newslatter_form .btn {
     min-width: 256px;
     margin-top: 16px;
+}
+.newslatter_form .form-control {
+    border: 0;
+    border-bottom: 1px solid var(--color-dark);
+    border-radius: 0;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 23px;
+    color: var(--color-dark);
+    padding: 7px 0;
+}
+.footer_bottom {
+    padding-top: 27px;
+    border-top: 1px solid rgba(76, 76, 75, 0.2);
+    ;
+}
+.footer_bottom p:last-child {
+    margin-bottom: 0;
 }

@@ -1,70 +1,71 @@
 {{ 'section-footer.css' | asset_url | stylesheet_tag }}
 <footer class="bg-primary">
     <div class="page-width">
-        <div class="grid-row">
-            <div class="grid-col">
-                <div class="footer-block">
-                    <div class="footer_title_wrap">
-                        <h6 class="footer_title">Customer care</h6>
+        <div class="footer_top">
+            <div class="grid-row">
+                <div class="grid-col">
+                    <div class="footer-block">
+                        <div class="footer_title_wrap">
+                            <h6 class="footer_title">Customer care</h6>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="footer_link">Order status</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer_link">Shipping and Delivery</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer_link">Returns</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer_link">Payments options</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer_link">Contact us</a>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#" class="footer_link">Order status</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer_link">Shipping and Delivery</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer_link">Returns</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer_link">Payments options</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer_link">Contact us</a>
-                        </li>
-                    </ul>
                 </div>
-            </div>
-            <div class="grid-col">
-                <div class="footer-block">
-                    <div class="footer_title_wrap">
-                        <h6 class="footer_title">Useful links</h6>
+                <div class="grid-col">
+                    <div class="footer-block">
+                        <div class="footer_title_wrap">
+                            <h6 class="footer_title">Useful links</h6>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="footer_link">Gift cards</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer_link">Find a store</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer_link">Sign up for e-mail</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer_link">Become a member</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer_link">Site feedback</a>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#" class="footer_link">Gift cards</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer_link">Find a store</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer_link">Sign up for e-mail</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer_link">Become a member</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer_link">Site feedback</a>
-                        </li>
-                    </ul>
                 </div>
-            </div>
-            <div class="grid-col-lg-6 grid-col-12">
-                <div class="footer_newslatter_wrap">
-                    <h2 class="footer_newslatter_title">Be a part of our family</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br/> Lorem Ipsum has been.</p>
-                    <form>
-                        <label class="visually-hidden" for="newslatter-email">Email <span aria-hidden="true">*</span></label>
-                        <input autocomplete="email" type="email" id="newslatter-email" name="email" class="form-control" spellcheck="false" autocapitalize="off" aria-required="true" placeholder="Email*">
-                        <button type="submit" class="btn btn-dark btn-arrow">
-                            Join us {% render 'icon-arrow-right' %}
-                          </button>
-                    </form>
+                <div class="grid-col-lg-6 grid-col-12">
+                    <div class="footer_newslatter_wrap">
+                        <h2 class="footer_newslatter_title">Be a part of our family</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br/> Lorem Ipsum has been.</p>
+                        <form class="newslatter_form">
+                            <label class="visually-hidden" for="newslatter-email">Email <span aria-hidden="true">*</span></label>
+                            <input autocomplete="email" type="email" id="newslatter-email" name="email" class="form-control" spellcheck="false" autocapitalize="off" aria-required="true" placeholder="Email*">
+                            <button type="submit" class="btn btn-dark btn-arrow">
+                                Join us {% render 'icon-arrow-right' %}
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-
         <div class="footer_middle">
             <div class="country_selector_wrap footer_country_selector">
                 <button type="button" class="footer_localization_button" aria-expanded="false" aria-controls="FooterCountryList" aria-describedby="FooterCountryList" aria-label="Localization">
@@ -222,6 +223,11 @@
                         <a href="#">{% render 'icon-dribble' %}</a>
                     </li>
                 </ul>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="copyright_text">
+                <p>© 2022 Kama Theme Powered by Shopify</p>
             </div>
         </div>
     </div>
