@@ -5,7 +5,9 @@
 .featured_collections_top {
     margin-bottom: 45px;
 }
-
+.featured_collections_wrapper .btn_wrap {
+    margin-top: 50px;
+}
 @media (min-width:992px) {
     .featured_collections_top {
         display: flex;

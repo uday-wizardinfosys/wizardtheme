@@ -1,1 +1,234 @@
-
+{{ 'section-footer.css' | asset_url | stylesheet_tag }}
+<footer class="bg-primary">
+    <div class="page-width">
+        <div class="footer_top">
+            <div class="grid-row">
+                <div class="grid-col">
+                    <div class="footer-block">
+                        <div class="footer_title_wrap">
+                            <h6 class="footer_title">Customer care</h6>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="footer_link">Order status</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer_link">Shipping and Delivery</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer_link">Returns</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer_link">Payments options</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer_link">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-col">
+                    <div class="footer-block">
+                        <div class="footer_title_wrap">
+                            <h6 class="footer_title">Useful links</h6>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="footer_link">Gift cards</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer_link">Find a store</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer_link">Sign up for e-mail</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer_link">Become a member</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer_link">Site feedback</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-col-lg-6 grid-col-12">
+                    <div class="footer_newslatter_wrap">
+                        <h2 class="footer_newslatter_title">Be a part of our family</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br/> Lorem Ipsum has been.</p>
+                        <form class="newslatter_form">
+                            <label class="visually-hidden" for="newslatter-email">Email <span aria-hidden="true">*</span></label>
+                            <input autocomplete="email" type="email" id="newslatter-email" name="email" class="form-control" spellcheck="false" autocapitalize="off" aria-required="true" placeholder="Email*">
+                            <button type="submit" class="btn btn-dark btn-arrow">
+                                Join us {% render 'icon-arrow-right' %}
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_middle">
+            <div class="country_selector_wrap footer_country_selector">
+                <button type="button" class="footer_localization_button" aria-expanded="false" aria-controls="FooterCountryList" aria-describedby="FooterCountryList" aria-label="Localization">
+                    <span class="currency-country">USD $</span>
+                </button>
+                <ul id="FooterCountryList" role="list" class="list-unstyled country_selector">
+                    <li class="country_selector_item" tabindex="-1">
+                        <a class="country_selector_link" href="#" data-value="AU" data-flag="INR">
+                            Australia
+                        </a>
+                    </li>
+                    <li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="AT" data-flag="INR">
+                        Austria
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="BE" data-flag="INR">
+                        Belgium
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="CA" data-flag="INR">
+                        Canada
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="CZ" data-flag="INR">
+                        Czechia
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="DK" data-flag="INR">
+                        Denmark
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="FI" data-flag="INR">
+                        Finland
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="FR" data-flag="INR">
+                        France
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="DE" data-flag="INR">
+                        Germany
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="HK" data-flag="INR">
+                        Hong Kong SAR
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="IN" data-flag="INR">
+                        India
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="IE" data-flag="INR">
+                        Ireland
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="IL" data-flag="INR">
+                        Israel
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="IT" data-flag="INR">
+                        Italy
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="JP" data-flag="INR">
+                        Japan
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="MY" data-flag="INR">
+                        Malaysia
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="NL" data-flag="INR">
+                        Netherlands
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="NZ" data-flag="INR">
+                        New Zealand
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="NO" data-flag="INR">
+                        Norway
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="PL" data-flag="INR">
+                        Poland
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="PT" data-flag="INR">
+                        Portugal
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="SG" data-flag="INR">
+                        Singapore
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="KR" data-flag="INR">
+                        South Korea
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="ES" data-flag="INR">
+                        Spain
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="SR" data-flag="SRD">
+                        Suriname
+                        <span class="localization-form__currency">(SRD $)</span>
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="SE" data-flag="INR">
+                        Sweden
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="CH" data-flag="INR">
+                        Switzerland
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="link link--text disclosure__link disclosure__link--flag caption-large disclosure__link--active focus-inset" href="#" aria-current="true" data-value="AE" data-flag="INR">
+                        United Arab Emirates
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="GB" data-flag="INR">
+                        United Kingdom
+                    </a>
+                </li><li class="country_selector_item" tabindex="-1">
+                    <a class="country_selector_link" href="#" data-value="US" data-flag="INR">
+                        United States
+                    </a>
+                </li></ul>
+            </div>
+            <div class="social_wrapper text-dark">
+                <ul class="list-unstyled d-flex align-items-center">
+                    <li>
+                        <a href="#">{% render 'icon-facebook' %}</a>
+                    </li>
+                    <li>
+                        <a href="#">{% render 'icon-instagram' %}</a>
+                    </li>
+                    <li>
+                        <a href="#">{% render 'icon-youtube' %}</a>
+                    </li>
+                    <li>
+                        <a href="#">{% render 'icon-twitter' %}</a>
+                    </li>
+                    <li>
+                        <a href="#">{% render 'icon-pintrest' %}</a>
+                    </li>
+                    <li>
+                        <a href="#">{% render 'icon-linkdin' %}</a>
+                    </li>
+                    <li>
+                        <a href="#">{% render 'icon-tik-tok' %}</a>
+                    </li>
+                    <li>
+                        <a href="#">{% render 'icon-dribble' %}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="copyright_text">
+                <p>© 2022 Kama Theme Powered by Shopify</p>
+            </div>
+        </div>
+    </div>
+</footer>
