@@ -1,5 +1,13 @@
 {
   "current": {
+    "social_twitter_link": "#",
+    "social_facebook_link": "#",
+    "social_pinterest_link": "#",
+    "social_instagram_link": "#",
+    "social_tiktok_link": "#",
+    "social_linkdin_link": "#",
+    "social_youtube_link": "#",
+    "social_dribble_link": "#",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -16,14 +24,44 @@
           "logo": "shopify:\/\/shop_images\/Kama.png",
           "logo_width": 100,
           "menu": "main-menu",
-          "enable_sticky_header": false,
+          "enable_sticky_header": true,
           "back-color": "#f1b3c3",
           "text-color": "#000000"
         }
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "3d9fc2d0-2b8c-4e9a-aa6f-96bbc3e95183": {
+            "type": "menu",
+            "settings": {
+              "menu_item": "customer-care",
+              "title": "Customer care"
+            }
+          },
+          "febffeec-467f-4511-8119-96816abd37e1": {
+            "type": "menu",
+            "settings": {
+              "menu_item": "customer-care",
+              "title": "Useful links"
+            }
+          },
+          "2bf2393e-b132-42b1-80b6-253872f012e2": {
+            "type": "newslatter",
+            "settings": {
+              "title": "Be a part of our family",
+              "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br\/> Lorem Ipsum has been.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "3d9fc2d0-2b8c-4e9a-aa6f-96bbc3e95183",
+          "febffeec-467f-4511-8119-96816abd37e1",
+          "2bf2393e-b132-42b1-80b6-253872f012e2"
+        ],
         "settings": {
+          "currency": true,
+          "social": true
         }
       }
     },
