@@ -12,9 +12,9 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "annoucement-bar-text": "Free Shipping World wide for all orders over $199.",
+          "annoucement-bar-text": "Welcome to our store",
           "annoucement-bar-alignment": "text-center",
-          "annoucement-bar-bg-color": "#ffd7d7",
+          "annoucement-bar-bg-color": "#FFD7D7",
           "annoucement-bar-text-color": "#232323"
         }
       },
@@ -25,39 +25,39 @@
           "logo_width": 100,
           "menu": "main-menu",
           "enable_sticky_header": true,
-          "back-color": "#f1b3c3",
+          "back-color": "#ffffff",
           "text-color": "#000000"
         }
       },
       "footer": {
         "type": "footer",
         "blocks": {
-          "3d9fc2d0-2b8c-4e9a-aa6f-96bbc3e95183": {
+          "47d9187c-686b-46ef-a141-b93b95da1b38": {
             "type": "menu",
             "settings": {
               "menu_item": "customer-care",
               "title": "Customer care"
             }
           },
-          "febffeec-467f-4511-8119-96816abd37e1": {
+          "bd4a83e3-3324-47ea-a37a-e5d07285e540": {
             "type": "menu",
             "settings": {
               "menu_item": "customer-care",
-              "title": "Useful links"
+              "title": ""
             }
           },
-          "2bf2393e-b132-42b1-80b6-253872f012e2": {
+          "be8416a8-dfa7-4782-a446-e6fc71b526aa": {
             "type": "newslatter",
             "settings": {
               "title": "Be a part of our family",
-              "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br\/> Lorem Ipsum has been.<\/p>"
+              "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.In rhoncus augue nibh, at ullamcorper orci ullamcorper ut.<\/p>"
             }
           }
         },
         "block_order": [
-          "3d9fc2d0-2b8c-4e9a-aa6f-96bbc3e95183",
-          "febffeec-467f-4511-8119-96816abd37e1",
-          "2bf2393e-b132-42b1-80b6-253872f012e2"
+          "47d9187c-686b-46ef-a141-b93b95da1b38",
+          "bd4a83e3-3324-47ea-a37a-e5d07285e540",
+          "be8416a8-dfa7-4782-a446-e6fc71b526aa"
         ],
         "settings": {
           "currency": true,

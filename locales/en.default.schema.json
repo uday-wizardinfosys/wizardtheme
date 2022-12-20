@@ -214,8 +214,7 @@
       "name": "Announcement bar",
       "settings": {
         "text": {
-          "label": "Text",
-          "default": "Welcome to store"
+          "label": "Text"          
         },
         "text_alignment": {
           "label": "Text alignment",
