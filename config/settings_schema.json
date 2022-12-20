@@ -162,14 +162,14 @@
       },
       {
         "type": "header",
-        "content": "body"
+        "content": "t:settings_schema.typography.settings.header__3.label"
       },
       {
         "type": "font_picker",
         "id": "body_font_family",
         "default": "poppins_n4",
-        "label": "Font",
-        "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+        "label": "t:settings_schema.typography.settings.body_font_family.label",
+        "info": "t:settings_schema.typography.settings.body_font_family.info"
       },
       {
         "type": "range",
@@ -178,7 +178,7 @@
         "max": 30,
         "step": 1,
         "unit": "px",
-        "label": "Font size",
+        "label": "t:settings_schema.typography.settings.body_font_size.label",
         "default": 16
       },
       {
@@ -188,7 +188,7 @@
         "max": 250,
         "step": 2,
         "unit": "%",
-        "label": "Line height",
+        "label": "t:settings_schema.typography.settings.body_font_line_height.label",
         "default": 162
       },
       {
@@ -198,19 +198,19 @@
         "max": 2,
         "step": 0.1,
         "unit": "em",
-        "label": "Letter spacing",
+        "label": "t:settings_schema.typography.settings.body_font_letter_spacing.label",
         "default": -0.2
       },
       {
         "type": "header",
-        "content": "Buttons"
+        "content": "t:settings_schema.typography.settings.header__4.content"
       },
       {
         "type": "font_picker",
         "id": "button_font_family",
         "default": "poppins_n6",
-        "label": "Font",
-        "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+        "label": "t:settings_schema.typography.settings.button_font_family.label",
+        "info": "t:settings_schema.typography.settings.button_font_family.info"
       },
       {
         "type": "range",
@@ -219,7 +219,7 @@
         "max": 30,
         "step": 1,
         "unit": "px",
-        "label": "Font size",
+        "label": "t:settings_schema.typography.settings.button_font_size.label",
         "default": 14
       },
       {
@@ -229,7 +229,7 @@
         "max": 200,
         "step": 2,
         "unit": "%",
-        "label": "Line height",
+        "label": "t:settings_schema.typography.settings.button_font_line_height.label",
         "default": 126
       },
       {
@@ -239,19 +239,19 @@
         "max": 2,
         "step": 0.1,
         "unit": "em",
-        "label": "Letter spacing",
+        "label": "t:settings_schema.typography.settings.button_font_letter_spacing.label",
         "default": 0.8
       },
       {
         "type": "header",
-        "content": "Navigation"
+        "content": "t:settings_schema.typography.settings.header__5.content"
       },
       {
         "type": "font_picker",
         "id": "navigation_font_family",
         "default": "poppins_n5",
-        "label": "Font",
-        "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+        "label": "t:settings_schema.typography.settings.navigation_font_family.label",
+        "info": "t:settings_schema.typography.settings.navigation_font_family.info"
       }
     ]
   },
@@ -283,82 +283,7 @@
         "default": 5
       }
     ]
-  },
-  {
-    "name": "t:settings_schema.badges.name",
-    "settings": [
-      {
-        "type": "select",
-        "id": "badge_position",
-        "options": [
-          {
-            "value": "bottom left",
-            "label": "t:settings_schema.badges.settings.position.options__1.label"
-          },
-          {
-            "value": "bottom right",
-            "label": "t:settings_schema.badges.settings.position.options__2.label"
-          },
-          {
-            "value": "top left",
-            "label": "t:settings_schema.badges.settings.position.options__3.label"
-          },
-          {
-            "value": "top right",
-            "label": "t:settings_schema.badges.settings.position.options__4.label"
-          }
-        ],
-        "default": "bottom left",
-        "label": "t:settings_schema.badges.settings.position.label"
-      },
-      {
-        "type": "range",
-        "id": "badge_corner_radius",
-        "min": 0,
-        "max": 40,
-        "step": 2,
-        "unit": "px",
-        "label": "t:settings_schema.global.settings.corner_radius.label",
-        "default": 40
-      },
-      {
-        "type": "select",
-        "id": "sale_badge_color_scheme",
-        "options": [
-          {
-            "value": "accent-1",
-            "label": "t:sections.all.colors.accent_1.label"
-          },
-          {
-            "value": "accent-2",
-            "label": "t:sections.all.colors.accent_2.label"
-          },
-          {
-            "value": "background-2",
-            "label": "t:sections.all.colors.background_2.label"
-          }
-        ],
-        "default": "accent-2",
-        "label": "t:settings_schema.badges.settings.sale_badge_color_scheme.label"
-      },
-      {
-        "type": "select",
-        "id": "sold_out_badge_color_scheme",
-        "options": [
-          {
-            "value": "background-1",
-            "label": "t:sections.all.colors.background_1.label"
-          },
-          {
-            "value": "inverse",
-            "label": "t:sections.all.colors.inverse.label"
-          }
-        ],
-        "default": "inverse",
-        "label": "t:settings_schema.badges.settings.sold_out_badge_color_scheme.label"
-      }
-    ]
-  },
+  },  
   {
     "name": "t:settings_schema.social-media.name",
     "settings": [
@@ -399,8 +324,8 @@
       {
         "type": "text",
         "id": "social_linkdin_link",
-        "label": "linkdin",
-        "info": "https://linkdin.com/shopify"
+        "label": "t:settings_schema.social-media.settings.social_linkdin_link.label",
+        "info": "t:settings_schema.social-media.settings.social_linkdin_link.info"
       },      
       {
         "type": "text",
@@ -411,8 +336,8 @@
       {
         "type": "text",
         "id": "social_dribble_link",
-        "label": "dribble",
-        "info": "https:dribble.com/shopify"
+        "label": "t:settings_schema.social-media.settings.social_dribble_link.label",
+        "info": "t:settings_schema.social-media.settings.social_dribble_link.info"
       }
     ]
   },

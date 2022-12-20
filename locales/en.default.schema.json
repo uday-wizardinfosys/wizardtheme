@@ -42,7 +42,7 @@
           "label": "Text alignment"
         }
       }
-    },
+    },    
     "colors": {
       "name": "Colors",
       "settings": {
@@ -114,45 +114,50 @@
         },
         "heading_h6":{
           "label":"Heading H6"
+        },
+        "header__3":{
+          "label":"body"
+        },
+        "body_font_family":{
+          "label":"Font",
+          "info":"Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+        },
+        "body_font_size":{
+          "label":"Font size"
+        },
+        "body_font_line_height":{
+          "label":"Line height"
+        },
+        "body_font_letter_spacing":{
+          "label":"Letter spacing"
+        },
+        "header__4":{
+          "content":"Buttons"
+        },
+        "button_font_family":{
+          "label":"Font",
+          "info":"Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+        },
+        "button_font_size":{
+          "label":"Font size"
+        },
+        "button_font_line_height":{
+          "label":"Line height"
+        },
+        "button_font_letter_spacing":{
+          "label":"Letter spacing"
+        },
+        "header__5":{
+          "content":"Navigation"
+        },
+        "navigation_font_family":{
+          "label":"Font",
+          "info":"Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
         }
       }
     },
-    "buttons": {
-      "name": "Buttons"
-    },
-    "variant_pills": {
-      "name": "Variant pills",
-      "paragraph": "Variant pills are one way of displaying your product variants. [Learn more](https:\/\/help.shopify.com\/en\/manual\/online-store\/themes\/theme-structure\/page-types#variant-picker-block)"
-    },
-    "inputs": {
-      "name": "Inputs"
-    },
-    "content_containers": {
-      "name": "Content containers"
-    },
-    "popups": {
-      "name": "Dropdowns and pop-ups",
-      "paragraph": "Affects areas like navigation dropdowns, pop-up modals, and cart pop-ups."
-    },
-    "media": {
-      "name": "Media"
-    },
-    "drawers": {
-      "name": "Drawers"
-    },
-    "styles": {
-      "name": "Icons",
-      "settings": {
-        "accent_icons": {
-          "options__3": {
-            "label": "Outline button"
-          },
-          "options__4": {
-            "label": "Text"
-          },
-          "label": "Color"
-        }
-      }
+    "buttons":{
+      "name":"Button"      
     },
     "social-media": {
       "name": "Social media",
@@ -179,44 +184,21 @@
         "social_tiktok_link": {
           "label": "TikTok",
           "info": "https:\/\/tiktok.com\/@shopify"
-        },
-        "social_tumblr_link": {
-          "label": "Tumblr",
-          "info": "https:\/\/shopify.tumblr.com"
-        },
-        "social_snapchat_link": {
-          "label": "Snapchat",
-          "info": "https:\/\/www.snapchat.com\/add\/shopify"
-        },
+        },        
         "social_youtube_link": {
           "label": "YouTube",
           "info": "https:\/\/www.youtube.com\/shopify"
         },
-        "social_vimeo_link": {
-          "label": "Vimeo",
-          "info": "https:\/\/vimeo.com\/shopify"
+        "social_linkdin_link": {
+          "label": "linkdin",
+          "info": "https:\/\/linkdin.com\/shopify"
+        },
+        "social_dribble_link": {
+          "label": "dribble",
+          "info": "https:\/\/dribble.com\/shopify"
         }
       }
-    },
-    "search_input": {
-      "name": "Search behavior",
-      "settings": {
-        "header": {
-          "content": "Product suggestions"
-        },
-        "predictive_search_enabled": {
-          "label": "Enable product suggestions"
-        },
-        "predictive_search_show_vendor": {
-          "label": "Show vendor",
-          "info": "Visible when product suggestions enabled."
-        },
-        "predictive_search_show_price": {
-          "label": "Show price",
-          "info": "Visible when product suggestions enabled."
-        }
-      }
-    },
+    },    
     "favicon": {
       "name": "Favicon",
       "settings": {
@@ -225,70 +207,7 @@
           "info": "Will be scaled down to 32 x 32px"
         }
       }
-    },
-    "currency_format": {
-      "name": "Currency format",
-      "settings": {
-        "content": "Currency codes",
-        "paragraph": "Cart and checkout prices always show currency codes. Example: $1.00 USD.",
-        "currency_code_enabled": {
-          "label": "Show currency codes"
-        }
-      }
-    },
-    "cart": {
-      "name": "Cart",
-      "settings": {
-        "cart_type": {
-          "label": "Cart type",
-          "drawer": {
-            "label": "Drawer"
-          },
-          "page": {
-            "label": "Page"
-          },
-          "notification": {
-            "label": "Popup notification"
-          }
-        },
-        "show_vendor": {
-          "label": "Show vendor"
-        },
-        "show_cart_note": {
-          "label": "Enable cart note"
-        },
-        "cart_drawer": {
-          "header": "Cart drawer",
-          "collection": {
-            "label": "Collection",
-            "info": "Visible when cart drawer is empty."
-          }
-        }
-      }
-    },
-    "layout": {
-      "name": "Layout",
-      "settings": {
-        "page_width": {
-          "label": "Page width"
-        },
-        "spacing_sections": {
-          "label": "Vertical space between sections"
-        },
-        "header__grid": {
-          "content": "Grid"
-        },
-        "paragraph__grid": {
-          "content": "Affects areas with a multicolumn layout."
-        },
-        "spacing_grid_horizontal": {
-          "label": "Horizontal space"
-        },
-        "spacing_grid_vertical": {
-          "label": "Vertical space"
-        }
-      }
-    }
+    }       
   },
   "sections": {
     "announcement-bar": {
