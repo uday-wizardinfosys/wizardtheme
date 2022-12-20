@@ -37,29 +37,29 @@
 
 {% schema %}
 {
-  "name": "Image block",
+  "name": "t:sections.image-block.name",
   "tag": "section",
   "class": "section-image-block",
   "blocks": [
     {
       "type":"box",
-      "name":"Blocks",
+      "name":"t:sections.image-block.blocks.name",
       "settings":[
         {
           "type":"image_picker",
           "id":"image",
-          "label":"Image"
+          "label":"t:sections.image-block.blocks.settings.image.label"
         },
         {
           "type":"text",
           "id":"title",
-          "label":"Title",
+          "label":"t:sections.image-block.blocks.settings.title.label",
           "default":"Loream ipsum"
         },
         {
           "type":"richtext",
           "id":"description",
-          "label":"Description",
+          "label":"t:sections.image-block.blocks.settings.description.label",
           "default":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
         }
       ]
@@ -68,7 +68,7 @@
 
   "presets": [
     {
-      "name": "Image block",
+      "name": "t:sections.image-block.presets.name",
       "blocks": [
         {
           "type": "box"

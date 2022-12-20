@@ -18,30 +18,30 @@
 
 {% schema %}
   {
-    "name": "Annoucement bar",
+    "name": "t:sections.announcement-bar.name",
     "settings": [
       {
         "type": "text",
         "id": "annoucement-bar-text",
-        "label": "Text",
-        "default": "Welcome to store"
+        "label": "t:sections.announcement-bar.settings.text.label",
+        "default": "t:sections.announcement-bar.settings.text.default"
       },      
       {
         "type": "select",
         "id": "annoucement-bar-alignment",
-        "label": "Text alignment",
+        "label": "t:sections.announcement-bar.settings.text_alignment.label",
         "options": [
           {            
             "value": "text-left",
-            "label": "Left"
+            "label": "t:sections.announcement-bar.settings.text_alignment.options__1.label"
           },
           {            
             "value": "text-center",
-            "label": "Center"
+            "label": "t:sections.announcement-bar.settings.text_alignment.options__2.label"
           },
           {            
             "value": "text-right",
-            "label": "Right"
+            "label": "t:sections.announcement-bar.settings.text_alignment.options__3.label"
           }
         ],
         "default": "text-center"
@@ -49,12 +49,13 @@
       {
         "type": "color",
         "id": "annoucement-bar-bg-color",
-        "label": "background color",
+        "label": "t:sections.announcement-bar.settings.bg_color.label",
         "default": "#FFD7D7"
-      }, {
+      }, 
+      {
         "type": "color",
         "id": "annoucement-bar-text-color",
-        "label": "Text color",
+        "label": "t:sections.announcement-bar.settings.text_color.label",
         "default": "#232323"
       }
     ]

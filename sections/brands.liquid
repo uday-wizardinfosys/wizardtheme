@@ -44,33 +44,33 @@
 
 {% schema %}
 {
-  "name": "Brands",
+  "name": "t:sections.brand.name",
   "tag": "section",
   "class": "section",
   "settings": [
     {
         "type":"text",
         "id":"title",
-        "label":"Title",
+        "label":"t:sections.brand.settings.title.label",
         "default":"As seen in"
     }
   ],
   "blocks":[
     {
         "type":"logo",
-        "name":"Brands",
+        "name":"t:sections.brand.blocks.name",
         "settings":[
             {
                 "type":"image_picker",
                 "id":"image",
-                "label":"Image"
+                "label":"t:sections.brand.blocks.settings.image.label"
             }
         ]
     }
   ],
   "presets": [
     {
-      "name": "Brands",
+      "name": "t:sections.presets.name",
       "blocks":[
         {
             "type":"logo"

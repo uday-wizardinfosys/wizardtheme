@@ -42,86 +42,86 @@
 
 {% schema %}
 {
-  "name": "Reviews slider",
+  "name": "t:sections.reviews.name",
   "tag": "section",
   "class": "section",
   "settings": [
     {
         "type":"text",
         "id":"title",
-        "label":"Title",
+        "label":"t:sections.reviews.settings.title.label",
         "default":"What Our Clients Says"
     },
     {
         "type":"text",
         "id":"btn-name",
-        "label":"Button Name",
+        "label":"t:sections.reviews.settings.btn-name.label",
         "default":"View All"
     },
     {
         "type":"url",
         "id":"btn-link",
-        "label":"Button Link"
+        "label":"t:sections.reviews.settings.btn-link.label"
     }
   ],
   "blocks":[
     {
         "type":"review",
-        "name":"Review",
+        "name":"t:sections.reviews.blocks.name",
         "settings":[
             {
                 "type":"image_picker",
                 "id":"image",
-                "label":"Author Image"
+                "label":"t:sections.reviews.blocks.settings.image.label"
             },
             {
                 "type":"text",
                 "id":"name",
-                "label":"Name"
+                "label":"t:sections.reviews.blocks.settings.name.label"
             },
             {
                 "type":"text",
                 "id":"designation",
-                "label":"Designation"
+                "label":"t:sections.reviews.blocks.settings.designation.label"
             },
             {
                 "type":"richtext",
                 "id":"description",
-                "label":"Description"
+                "label":"t:sections.reviews.blocks.settings.description.label"
             },
             {
                 "type":"select",
                 "options":[
                     {
                         "value":"1",
-                        "label":"1"
+                        "label":"t:sections.reviews.blocks.settings.rate.options__1.label"
                     },
                     {
                         "value":"2",
-                        "label":"2"
+                        "label":"t:sections.reviews.blocks.settings.rate.options__2.label"
                     },
                     {
                         "value":"3",
-                        "label":"3"
+                        "label":"t:sections.reviews.blocks.settings.rate.options__3.label"
                     },
                     {
                         "value":"4",
-                        "label":"4"
+                        "label":"t:sections.reviews.blocks.settings.rate.options__4.label"
                     },
                     {
                         "value":"5",
-                        "label":"5"
+                        "label":"t:sections.reviews.blocks.settings.rate.options__5.label"
                     }
                 ],
                 "id":"review",
-                "label":"Select Review"
+                "label":"t:sections.reviews.blocks.settings.rate.label"
             }
         ]
     }
   ],
   "presets": [
     {
-      "name": "Reviews slider"
+      "name": "t:sections.reviews.presets.name"
     }
   ]
 }

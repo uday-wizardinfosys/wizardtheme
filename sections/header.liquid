@@ -87,12 +87,12 @@
 </header>
 {% schema %}
   {
-     "name":"Header",
+     "name":"t:sections.header.name",
      "settings" :[
         {
           "type": "image_picker",
           "id": "logo",
-          "label": "Logo image"
+          "label": "t:sections.header.settings.logo.label"
         },
         {
           "type": "range",
@@ -102,31 +102,31 @@
           "step": 10,
           "default": 100,
           "unit": "px",
-          "label": "logo width"
+          "label": "t:sections.header.settings.logo_width.label"
         },
         {
           "type": "link_list",
           "id": "menu",
           "default": "main-menu",
-          "label": "Menu"
+          "label": "t:sections.header.settings.nav.label"
         },
         {
           "type": "checkbox",
           "id": "enable_sticky_header",
           "default": true,
-          "label": "Enable sticky header",
-          "info": "Header shows on the screen as customers scroll up."
+          "label": "t:sections.header.settings.sticky_header.label",
+          "info": "t:sections.header.settings.sticky_header.info"
         },
         {
           "type":"color",
           "id":"back-color",
-          "label":"Background Color",
+          "label":"t:sections.header.settings.bg_color.label",
           "default":"#ffffff"
         },
         {
           "type":"color",
           "id":"text-color",
-          "label":"Text Color",
+          "label":"t:sections.header.settings.text_color.label",
           "default":"#000000"
         }
      ]

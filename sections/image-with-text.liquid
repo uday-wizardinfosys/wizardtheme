@@ -45,68 +45,68 @@
 
 {% schema %}
 {
-  "name": "Image with text",
+  "name": "t:sections.image-with-text.name",
   "tag": "section",
   "class": "section-image-with-text",
   "settings": [
     {
         "type":"checkbox",
         "id":"column-reverse",
-        "label":"Enable Reverse Column"
+        "label":"t:sections.image-with-text.settings.column-reverse.label"
     },
     {
       "type": "select",
       "options": [
         {
           "value": "align-items-start",
-          "label": "Top"
+          "label": "t:sections.image-with-text.settings.position.options__1.label"
         },
         {
           "value": "align-items-center",
-          "label": "Middle"
+          "label": "t:sections.image-with-text.settings.position.options__2.label"
         },
         {
           "value": "align-items-end",
-          "label": "Bottom"
+          "label": "t:sections.image-with-text.settings.position.options__3.label"
         }
       ],
       "id": "position",
       "default": "align-items-center",
-      "label": "Select position"
+      "label": "t:sections.image-with-text.settings.position.label"
     },  
     {
         "type":"image_picker",
         "id":"image",
-        "label":"Image"
+        "label":"t:sections.image-with-text.settings.image.label"
     },
     {
         "type":"text",
         "id":"title",
-        "label":"Title",
+        "label":"t:sections.image-with-text.settings.title.label",
         "default":"Everything we create is inspired by real girls, real life."
     },
     {
         "type":"richtext",
         "id":"description",
-        "label":"Description",
+        "label":"t:sections.image-with-text.settings.description.label",
         "default":"<p>We don't accept ordinary. We believe everyone has the power to be ordinary. Our clothing and accessories provide a platform for self-expression served up with a slice of keeping it real.</p>"
     },
     {
         "type":"text",
         "id":"btn-name",
-        "label":"Button Name",
+        "label":"t:sections.image-with-text.settings.btn-name.label",
         "default":"Women Collection"
     },
     {
         "type":"url",
-        "id":"btn-link",
-        "label":"Button Link"
+        "id":"btn-link", 
+        "label":"t:sections.image-with-text.settings.btn-link.label"
     }
   ],
 
   "presets": [
     {
-      "name": "Image with text"
+      "name": "t:sections.image-with-text.presets.name"
     }
   ]
 }

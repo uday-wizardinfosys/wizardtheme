@@ -40,50 +40,50 @@
 
 {% schema %}
 {
-  "name": "Featured collections",
+  "name": "t:sections.featured-collection.name",
   "tag": "section",
   "class": "section",
   "settings": [
     {
         "type":"text",
         "id":"title",
-        "label":"Title",
+        "label":"t:sections.featured-collection.settings.title.label",
         "default":"Discover Our products"
     },
     {
         "type":"richtext",
         "id":"description",
-        "label":"Description",
+        "label":"t:sections.featured-collection.settings.description.label",
         "default":"<p>Believe what you see!</p>"
     },
     {
         "type":"text",
         "id":"btn-title",
-        "label":"Button Title",
+        "label":"t:sections.featured-collection.settings.btn-title.label",
         "default":"View More"
     },
     {
         "type":"url",
         "id":"btn-link",
-        "label":"Button Link"        
+        "label":"t:sections.featured-collection.settings.btn-link.label"        
     }
   ],
   "blocks":[
     {
         "type":"collection",
-        "name":"Collection",
+        "name":"t:sections.featured-collection.blocks.name",
         "settings":[
             {
                 "type":"collection",
                 "id":"coll",
-                "label":"Select Collection"
+                "label":"t:sections.featured-collection.blocks.label"
             }
         ]
     }
   ],
   "presets": [
     {
-      "name": "Featured collections",
+      "name": "t:sections.featured-collection.presets.name",
       "blocks":[
         {
             "type":"collection"

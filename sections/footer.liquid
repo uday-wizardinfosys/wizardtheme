@@ -192,50 +192,50 @@
 {% endjavascript %}
 {% schema %}
 {
-  "name": "footer",
+  "name": "t:sections.footer.name",
   "class": "section-footer",
   "settings": [
     {
         "type":"checkbox",
         "id":"currency",
-        "label":"Enable Currency Drop Down"
+        "label":"t:sections.footer.settings.currency.label"
     },
     {
         "type":"checkbox",
         "id":"social",
-        "label":"Enable Social Meida"
+        "label":"t:sections.footer.settings.social.label"
     }
   ],
   "blocks":[
     {
         "type":"menu",
-        "name":"Menu",
+        "name":"t:sections.footer.blocks.name",
         "settings":[
             {
                 "type":"link_list",
                 "id":"menu_item",
-                "label":"Select Menu"
+                "label":"t:sections.footer.blocks.settings.menu_item.label"
             },
             {
                 "type":"text",
                 "id":"title",
-                "label":"Title"
+                "label":"t:sections.footer.blocks.settings.title.label"
             }
         ]
     },
     {
         "type":"newslatter",
-        "name":"News Latter",
+        "name":"t:sections.footer.blocks.name_2",
         "settings":[
             {
                 "type":"text",
                 "id":"title",
-                "label":"Title"
+                "label":"t:sections.footer.blocks.settings_2.title.label"
             },
             {
                 "type":"richtext",
                 "id":"description",
-                "label":"Description"
+                "label":"t:sections.footer.blocks.settings_2.description.label"
             }
         ]
     }
