@@ -99,7 +99,7 @@ h6, .h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
-  letter-spacing: var(--body-font-letter-spacing);
+  /* letter-spacing: var(--body-font-letter-spacing); */
 }
 p:empty{
 	display: none;
@@ -837,7 +837,7 @@ textarea.form-control {
 /*-=-=- Buttons -=-=-*/
 button, .btn {
   display: inline-block;
-  padding: 16px 25px;
+  padding: 17px 25px 15px;
   font-family: var(--button-font-family);
   font-style: var(--button-font-style);
   font-size: var(--button-font-size);
@@ -874,6 +874,13 @@ button:focus, .btn:focus {
   margin-left: 6px;
   vertical-align: 0.01em;
   transition: var(--base-transition);
+}
+.btn-transparent:hover,
+.btn-transparent:focus {
+  color: var(--button-secondary-color);
+  background-color: var(--button-primary-background-color);
+  border-color: var(--button-primary-background-color);
+  outline: 0;
 }
 .btn-primary {
   color: var(--button-primary-color);

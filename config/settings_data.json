@@ -1,4 +1,36 @@
 {
   "current": {
+    "body_font_family": "montserrat_n4",
+    "button_font_family": "montserrat_n6",
+    "button_font_line_height": 110,
+    "navigation_font_family": "montserrat_n5",
+    "badge_position": "top right",
+    "sale_badge_color": "#ed8000",
+    "sold_badge_color": "#ff3535",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "annoucement-bar-text": "Welcome to store",
+          "annoucement-bar-link": "",
+          "annoucement-bar-alignment": "",
+          "annoucement-bar-bg-color": "#ffd7d7",
+          "annoucement-bar-text-color": "#232323"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
   }
 }
