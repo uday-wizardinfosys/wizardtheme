@@ -13,55 +13,122 @@
 .header-fixed.header-scroll-bg {
   background-color: var(--color-white);
 }
-
+.header-unfixed {
+  background-color: {{section.settings.back-color}};
+}
+.header-unfixed .menu-link {
+  color: {{section.settings.text-color}};
+}
 
 {% endstyle %}
 
 <header>
-  <div class="header-wrapper header-fixed header-fixed-bg">
+  <div class="header-wrapper {% if section.settings.enable_sticky_header %}header-fixed header-fixed-bg{% else %}header-unfixed{% endif %}">
     <nav class="header-bar">
       <div class="page-width">
-        <a class="header-brand" href="#">
-          <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/Kama.png?v=1669457708" alt="Kama"/>
+        <a class="header-brand" href="{{ routes.root_url }}">
+            {%- if section.settings.logo != blank -%}
+              {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+              {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
+              {{ section.settings.logo | image_url: width: section.settings.width | image_tag:
+                class: 'heading-logo',
+                widths: '50, 100, 150, 200, 250, 300, 400, 500',
+                height: logo_height,
+                width: section.settings.logo_width,
+                alt: logo_alt
+              }}
+            {%- else -%}
+              <span class="h2">{{ shop.name }}</span>
+            {%- endif -%}          
         </a>
         <button class="header-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
           <span class="header-toggler-icon"></span>
         </button>
-        <div class="header-collapse">
-          <ul class="menu-wrapper mx-auto">
-            <li class="menu-item">
-              <a class="menu-link" href="#">Home</a>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link" href="#">Men</a>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link" href="#">Women</a>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link" href="#">About us</a>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link" href="#">Shop</a>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link" href="#">Blog</a>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link" href="#">Contact us</a>
-            </li>
-          </ul>
-        </div>
+        {%- if section.settings.menu != blank -%}
+          <div class="header-collapse">
+            <ul class="menu-wrapper mx-auto">
+              {%- for link in section.settings.menu.links -%}
+                
+                {%- if link.links != blank -%}
+                  <li class="menu-item">
+                    <a class="menu-link {% if link.current %}active{% endif %}" href="{{ link.url }}">{{ link.title | escape }}</a>
+                  </li>
+                {%- else -%}
+                  <li class="menu-item dropdown">
+                    <a class="menu-link dropdown-toggle {% if link.current %}active{% endif %}" href="{{ link.url }}">{{ link.title | escape }}</a>
+                    <ul class="dropdown-menu">
+                        {%- for childlink in link.links -%}
+                          <li>
+                              <a class="dropdown-item {% if childlink.current %}active{% endif %}" href="{{ childlink.url }}">
+                                {{ childlink.title | escape }}
+                              </a>
+                          </li>
+                        {%- endfor -%}  
+                    </ul>
+                  </li>
+                {%- endif -%}  
+              {%- endfor -%}                
+            </ul>
+          </div>
+        {% endif %}
         <div class="header-right">
           <button type="button" class="header-search-btn">{% render 'icon-search' %}</button>
-            <button type="button" class="cart-icon-btn">
-              {% render 'icon-cart' %}
-              <span class="cart-icon-badge">2</span>
-            </button>
-          <button class="account-btn">{% render 'icon-user' %}</button>
-
+          <a href="{{ routes.cart_url }}" type="button" class="cart-icon-btn">
+            {% render 'icon-cart' %}
+            <span class="cart-icon-badge">2</span>
+          </a>
+          {%- if shop.customer_accounts_enabled -%}
+          <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="account-btn">{% render 'icon-user' %}</a>
+          {%- endif -%}
         </div>
       </div>
     </nav>
   </div>
 </header>
+{% schema %}
+  {
+     "name":"t:sections.header.name",
+     "settings" :[
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "t:sections.header.settings.logo.label"
+        },
+        {
+          "type": "range",
+          "id": "logo_width",
+          "min": 50,
+          "max": 250,
+          "step": 10,
+          "default": 100,
+          "unit": "px",
+          "label": "t:sections.header.settings.logo_width.label"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "default": "main-menu",
+          "label": "t:sections.header.settings.nav.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_sticky_header",
+          "default": true,
+          "label": "t:sections.header.settings.sticky_header.label",
+          "info": "t:sections.header.settings.sticky_header.info"
+        },
+        {
+          "type":"color",
+          "id":"back-color",
+          "label":"t:sections.header.settings.bg_color.label",
+          "default":"#ffffff"
+        },
+        {
+          "type":"color",
+          "id":"text-color",
+          "label":"t:sections.header.settings.text_color.label",
+          "default":"#000000"
+        }
+     ]
+  }
+{% endschema %}

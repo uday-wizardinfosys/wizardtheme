@@ -14,13 +14,15 @@ var header = document.querySelector('.header-wrapper');
 // }
 
 
-
+   
     window.addEventListener('scroll', function() {
-        if (window.scrollY > header.offsetHeight) {
-            document.querySelector('.header-fixed').classList.add('header-scrolled');
-            document.querySelector('.header-fixed').classList.add('header-scroll-bg');
-        } else {
-            document.querySelector('.header-fixed').classList.remove('header-scrolled');
-            document.querySelector('.header-fixed').classList.remove('header-scroll-bg');
-        }
+        if(document.getElementsByClassName('header-fixed').length){
+            if (window.scrollY > header.offsetHeight) {
+                document.querySelector('.header-fixed').classList.add('header-scrolled');
+                document.querySelector('.header-fixed').classList.add('header-scroll-bg');
+            } else {
+                document.querySelector('.header-fixed').classList.remove('header-scrolled');
+                document.querySelector('.header-fixed').classList.remove('header-scroll-bg');
+            }
+        }    
     });

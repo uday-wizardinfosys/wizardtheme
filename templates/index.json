@@ -3,21 +3,232 @@
     "377a8443-4733-420e-8752-53ed3c4323f2": {
       "type": "image-banner",
       "settings": {
+        "image": "shopify:\/\/shop_images\/Banner.jpg",
+        "title": "Further Reductions",
+        "sub-title": "Up To 70% Off On Sale",
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.In rhoncus augue nibh, at ullamcorper orci ullamcorper ut.<\/p>",
+        "btn-name": "Explore Collection",
+        "btn-link": "",
+        "position": "align-items-center",
+        "text-align": "style1"
       }
     },
-    "030a76a4-3c61-459a-8a12-ef0ded7e1e79": {
-      "type": "image-block",
+    "284794f4-7e42-4b35-b1fa-3265d453c443": {
+      "type": "image-with-text-vertical",
+      "blocks": {
+        "44df096f-f822-44f0-9fa9-3373148a17ee": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/woman-in-summer-floral-fashion.jpg",
+            "title": "Effortlessly refined styles",
+            "sub-title": "for celebrating",
+            "btn-name": "Women Collection",
+            "btn-link": "#"
+          }
+        },
+        "d2491f2c-fbd4-4498-84a6-ecbc9676bc12": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/man-in-summer-floral-fashion.jpg",
+            "image-icon": "shopify:\/\/shop_images\/brand-logo.png",
+            "title": "A stand out shirt is a one-and-done autumn look",
+            "sub-title": "",
+            "btn-name": "Men Collection",
+            "btn-link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "44df096f-f822-44f0-9fa9-3373148a17ee",
+        "d2491f2c-fbd4-4498-84a6-ecbc9676bc12"
+      ],
       "settings": {
       }
     },
-    "52156f5c-a12a-4150-8f80-2e5a87a6bfcb": {
-      "type": "featured-products",
+    "a31f1109-5377-416c-882b-07fbe52e4592": {
+      "type": "image-block",
+      "blocks": {
+        "template--15992652431532__a31f1109-5377-416c-882b-07fbe52e4592-167109475059fa1a59-0": {
+          "type": "box",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-tree.png",
+            "title": "Sustainably sourced",
+            "description": "<p>Made in Canada using 100% ethically-sourced and sustainable materials. We believe in the long term.<\/p>"
+          }
+        },
+        "template--15992652431532__a31f1109-5377-416c-882b-07fbe52e4592-167109475059fa1a59-1": {
+          "type": "box",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-wallet.png",
+            "title": "Fair Pricing",
+            "description": "<p>We're able to keep quality high and costs low by selling direct to you and avoiding traditional markups.<\/p>"
+          }
+        },
+        "template--15992652431532__a31f1109-5377-416c-882b-07fbe52e4592-167109475059fa1a59-2": {
+          "type": "box",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-chat.png",
+            "title": "24h Support",
+            "description": "<p>Our amazing support team is always happy to help with your order, shipping and return.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15992652431532__a31f1109-5377-416c-882b-07fbe52e4592-167109475059fa1a59-0",
+        "template--15992652431532__a31f1109-5377-416c-882b-07fbe52e4592-167109475059fa1a59-1",
+        "template--15992652431532__a31f1109-5377-416c-882b-07fbe52e4592-167109475059fa1a59-2"
+      ],
       "settings": {
       }
     },
     "60e8c1fd-bf78-4609-80e4-3061f997865a": {
       "type": "image-with-text",
       "settings": {
+        "column-reverse": false,
+        "position": "align-items-center",
+        "image": "shopify:\/\/shop_images\/girls.jpg",
+        "title": "Everything we create is inspired by real girls, real life.",
+        "description": "<p>We don't accept ordinary. We believe everyone has the power to be ordinary.  Our clothing and accessories provide a platform for self-expression served up with a slice of keeping it real.<\/p>",
+        "btn-name": "Women Collection",
+        "btn-link": "#"
+      }
+    },
+    "c0b6095c-9669-4c76-97b6-9f980ed9e426": {
+      "type": "featured-collections",
+      "blocks": {
+        "5c7a9e32-0436-47b2-bf74-bf0b35bb7211": {
+          "type": "collection",
+          "settings": {
+            "coll": "women"
+          }
+        },
+        "8bb96de3-2859-462a-a8a8-017d560b7470": {
+          "type": "collection",
+          "settings": {
+            "coll": "frontpage"
+          }
+        },
+        "6738e3d6-ceef-4a27-b664-463e18c9c9ad": {
+          "type": "collection",
+          "settings": {
+            "coll": "test"
+          }
+        }
+      },
+      "block_order": [
+        "5c7a9e32-0436-47b2-bf74-bf0b35bb7211",
+        "8bb96de3-2859-462a-a8a8-017d560b7470",
+        "6738e3d6-ceef-4a27-b664-463e18c9c9ad"
+      ],
+      "settings": {
+        "title": "Discover Our products",
+        "description": "<p>Believe what you see!<\/p>",
+        "btn-title": "View More",
+        "btn-link": ""
+      }
+    },
+    "80a4dd7f-bcd1-4766-92b8-27a19521d623": {
+      "type": "brands",
+      "blocks": {
+        "c9eb63d6-1e9e-4c10-bf0b-d52fd21f9360": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LOGO-PLACEHOLDER-1.png"
+          }
+        },
+        "88d9a042-a49f-4013-bda8-725a2e234590": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LOGO-PLACEHOLDER-2.png"
+          }
+        },
+        "1b180e6a-0400-483a-bbc4-7f3cecfa9871": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LOGO-PLACEHOLDER-3.png"
+          }
+        },
+        "a4bb297b-f0a8-45b7-9ff1-e83694d474b9": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LOGO-PLACEHOLDER-4.png"
+          }
+        },
+        "d8563c25-9101-4698-a54a-2a6621b16430": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LOGO-PLACEHOLDER-5.png"
+          }
+        },
+        "7db4ff73-be33-49d0-a288-b0a97d5f096f": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LOGO-PLACEHOLDER-6.png"
+          }
+        },
+        "03ad7028-bf2f-4450-b244-f3003e2c314d": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LOGO-PLACEHOLDER-7.png"
+          }
+        }
+      },
+      "block_order": [
+        "c9eb63d6-1e9e-4c10-bf0b-d52fd21f9360",
+        "88d9a042-a49f-4013-bda8-725a2e234590",
+        "1b180e6a-0400-483a-bbc4-7f3cecfa9871",
+        "a4bb297b-f0a8-45b7-9ff1-e83694d474b9",
+        "d8563c25-9101-4698-a54a-2a6621b16430",
+        "7db4ff73-be33-49d0-a288-b0a97d5f096f",
+        "03ad7028-bf2f-4450-b244-f3003e2c314d"
+      ],
+      "settings": {
+        "title": "As seen in"
+      }
+    },
+    "ada81cef-849e-4867-a9a8-5b58b80cdc2b": {
+      "type": "reviews",
+      "blocks": {
+        "e3fb8fe4-9aa6-4706-8e53-59ed3eae6098": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/author-img-1.png",
+            "name": "Roboto Dose",
+            "designation": "Head Of Offcer",
+            "description": "<p>“Few brands manage to harness the talent of French and Italian mills in a way that honours the tradition of the makers. Here Chanet excels as the challenger.”<\/p>",
+            "review": "2"
+          }
+        },
+        "1a7b268d-c406-487b-833b-5944bf739a40": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/author-img-1.png",
+            "name": "Roboto Dose",
+            "designation": "Head Of Offcer",
+            "description": "<p>“Few brands manage to harness the talent of French and Italian mills in a way that honours the tradition of the makers. Here Chanet excels as the challenger.”<\/p>",
+            "review": "3"
+          }
+        },
+        "214740a4-5327-409c-a3f8-d0364ab53934": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/author-img-1.png",
+            "name": "Roboto Dose",
+            "designation": "Head Of Offcer",
+            "description": "<p>“Few brands manage to harness the talent of French and Italian mills in a way that honours the tradition of the makers. Here Chanet excels as the challenger.”<\/p>",
+            "review": "4"
+          }
+        }
+      },
+      "block_order": [
+        "e3fb8fe4-9aa6-4706-8e53-59ed3eae6098",
+        "1a7b268d-c406-487b-833b-5944bf739a40",
+        "214740a4-5327-409c-a3f8-d0364ab53934"
+      ],
+      "settings": {
+        "title": "What Our Clients Says",
+        "btn-name": "View More",
+        "btn-link": "#"
       }
     },
     "c0b6095c-9669-4c76-97b6-9f980ed9e426": {
@@ -28,31 +239,18 @@
     "284794f4-7e42-4b35-b1fa-3265d453c443": {
       "type": "image-with-text-vertical",
       "settings": {
-      }
-    },
-    "80a4dd7f-bcd1-4766-92b8-27a19521d623": {
-      "type": "brands",
-      "settings": {
-      }
-    },
-    "ada81cef-849e-4867-a9a8-5b58b80cdc2b": {
-      "type": "reviews",
-      "settings": {
-      }
-    },
-    "1287781c-4d29-4eeb-af07-ddc70c359f4c": {
-      "type": "featured-blogs",
-      "settings": {
+        "title": "From the Blog",
+        "btn-name": "View All",
+        "btn-link": ""
       }
     }
   },
   "order": [
     "377a8443-4733-420e-8752-53ed3c4323f2",
-    "030a76a4-3c61-459a-8a12-ef0ded7e1e79",
-    "52156f5c-a12a-4150-8f80-2e5a87a6bfcb",
+    "284794f4-7e42-4b35-b1fa-3265d453c443",
+    "a31f1109-5377-416c-882b-07fbe52e4592",
     "60e8c1fd-bf78-4609-80e4-3061f997865a",
     "c0b6095c-9669-4c76-97b6-9f980ed9e426",
-    "284794f4-7e42-4b35-b1fa-3265d453c443",
     "80a4dd7f-bcd1-4766-92b8-27a19521d623",
     "ada81cef-849e-4867-a9a8-5b58b80cdc2b",
     "1287781c-4d29-4eeb-af07-ddc70c359f4c"

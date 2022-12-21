@@ -4,36 +4,36 @@
     "theme_name": "Kama",
     "theme_version": "1.0.0",
     "theme_author": "Shopify",
-    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
-    "theme_support_url": "https://support.shopify.com/"
+    "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes",
+    "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
     "name": "t:settings_schema.colors.name",
     "settings": [
       {
         "type": "header",
-        "content": "Main"
+        "content": "t:settings_schema.colors.settings.header.label"
       },
       {
         "type": "color",
         "id": "colors_primary",
         "default": "#ffd7d7",
-        "label": "Primary Color",
-        "info": "Used for backgrounds."
+        "label": "t:settings_schema.colors.settings.colors_primary.label",
+        "info": "t:settings_schema.colors.settings.colors_primary.info"
       },
       {
         "type": "color",
         "id": "colors_dark",
         "default": "#232323",
-        "label": "Dark Color",
-        "info": "Used for headings, forms and highlight text."
+        "label": "t:settings_schema.colors.settings.colors_dark.label",
+        "info": "t:settings_schema.colors.settings.colors_dark.info"
       },
       {
         "type": "color",
         "id": "colors_body",
         "default": "#4C4C4B",
-        "label": "Text Color",
-        "info": "Used for text."
+        "label": "t:settings_schema.colors.settings.colors_body.label",
+        "info": "t:settings_schema.colors.settings.colors_body.info"
       },
       {
         "type": "header",
@@ -43,22 +43,22 @@
         "type": "color",
         "id": "button_primary_color",
         "default": "#232323",
-        "label": "Dark Color",
-        "info": "Used as foreground color on accent colors."
+        "label": "t:settings_schema.colors.settings.button_primary_color.label",
+        "info": "t:settings_schema.colors.settings.button_primary_color.info"
       },
       {
         "type": "color",
         "id": "button_primary_background_color",
         "default": "#ffd7d7",
-        "label": "Primary Color",
-        "info": "Used for solid button background."
+        "label": "t:settings_schema.colors.settings.button_primary_background_color.label",
+        "info": "t:settings_schema.colors.settings.button_primary_background_color.info"
       },
       {
         "type": "color",
         "id": "button_secondary_color",
         "default": "#232323",
-        "label": "Dark Color",
-        "info": "Used for button border and foreground, when button background is transparent."
+        "label": "t:settings_schema.colors.settings.button_secondary_color.label",
+        "info": "t:settings_schema.colors.settings.button_secondary_color.info"
       }
     ]
   },
@@ -83,7 +83,7 @@
         "max": 200,
         "step": 1,
         "unit": "%",
-        "label": "Line height",
+        "label": "t:settings_schema.typography.settings.heading_font_line_height.label",
         "default": 125
       },
       {
@@ -93,12 +93,12 @@
         "max": 2,
         "step": 0.1,
         "unit": "em",
-        "label": "Letter spacing",
+        "label": "t:settings_schema.typography.settings.heading_font_letter_spacing.label",
         "default": 0
       },
       {
         "type": "header",
-        "content": "Font size"
+        "content": "t:settings_schema.typography.settings.header__2.label"
       },
       {
         "type": "range",
@@ -107,7 +107,7 @@
         "max": 80,
         "step": 1,
         "unit": "px",
-        "label": "Heading H1",
+        "label": "t:settings_schema.typography.settings.heading_h1.label",
         "default": 50
       },
       {
@@ -117,7 +117,7 @@
         "max": 60,
         "step": 1,
         "unit": "px",
-        "label": "Headings H2",
+        "label": "t:settings_schema.typography.settings.heading_h2.label",
         "default": 40
       },
       {
@@ -127,7 +127,7 @@
         "max": 45,
         "step": 1,
         "unit": "px",
-        "label": "Headings H3",
+        "label": "t:settings_schema.typography.settings.heading_h3.label",
         "default": 30
       },
       {
@@ -137,7 +137,7 @@
         "max": 35,
         "step": 1,
         "unit": "px",
-        "label": "Headings H4",
+        "label": "t:settings_schema.typography.settings.heading_h4.label",
         "default": 24
       },
       {
@@ -147,7 +147,7 @@
         "max": 30,
         "step": 1,
         "unit": "px",
-        "label": "Headings H5",
+        "label": "t:settings_schema.typography.settings.heading_h5.label",
         "default": 20
       },
       {
@@ -157,19 +157,19 @@
         "max": 25,
         "step": 1,
         "unit": "px",
-        "label": "Headings H6",
+        "label": "t:settings_schema.typography.settings.heading_h6.label",
         "default": 18
       },
       {
         "type": "header",
-        "content": "t:settings_schema.typography.settings.header__2.content"
+        "content": "t:settings_schema.typography.settings.header__3.label"
       },
       {
         "type": "font_picker",
         "id": "body_font_family",
         "default": "poppins_n4",
-        "label": "t:settings_schema.typography.settings.type_body_font.label",
-        "info": "t:settings_schema.typography.settings.type_body_font.info"
+        "label": "t:settings_schema.typography.settings.body_font_family.label",
+        "info": "t:settings_schema.typography.settings.body_font_family.info"
       },
       {
         "type": "range",
@@ -178,7 +178,7 @@
         "max": 30,
         "step": 1,
         "unit": "px",
-        "label": "Font size",
+        "label": "t:settings_schema.typography.settings.body_font_size.label",
         "default": 16
       },
       {
@@ -188,7 +188,7 @@
         "max": 250,
         "step": 2,
         "unit": "%",
-        "label": "Line height",
+        "label": "t:settings_schema.typography.settings.body_font_line_height.label",
         "default": 162
       },
       {
@@ -198,19 +198,19 @@
         "max": 2,
         "step": 0.1,
         "unit": "em",
-        "label": "Letter spacing",
+        "label": "t:settings_schema.typography.settings.body_font_letter_spacing.label",
         "default": -0.2
       },
       {
         "type": "header",
-        "content": "Buttons"
+        "content": "t:settings_schema.typography.settings.header__4.content"
       },
       {
         "type": "font_picker",
         "id": "button_font_family",
         "default": "poppins_n6",
-        "label": "t:settings_schema.typography.settings.type_body_font.label",
-        "info": "t:settings_schema.typography.settings.type_body_font.info"
+        "label": "t:settings_schema.typography.settings.button_font_family.label",
+        "info": "t:settings_schema.typography.settings.button_font_family.info"
       },
       {
         "type": "range",
@@ -219,7 +219,7 @@
         "max": 30,
         "step": 1,
         "unit": "px",
-        "label": "Font size",
+        "label": "t:settings_schema.typography.settings.button_font_size.label",
         "default": 14
       },
       {
@@ -229,7 +229,7 @@
         "max": 200,
         "step": 2,
         "unit": "%",
-        "label": "Line height",
+        "label": "t:settings_schema.typography.settings.button_font_line_height.label",
         "default": 126
       },
       {
@@ -239,19 +239,19 @@
         "max": 2,
         "step": 0.1,
         "unit": "em",
-        "label": "Letter spacing",
+        "label": "t:settings_schema.typography.settings.button_font_letter_spacing.label",
         "default": 0.8
       },
       {
         "type": "header",
-        "content": "Navigation"
+        "content": "t:settings_schema.typography.settings.header__5.content"
       },
       {
         "type": "font_picker",
         "id": "navigation_font_family",
         "default": "poppins_n5",
-        "label": "t:settings_schema.typography.settings.type_body_font.label",
-        "info": "t:settings_schema.typography.settings.type_body_font.info"
+        "label": "t:settings_schema.typography.settings.navigation_font_family.label",
+        "info": "t:settings_schema.typography.settings.navigation_font_family.info"
       }
     ]
   },
@@ -366,16 +366,10 @@
       },
       {
         "type": "text",
-        "id": "social_tumblr_link",
-        "label": "t:settings_schema.social-media.settings.social_tumblr_link.label",
-        "info": "t:settings_schema.social-media.settings.social_tumblr_link.info"
-      },
-      {
-        "type": "text",
-        "id": "social_snapchat_link",
-        "label": "t:settings_schema.social-media.settings.social_snapchat_link.label",
-        "info": "t:settings_schema.social-media.settings.social_snapchat_link.info"
-      },
+        "id": "social_linkdin_link",
+        "label": "t:settings_schema.social-media.settings.social_linkdin_link.label",
+        "info": "t:settings_schema.social-media.settings.social_linkdin_link.info"
+      },      
       {
         "type": "text",
         "id": "social_youtube_link",
@@ -384,9 +378,9 @@
       },
       {
         "type": "text",
-        "id": "social_vimeo_link",
-        "label": "t:settings_schema.social-media.settings.social_vimeo_link.label",
-        "info": "t:settings_schema.social-media.settings.social_vimeo_link.info"
+        "id": "social_dribble_link",
+        "label": "t:settings_schema.social-media.settings.social_dribble_link.label",
+        "info": "t:settings_schema.social-media.settings.social_dribble_link.info"
       }
     ]
   },

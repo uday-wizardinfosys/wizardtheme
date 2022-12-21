@@ -6,53 +6,56 @@
   }
 {% endstyle %}
 
-
+{% if section.settings.annoucement-bar-text != blank %}
 <div class="annoucement-bar-wrapper">
   <div class="page-width">
-    <div class="annoucement-bar-content text-center">
-      <p>Free Shipping World wide for all orders over $199.</p>
+    <div class="annoucement-bar-content {{section.settings.annoucement-bar-alignment}}">
+      <p>{{section.settings.annoucement-bar-text}}</p>
     </div>
   </div>
 </div>
-
+{% endif %}
 
 {% schema %}
   {
-    "name": "Annoucement bar",
+    "name": "t:sections.announcement-bar.name",
     "settings": [
       {
         "type": "text",
         "id": "annoucement-bar-text",
-        "label": "Text",
+        "label": "t:sections.announcement-bar.settings.text.label",
         "default": "Welcome to store"
-      },
-      {
-        "type": "link_list",
-        "id": "annoucement-bar-link",
-        "label": "Link"
-      },
+      },      
       {
         "type": "select",
         "id": "annoucement-bar-alignment",
-        "label": "Text alignment",
+        "label": "t:sections.announcement-bar.settings.text_alignment.label",
         "options": [
-          {
-            "group": "text-alignment",
-            "value": "",
-            "label": ""
+          {            
+            "value": "text-left",
+            "label": "t:sections.announcement-bar.settings.text_alignment.options__1.label"
+          },
+          {            
+            "value": "text-center",
+            "label": "t:sections.announcement-bar.settings.text_alignment.options__2.label"
+          },
+          {            
+            "value": "text-right",
+            "label": "t:sections.announcement-bar.settings.text_alignment.options__3.label"
           }
         ],
-        "default": ""
+        "default": "text-center"
       },
       {
         "type": "color",
         "id": "annoucement-bar-bg-color",
-        "label": "background color",
+        "label": "t:sections.announcement-bar.settings.bg_color.label",
         "default": "#FFD7D7"
-      }, {
+      }, 
+      {
         "type": "color",
         "id": "annoucement-bar-text-color",
-        "label": "Text color",
+        "label": "t:sections.announcement-bar.settings.text_color.label",
         "default": "#232323"
       }
     ]
