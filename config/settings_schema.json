@@ -283,7 +283,50 @@
         "default": 5
       }
     ]
-  },  
+  },
+  {
+    "name": "t:settings_schema.badges.name",
+    "settings": [
+      {
+        "type": "select",
+        "id": "badge_position",
+        "options": [
+          {
+            "value": "top left",
+            "label": "t:settings_schema.badges.settings.position.options__3.label"
+          },
+          {
+            "value": "top right",
+            "label": "t:settings_schema.badges.settings.position.options__4.label"
+          }
+        ],
+        "default": "top left",
+        "label": "t:settings_schema.badges.settings.position.label"
+      },
+      {
+        "type": "range",
+        "id": "badge_corner_radius",
+        "min": 0,
+        "max": 40,
+        "step": 1,
+        "unit": "px",
+        "label": "t:settings_schema.global.settings.corner_radius.label",
+        "default": 4
+      },
+      {
+        "type": "color",
+        "id": "sale_badge_color",
+        "default": "#f37777",
+        "label": "Sale badge color"
+      },
+      {
+        "type": "color",
+        "id": "sold_badge_color",
+        "default": "#f37777",
+        "label": "Sold badge color"
+      }
+    ]
+  },
   {
     "name": "t:settings_schema.social-media.name",
     "settings": [

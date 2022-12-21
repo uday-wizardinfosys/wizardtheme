@@ -1,5 +1,12 @@
 {
   "current": {
+    "body_font_family": "montserrat_n4",
+    "button_font_family": "montserrat_n6",
+    "button_font_line_height": 110,
+    "navigation_font_family": "montserrat_n5",
+    "badge_position": "top right",
+    "sale_badge_color": "#ed8000",
+    "sold_badge_color": "#ff3535",
     "social_twitter_link": "#",
     "social_facebook_link": "#",
     "social_pinterest_link": "#",

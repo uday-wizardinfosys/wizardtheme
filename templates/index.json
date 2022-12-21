@@ -231,8 +231,13 @@
         "btn-link": "#"
       }
     },
-    "1287781c-4d29-4eeb-af07-ddc70c359f4c": {
-      "type": "featured-blogs",
+    "c0b6095c-9669-4c76-97b6-9f980ed9e426": {
+      "type": "featured-collections",
+      "settings": {
+      }
+    },
+    "284794f4-7e42-4b35-b1fa-3265d453c443": {
+      "type": "image-with-text-vertical",
       "settings": {
         "title": "From the Blog",
         "btn-name": "View All",
