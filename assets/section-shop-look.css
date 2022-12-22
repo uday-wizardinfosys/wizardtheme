@@ -1,0 +1,45 @@
+.look_wrapper {
+    padding: 150px 0 110px;
+}
+.look_section_left--image {
+    position: relative;
+}
+.look_section_left--image img {
+    width: 100%;
+}
+.look_section_left--image-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 8px;
+}
+.look_point {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--color-white);
+    border-radius: 100%;
+}
+.look_point_circle {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: var(--color-white);
+}
+.look_section_right--content-top {
+    margin-bottom: 30px;
+}
+.look_section_right--content-title {
+    margin-bottom: 10px;
+}
+
+
+
+

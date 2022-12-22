@@ -1,0 +1,72 @@
+{{ 'component-look.css' | asset_url | stylesheet_tag }}
+{{ 'section-shop-look.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+.look_point_one {
+    top: 30%;
+    left: 30%;
+}
+.look_point_two {
+    top: 50%;
+    left: 41%;
+}
+{% endstyle %}
+
+
+<div class="look_wrapper">
+    <div class="page-width">
+        <div class="grid-row">
+            <div class="grid-col-xl-6 grid-col-12">
+                <div class="look_section_left">
+                    <div class="look_section_left--image">
+                        <span class="badge look_section_left--image-badge">50%</span>
+                        <span class="look_point look_point_one"><span class="look_point_circle"></span></span>
+                        <span class="look_point look_point_two"><span class="look_point_circle"></span></span>
+                        <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/look-image-1.png" alt="look-image">
+                    </div>
+                </div>
+            </div>
+            <div class="grid-col-xl-6 grid-col-12">
+                <div class="look_section_right">
+                    <div class="look_section_right--content">
+                        <div class="look_section_right--content-top">
+                            <h2 class="look_section_right--content-title">Shop the look</h2>
+                            <p>Monochromatic outfits for the season.</p>
+                        </div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-col-lg-6 grid-col-12">
+                                {% render 'product-card' %}
+                        </div>
+                        <div class="grid-col-lg-6 grid-col-12">
+                            {% render 'product-card' %}
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Shop the look",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+  ],
+
+  "presets": [
+    {
+      "name": "Shop the look"
+    }
+  ]
+}
+{% endschema %}
+
+

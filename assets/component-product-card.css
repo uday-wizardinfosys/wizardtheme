@@ -19,7 +19,8 @@
     left: 0;
     padding: 7px 3px;
 }
-.product_card__badges .badge {
+.badge {
+    display: inline-block;
     margin: 4px;
     font-size: 12px;
     line-height: 12px;
@@ -31,10 +32,10 @@
     border-radius: var(--badge-border-radius);
     text-transform: uppercase;
 }
-.product_card__badges .sale_badge {
+.sale_badge {
     background-color: var(--badge-sale-background-color);
 }
-.product_card__badges .sold_badge {
+.sold_badge {
     background-color: var(--badge-sold-background-color);
 }
 .product_card__image_overlay {
