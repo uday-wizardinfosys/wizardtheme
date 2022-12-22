@@ -285,23 +285,23 @@
     ]
   },
   {
-    "name": "t:settings_schema.badges.name",
+    "name": "Badges",
     "settings": [
       {
         "type": "select",
         "id": "badge_position",
         "options": [
           {
-            "value": "top left",
-            "label": "t:settings_schema.badges.settings.position.options__3.label"
+            "value": "top-left",
+            "label": "Top left"
           },
           {
-            "value": "top right",
-            "label": "t:settings_schema.badges.settings.position.options__4.label"
+            "value": "top-right",
+            "label": "Top Right"
           }
         ],
-        "default": "top left",
-        "label": "t:settings_schema.badges.settings.position.label"
+        "default": "top-left",
+        "label": "Top left"
       },
       {
         "type": "range",

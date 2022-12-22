@@ -267,20 +267,16 @@
           "label": "image"
         },
         "title": {
-          "label": "Title",
-          "default": "Further Reductions"
+          "label": "Title"
         },
         "sub-title": {
-          "label": "Sub Title",
-          "default": "Up To 70% Off On Sale"
+          "label": "Sub Title"
         },
         "description": {
-          "label": "Description",
-          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.In rhoncus augue nibh, at ullamcorper orci ullamcorper ut.<\/p>"
+          "label": "Description"
         },
         "btn-name": {
-          "label": "Button Name",
-          "default": "Explore Collection"
+          "label": "Button Name"          
         },
         "btn-link": {
           "label": "Button Link"
@@ -488,6 +484,9 @@
             }
           }
         }
+      },
+      "presets":{
+        "name":"Reviews slider"
       }
     },
     "featured-blog": {
