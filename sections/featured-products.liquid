@@ -4,15 +4,23 @@
 <div class="featured_products_wrapper">
     <div class="page-width">
         <div class="featured_products_top">
-            <div class="featured_products_title_wrapper">
-                <h2 class="featured_products_title">New Arrivals</h2>
-            </div>
-            <div class="featured_products_btns">
-                
+            {% if section.settings.title != blank %}
+                <div class="featured_products_title_wrapper">
+                    <h2 class="featured_products_title">{{section.settings.title}}</h2>
+                </div>
+            {% endif %}
+            <div class="featured_products_btns">                
             </div>
         </div>
         <div class="grid-row">
-            <div class="grid-col-lg-3 grid-col-md-6 grid-col-12">
+            {% for block in section.blocks %}
+                {% assign product = block.settings.product %}
+               
+                <div class="grid-col-lg-3 grid-col-md-6 grid-col-12"> 
+                    {% render 'product-card',card_product:product %}
+                </div>
+            {% endfor %}
+            {% comment %} <div class="grid-col-lg-3 grid-col-md-6 grid-col-12">
                 {% render 'product-card' %}
             </div>
             <div class="grid-col-lg-3 grid-col-md-6 grid-col-12">
@@ -20,14 +28,13 @@
             </div>
             <div class="grid-col-lg-3 grid-col-md-6 grid-col-12">
                 {% render 'product-card' %}
-            </div>
-            <div class="grid-col-lg-3 grid-col-md-6 grid-col-12">
-                {% render 'product-card' %}
-            </div>
+            </div> {% endcomment %}
         </div>
-        <div class="btn_wrap text-center">
-            <a href="#" class="btn btn-transparent btn-arrow">VIEW MORE {% render 'icon-arrow-right' %}</a>
-        </div>
+        {% if section.settings.btn-name != blank %}
+            <div class="btn_wrap text-center">
+                <a href="{{section.settings.btn-link}}" class="btn btn-transparent btn-arrow">{{section.settings.btn-name}} {% render 'icon-arrow-right' %}</a>
+            </div>
+        {% endif %}
     </div>
 </div>
 {% schema %}
@@ -36,8 +43,37 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+        "type":"text",
+        "id":"title",
+        "label":"Title",
+        "default":"New Arrivals"
+    },
+    {
+        "type":"text",
+        "id":"btn-name",
+        "label":"Button Name",
+        "default":"VIEW MORE"
+    },
+    {
+        "type":"url",
+        "id":"btn-link",
+        "label":"Button Link"
+    }
   ],
-
+  "blocks":[
+    {
+        "type":"product",
+        "name":"Product",
+        "settings":[
+            {
+                "type":"product",
+                "id":"product",
+                "label":"Select Product"
+            }
+        ]
+    }
+  ],
   "presets": [
     {
       "name": "Featured products"

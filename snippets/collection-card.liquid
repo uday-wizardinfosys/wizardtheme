@@ -1,9 +1,19 @@
 <div class="collection_card">
     <div class="collection_card__image">
-        <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/collection-2.jpg" alt="collection"/>
+        {% if card_collection.image != blank %}           
+            {% comment %} {{ card_collection.image | image_url: width: 1500 | image_tag:
+                loading: 'lazy',
+                width: card_collection.image.width,           
+                widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                alt: card_collection.image.alt | escape
+            }} {% endcomment %}
+            <img src="{{card_collection.image | img_url:'master'}}">
+        {% else %}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {% endif %}
     </div>
     <div class="collection_card__content">
-        <h3 class="h4 collection_card__title">SHOP EARRINGS</h5>
-        <p>Hot deals. High Quality Earrings</p>
+        <h3 class="h4 collection_card__title">{{card_collection.title}}</h5>
+        {{card_collection.content | escape | truncate: 50}}
     </div>
 </div>

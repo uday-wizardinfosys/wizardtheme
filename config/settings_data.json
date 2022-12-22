@@ -7,25 +7,68 @@
     "badge_position": "top right",
     "sale_badge_color": "#ed8000",
     "sold_badge_color": "#ff3535",
+    "social_twitter_link": "#",
+    "social_facebook_link": "#",
+    "social_pinterest_link": "#",
+    "social_instagram_link": "#",
+    "social_tiktok_link": "#",
+    "social_linkdin_link": "#",
+    "social_youtube_link": "#",
+    "social_dribble_link": "#",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "annoucement-bar-text": "Welcome to store",
-          "annoucement-bar-link": "",
-          "annoucement-bar-alignment": "",
-          "annoucement-bar-bg-color": "#ffd7d7",
+          "annoucement-bar-text": "Welcome to our store",
+          "annoucement-bar-alignment": "text-center",
+          "annoucement-bar-bg-color": "#FFD7D7",
           "annoucement-bar-text-color": "#232323"
         }
       },
       "header": {
         "type": "header",
         "settings": {
+          "logo": "shopify:\/\/shop_images\/Kama.png",
+          "logo_width": 100,
+          "menu": "main-menu",
+          "enable_sticky_header": true,
+          "back-color": "#ffffff",
+          "text-color": "#000000"
         }
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "47d9187c-686b-46ef-a141-b93b95da1b38": {
+            "type": "menu",
+            "settings": {
+              "menu_item": "customer-care",
+              "title": "Customer care"
+            }
+          },
+          "bd4a83e3-3324-47ea-a37a-e5d07285e540": {
+            "type": "menu",
+            "settings": {
+              "menu_item": "customer-care",
+              "title": "Info"
+            }
+          },
+          "be8416a8-dfa7-4782-a446-e6fc71b526aa": {
+            "type": "newslatter",
+            "settings": {
+              "title": "Be a part of our family",
+              "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.In rhoncus augue nibh, at ullamcorper orci ullamcorper ut.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "47d9187c-686b-46ef-a141-b93b95da1b38",
+          "bd4a83e3-3324-47ea-a37a-e5d07285e540",
+          "be8416a8-dfa7-4782-a446-e6fc71b526aa"
+        ],
         "settings": {
+          "currency": true,
+          "social": true
         }
       }
     },

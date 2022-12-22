@@ -1,8 +1,35 @@
 <div class="product_card">
     <div class="product_card__image">
-        <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/Spell-LeiLeiFrillPlaydress-CreamFloral-000095720004_720x_d9544716-16c6-4d7a-b24f-3c1d89e523b2.webp" alt="product" />
-        <div class="product_card__badges {% if settings.badge_position == "top right" %}text-right{% endif %}">
-            <span class="badge sale_badge">Sale</span>
+        {% assign featured_image = card_product.featured_image %}        
+        {%- if card_product.featured_media -%}
+            <img
+                srcset="
+                  {%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if card_product.featured_media.width >= 360 -%}{{ card_product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if card_product.featured_media.width >= 533 -%}{{ card_product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if card_product.featured_media.width >= 720 -%}{{ card_product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if card_product.featured_media.width >= 940 -%}{{ card_product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if card_product.featured_media.width >= 1066 -%}{{ card_product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
+                  {{ card_product.featured_media | image_url }} {{ card_product.featured_media.width }}w
+                "
+                src="{{ card_product.featured_media | image_url: width: 533 }}"
+                sizes="(min-width: 1200px) {{ 1200 | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                alt="{{ card_product.featured_media.alt | escape }}"
+                class="motion-reduce"
+                {% unless lazy_load == false %}
+                  loading="lazy"
+                {% endunless %}
+                width="{{ card_product.featured_media.width }}"
+                height="auto"
+              >
+      {% else %}
+        <div class="background-size-cover lazyload"  data-bgset="{% include 'bgset', image: section.settings.bg_image %}"></div>
+      {% endif %}
+        {% comment %} <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/Spell-LeiLeiFrillPlaydress-CreamFloral-000095720004_720x_d9544716-16c6-4d7a-b24f-3c1d89e523b2.webp" alt="product" /> {% endcomment %}
+        <div class="product_card__badges {% if settings.badge_position == 'top-right' %}text-right{% endif %}">
+            {% if card_product.compare_at_price != blank %}
+                <span class="badge sale_badge">Sale</span>
+            {% endif %}
             <span class="badge sold_badge">Sold out</span>
         </div>
         <div class="product_card__image_overlay">
@@ -10,10 +37,12 @@
         </div>
     </div>
     <div class="product_card__content">
-        <h3 class="h4 product_card__title"><a href="#" class="text-reset">Crochet Mini Dress</a></h3>
+        <h3 class="h4 product_card__title"><a href="{{card_product.url}}" class="text-reset">{{card_product.title}}</a></h3>
         <div class="price">
-            <span class="price__regular">$68.95 USD</span>
-            <span class="price__sale">$68.95 USD</span>
+            <span class="price__regular">{{card_product.price | money}}</span>
+            {% if card_product.compare_at_price != blank %}
+                <span class="price__sale">{{ card_product.compare_at_price | money }}</span>
+            {% endif %}    
         </div>
         <div class="product_card__optoins">
             <div class="product_card__optoins_size">
