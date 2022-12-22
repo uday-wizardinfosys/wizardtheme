@@ -15,6 +15,7 @@ var header = document.querySelector('.header-wrapper');
 
 
 
+
     window.addEventListener('scroll', function() {
         if (window.scrollY > header.offsetHeight) {
             document.querySelector('.header-fixed').classList.add('header-scrolled');
