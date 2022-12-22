@@ -14,7 +14,8 @@ var header = document.querySelector('.header-wrapper');
 // }
 
 
-   
+
+
     window.addEventListener('scroll', function() {
         if(document.getElementsByClassName('header-fixed').length){
             if (window.scrollY > header.offsetHeight) {
