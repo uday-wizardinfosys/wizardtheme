@@ -77,17 +77,20 @@
             {
                 "type":"text",
                 "id":"name",
-                "label":"t:sections.reviews.blocks.settings.name.label"
+                "label":"t:sections.reviews.blocks.settings.name.label",
+                "default":"Loream ipsum"
             },
             {
                 "type":"text",
                 "id":"designation",
-                "label":"t:sections.reviews.blocks.settings.designation.label"
+                "label":"t:sections.reviews.blocks.settings.designation.label",
+                "default":"Loream"
             },
             {
                 "type":"richtext",
                 "id":"description",
-                "label":"t:sections.reviews.blocks.settings.description.label"
+                "label":"t:sections.reviews.blocks.settings.description.label",
+                "default":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.In rhoncus augue nibh, at ullamcorper orci ullamcorper ut.</p>"
             },
             {
                 "type":"select",
@@ -114,14 +117,26 @@
                     }
                 ],
                 "id":"review",
-                "label":"t:sections.reviews.blocks.settings.rate.label"
+                "label":"t:sections.reviews.blocks.settings.rate.label",
+                "default":"5"
             }
         ]
     }
   ],
   "presets": [
     {
-      "name": "t:sections.reviews.presets.name"
+      "name": "t:sections.reviews.presets.name",
+      "blocks":[
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        }
+      ]      
     }
   ]
 }
