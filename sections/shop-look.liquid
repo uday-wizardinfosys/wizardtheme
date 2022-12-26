@@ -1,6 +1,4 @@
-{{ 'component-look.css' | asset_url | stylesheet_tag }}
 {{ 'section-shop-look.css' | asset_url | stylesheet_tag }}
-
 {% style %}
 .look_point_one {
     top: 30%;
@@ -11,8 +9,6 @@
     left: 41%;
 }
 {% endstyle %}
-
-
 <div class="look_wrapper">
     <div class="page-width">
         <div class="grid-row">
@@ -60,7 +56,7 @@
                                 <h2 class="look_section_right--content-title">{{section.settings.title}}</h2>
                             {% endif %}
                             {% if section.settings.sub-title != blank %}
-                            <p>{{section.settings.sub-title}}</p>
+                                <p>{{section.settings.sub-title}}</p>
                             {% endif %}
                         </div>
                     </div>
