@@ -190,7 +190,7 @@
         "title": "Discover Our products",
         "description": "<p>Believe what you see!<\/p>",
         "btn-title": "View More",
-        "btn-link": ""
+        "btn-link": "shopify:\/\/collections"
       }
     },
     "80a4dd7f-bcd1-4766-92b8-27a19521d623": {
@@ -285,7 +285,7 @@
       "settings": {
         "title": "From the Blog",
         "btn-name": "View All",
-        "btn-link": ""
+        "btn-link": "shopify:\/\/blogs\/news"
       }
     }
   },
