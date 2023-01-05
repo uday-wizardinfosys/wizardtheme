@@ -125,9 +125,11 @@
     margin-left: 3px;
 }
 /*-=-= Hover state -=-*/
+.product_card:focus .product_card__image_overlay,
 .product_card:hover .product_card__image_overlay{
     opacity: 1;
 }
+.product_card:focus .product_card__image img,
 .product_card:hover .product_card__image img {
     transform: scale(1.07);
 }

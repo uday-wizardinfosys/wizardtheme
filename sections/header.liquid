@@ -49,17 +49,17 @@
             <ul class="menu-wrapper mx-auto">
               {%- for link in section.settings.menu.links -%}
                 
-                {%- if link.links != blank -%}
+                {%- if link.links == blank -%}
                   <li class="menu-item">
                     <a class="menu-link {% if link.current %}active{% endif %}" href="{{ link.url }}">{{ link.title | escape }}</a>
                   </li>
                 {%- else -%}
                   <li class="menu-item dropdown">
-                    <a class="menu-link dropdown-toggle {% if link.current %}active{% endif %}" href="{{ link.url }}">{{ link.title | escape }}</a>
+                    <button class="menu-link dropdown-toggle {% if link.current %}active{% endif %}">{{ link.title | escape }}</button>
                     <ul class="dropdown-menu">
                         {%- for childlink in link.links -%}
-                          <li>
-                              <a class="dropdown-item {% if childlink.current %}active{% endif %}" href="{{ childlink.url }}">
+                          <li class="dropdown-item">
+                              <a class="dropdown-link {% if childlink.current %}active{% endif %}" href="{{ childlink.url }}">
                                 {{ childlink.title | escape }}
                               </a>
                           </li>
@@ -75,7 +75,7 @@
           <button type="button" class="header-search-btn">{% render 'icon-search' %}</button>
           <a href="{{ routes.cart_url }}" type="button" class="cart-icon-btn">
             {% render 'icon-cart' %}            
-            <span class="cart-icon-badge">2</span>
+            <span class="cart-icon-badge">15</span>
           </a>
           {%- if shop.customer_accounts_enabled -%}
           <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="account-btn">{% render 'icon-user' %}</a>
