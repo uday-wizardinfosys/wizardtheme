@@ -2394,6 +2394,11 @@ button:hover, .btn:hover {
 .dropdown-toggle, .sub_dropdown-toggle {
   white-space: nowrap;
 }
+.sub_dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .dropdown-toggle::after, .sub_dropdown-toggle::after {
   display: inline-block;
   margin-left: 8px;
