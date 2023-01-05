@@ -26,3 +26,20 @@ var header = document.querySelector('.header-wrapper');
             }
         }    
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        let child_dropdown = document.querySelector("ul li.dropdown");        
+        child_dropdown.onclick = function() {
+            if(this.querySelector('ul.dropdown-menu').classList.contains('active')){
+                this.querySelector('ul.dropdown-menu').classList.remove('active'); 
+            }else{
+                this.querySelector('ul.dropdown-menu').classList.add('active'); 
+            }
+                       
+        };
+
+        let child_sub_dropdown = document.querySelector("ul li.submenu");
+        child_sub_dropdown.onclick = function() {
+            this.querySelector('ul.dropdown-menu').classList.toggle('active');            
+        };
+    });    
