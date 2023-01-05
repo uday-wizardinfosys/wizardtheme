@@ -2414,6 +2414,7 @@ button:hover, .btn:hover {
   list-style: none;
   min-width: 12rem;
   background-color: var(--color-white);
+  border: 1px solid rgba(var(--color-body-rgb), 0.3);
   color: var(--color-dark);
   transform: translateY(10px);
   opacity: 0;
