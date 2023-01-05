@@ -210,6 +210,13 @@
     }       
   },
   "sections": {
+    "all": {
+      "padding": {
+        "section_padding_heading": "Section padding",
+        "padding_top": "Top padding",
+        "padding_bottom": "Bottom padding"
+      }  
+    },
     "announcement-bar": {
       "name": "Announcement bar",
       "settings": {
@@ -536,6 +543,15 @@
           }
         }
       }
+    },
+    "main-register": {
+      "name": "Registration"
+    },
+    "main-login": {
+      "name": "Login"
+    },
+    "main-reset-password": {
+      "name": "Password reset"
     }     
   }
 }

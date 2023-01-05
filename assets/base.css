@@ -178,10 +178,6 @@ button {
   border-radius: 0;
 }
 
-button:focus:not(:focus-visible) {
-  outline: 0;
-}
-
 input,
 button,
 select,
@@ -271,6 +267,85 @@ iframe {
   padding-left: 0;
   list-style: none;
 }
+/* base-focus */
+/*
+  Focus ring - default (with offset)
+*/
+
+*:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+*:focus-visible {
+  outline: 1px solid rgba(var(--color-dark-rgb), 0.5);
+  outline-offset: 1px;
+  box-shadow: 0 0 0 1px rgb(var(--color-body-rgb)),
+    0 0 2px 3px rgba(var(--color-dark-rgb), 0.3);
+}
+
+/* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
+.focused,
+.no-js *:focus {
+  outline: 1px solid rgba(var(--color-dark-rgb), 0.5);
+  outline-offset: 1px;
+  box-shadow: 0 0 0 1px rgb(var(--color-body-rgb)),
+    0 0 2px 3px rgba(var(--color-dark-rgb), 0.3);
+}
+
+/* Negate the fallback side-effect for browsers that support :focus-visible */
+.no-js *:focus:not(:focus-visible) {
+  outline: 0;
+  box-shadow: none;
+}
+
+/*
+  Focus ring - inset
+*/
+
+.focus-inset:focus-visible {
+  outline: 1px solid rgba(var(--color-dark-rgb), 0.5);
+  outline-offset: -1px;
+  box-shadow: 0 0 1px 0 rgba(var(--color-dark-rgb), 0.3);
+}
+
+.focused.focus-inset,
+.no-js .focus-inset:focus {
+  outline: 1px solid rgba(var(--color-dark-rgb), 0.5);
+  outline-offset: -1px;
+  box-shadow: 0 0 1px 0 rgba(var(--color-dark-rgb), 0.3);
+}
+
+.no-js .focus-inset:focus:not(:focus-visible) {
+  outline: 0;
+  box-shadow: none;
+}
+/*
+  Focus ring - none
+*/
+/* Dangerous for a11y - Use with care */
+.focus-none {
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+.focus-offset:focus-visible {
+  outline: 1px solid rgba(var(--color-dark-rgb), 0.5);
+  outline-offset: 1px;
+  box-shadow: 0 0 0 1px rgb(var(--color-body-rgb)), 0 0 0.5px 1px rgba(var(--color-dark-rgb), 0.3);
+}
+
+.focus-offset.focused,
+.no-js .focus-offset:focus {
+  outline: 1px solid rgba(var(--color-dark-rgb), 0.5);
+  outline-offset: 1px;
+  box-shadow: 0 0 0 1px rgb(var(--color-body-rgb)), 0 0 0.5px 1px rgba(var(--color-dark-rgb), 0.3);
+}
+
+.no-js .focus-offset:focus:not(:focus-visible) {
+  outline: 0;
+  box-shadow: none;
+}
+
 .page-width,
 .page-width-fluid,
 .page-width-xxl,
@@ -868,6 +943,8 @@ button:focus, .btn:focus {
   color: var(--button-secondary-color);
   background-color: transparent;
   border-color: var(--button-secondary-color);
+}
+button:hover, .btn:hover {
   outline: 0;
 }
 .btn-arrow svg {
@@ -2310,3 +2387,70 @@ button:focus, .btn:focus {
   color: var(--color-white);
   background-color: var(--color-dark);
 }
+.dropdown {
+  position: relative;
+}
+.dropdown-toggle {
+  white-space: nowrap;
+}
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: 0.255em;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-left: 1px solid var(--color-dark);
+  border-bottom: 1px solid var(--color-dark);
+  transform: rotate(-45deg);
+}
+.dropdown-menu {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  padding: 20px 5px;
+  margin: 3px 0 0;
+  list-style: none;
+  min-width: 12rem;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  transform: translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: var(--base-transition);
+}
+.dropdown-menu.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+}
+.dropdown-link {
+  display: block;
+  color: inherit;
+  padding: 10px 20px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: normal;
+  font-family: var(--navigation-font-family);
+  font-style: var(--navigation-font-style);
+  font-weight: var(--navigation-font-weight);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .25s ease-in-out;
+}
+.dropdown-link:hover {
+  color: var(--color-primary);
+}
+
+
+
+
+
+
+

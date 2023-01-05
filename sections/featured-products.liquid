@@ -19,16 +19,7 @@
                 <div class="grid-col-lg-3 grid-col-md-6 grid-col-12"> 
                     {% render 'product-card',card_product:product %}
                 </div>
-            {% endfor %}
-            {% comment %} <div class="grid-col-lg-3 grid-col-md-6 grid-col-12">
-                {% render 'product-card' %}
-            </div>
-            <div class="grid-col-lg-3 grid-col-md-6 grid-col-12">
-                {% render 'product-card' %}
-            </div>
-            <div class="grid-col-lg-3 grid-col-md-6 grid-col-12">
-                {% render 'product-card' %}
-            </div> {% endcomment %}
+            {% endfor %}            
         </div>
         {% if section.settings.btn-name != blank %}
             <div class="btn_wrap text-center">
@@ -37,6 +28,10 @@
         {% endif %}
     </div>
 </div>
+
+
+
+
 {% schema %}
 {
   "name": "Featured products",
