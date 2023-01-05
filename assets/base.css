@@ -2391,10 +2391,10 @@ button:hover, .btn:hover {
 .dropdown, .sub_dropdown {
   position: relative;
 }
-.dropdown-toggle, .sub_dropdown-toggle {
+.dropdown-toggle, .sub_dropdown-toggle, .megamenu_dropdown-toggle {
   white-space: nowrap;
 }
-.dropdown-toggle::after, .sub_dropdown-toggle::after {
+.dropdown-toggle::after, .sub_dropdown-toggle::after, .megamenu_dropdown-toggle::after {
   display: inline-block;
   margin-left: 8px;
   vertical-align: 0.255em;
@@ -2409,7 +2409,7 @@ button:hover, .btn:hover {
   margin-top: -2px;
   vertical-align: middle;
 }
-.dropdown-toggle.opened::after {
+.dropdown-toggle.opened::after, .megamenu_dropdown-toggle.opened::after {
   transform: rotate(135deg);
   vertical-align: 1.2px;
 }
