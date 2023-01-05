@@ -2394,11 +2394,6 @@ button:hover, .btn:hover {
 .dropdown-toggle, .sub_dropdown-toggle {
   white-space: nowrap;
 }
-.sub_dropdown-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 .dropdown-toggle::after, .sub_dropdown-toggle::after {
   display: inline-block;
   margin-left: 8px;
@@ -2435,15 +2430,14 @@ button:hover, .btn:hover {
   visibility: visible;
 }
 .sub_dropdown-menu {
-  position: absolute;
-  display: block;
+  display: none;
   top: 100%;
   left: 0;
-  padding: 20px 5px;
+  padding: 0 0 10px;
   list-style: none;
   width: 100%;
   background-color: var(--color-white);
-  border-bottom: 1px solid rgba(var(--color-body-rgb), 0.3);
+  border-bottom: 1px solid rgba(var(--color-body-rgb), 0.1);
   color: var(--color-dark);
   transform: translateY(-10px);
   opacity: 0;
@@ -2452,6 +2446,7 @@ button:hover, .btn:hover {
   transition: var(--base-transition);
 }
 .sub_dropdown-menu.active {
+  display: block;
   transform: translateY(0);
   opacity: 1;
   pointer-events: all;
@@ -2479,7 +2474,11 @@ button:hover, .btn:hover {
 .dropdown-link:hover, .sub_dropdown-link:hover {
   color: var(--color-primary);
 }
-
+.sub_dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 
 
