@@ -36,28 +36,28 @@ var header = document.querySelector('.header-wrapper');
         // child_dropdown.forEach(function (list) {
         //     console.log(list);
         // }); 
-        child_dropdown.onclick = function(e) {
-            console.log('open click');
-            if(this.querySelector('ul.dropdown-menu').classList.contains('active')){
-                this.querySelector('ul.dropdown-menu').classList.remove('active');
-                this.querySelector('button').classList.remove('opened'); 
-            }else{
-                this.querySelector('ul.dropdown-menu').classList.add('active'); 
-                this.querySelector('button').classList.add('opened');
-            }   
-            e.stopPropagation();                   
-        };
-        let child_sub_dropdown = document.querySelector("ul li#dropdown_submenu");
-        child_sub_dropdown.onclick = function(e) {
-            if(this.querySelector('ul.dropdown-menu').classList.contains('active')){
-                this.querySelector('ul.dropdown-menu').classList.remove('active');
-                this.querySelector('button').classList.remove('opened');
-            }else{
-                this.querySelector('ul.dropdown-menu').classList.add('active');
-                this.querySelector('button').classList.add('opened');
-            } 
-            e.stopPropagation();         
-        };   
+        // child_dropdown.onclick = function(e) {
+        //     console.log('open click');
+        //     if(this.querySelector('ul.dropdown-menu').classList.contains('active')){
+        //         this.querySelector('ul.dropdown-menu').classList.remove('active');
+        //         this.querySelector('button').classList.remove('opened'); 
+        //     }else{
+        //         this.querySelector('ul.dropdown-menu').classList.add('active'); 
+        //         this.querySelector('button').classList.add('opened');
+        //     }   
+        //     e.stopPropagation();                   
+        // };
+       // let child_sub_dropdown = document.querySelector("ul li#dropdown_submenu");
+        // child_sub_dropdown.onclick = function(e) {
+        //     if(this.querySelector('ul.dropdown-menu').classList.contains('active')){
+        //         this.querySelector('ul.dropdown-menu').classList.remove('active');
+        //         this.querySelector('button').classList.remove('opened');
+        //     }else{
+        //         this.querySelector('ul.dropdown-menu').classList.add('active');
+        //         this.querySelector('button').classList.add('opened');
+        //     } 
+        //     e.stopPropagation();         
+        // };   
         // const fakeImages = document.querySelectorAll("ul li#dropdown_menu");
         // fakeImages.forEach(fakeImage => {
         // console.log('fakeImage: ', fakeImage);
@@ -74,14 +74,33 @@ var header = document.querySelector('.header-wrapper');
                     this.querySelector('ul.dropdown-menu').classList.add('active'); 
                     this.querySelector('button').classList.add('opened');
                 }   
+                let child_sub_dropdown = this.querySelector("ul li#dropdown_submenu");
+                child_sub_dropdown.forEach(function($item){
+                    $item.onclick = function(e) {
+                        if(this.querySelector('ul.dropdown-menu').classList.contains('active')){
+                            this.querySelector('ul.dropdown-menu').classList.remove('active');
+                            this.querySelector('button').classList.remove('opened');
+                        }else{
+                            this.querySelector('ul.dropdown-menu').classList.add('active');
+                            this.querySelector('button').classList.add('opened');
+                        } 
+                        e.stopPropagation();         
+                    };  
+                });    
                 e.stopPropagation();                   
             };
         }); 
 
-        document.body.addEventListener('click', function(){
-            child_dropdown.forEach(function($item){
-                $item.querySelector('ul.dropdown-menu').classList.remove('active');                    
-            });
+        document.body.addEventListener('click', function(e){
+            console.log('dhruv',e.target.classList);
+            if(!e.target.classList.contains('menu-link') && !e.target.classList.contains('dropdown-menu'))
+            {
+                console.log('close all menu');
+                child_dropdown.forEach(function($item){
+                    $item.querySelector('ul.dropdown-menu').classList.remove('active');  
+                    $item.querySelector('button').classList.remove('opened');                  
+                });
+            }
         }, true); 
 
     //     var count_child_dropdown = document.querySelectorAll("ul li#dropdown_menu").length;   
