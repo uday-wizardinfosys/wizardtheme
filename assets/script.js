@@ -34,8 +34,7 @@ var header = document.querySelector('.header-wrapper');
                 this.querySelector('ul.dropdown-menu').classList.remove('active'); 
             }else{
                 this.querySelector('ul.dropdown-menu').classList.add('active'); 
-            }
-                       
+            }                       
         };
 
         let child_sub_dropdown = document.querySelector("ul li.submenu");

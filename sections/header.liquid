@@ -65,13 +65,28 @@
                               </a>
                             {%- else -%}  
                               <li class="menu-item dropdown submenu">
-                                <button class="menu-link dropdown-toggle {% if childlink.current %}active{% endif %}">{{ link.title | escape }}</button>
+                                <button class="menu-link dropdown-toggle {% if childlink.current %}active{% endif %}">{{ childlink.title | escape }}</button>
                                 <ul class="dropdown-menu">
                                     {%- for sublink in childlink.links -%}
-                                      <li class="dropdown-item">                                        
+                                      <li class="dropdown-item">   
+                                        {%- if sublink.links == blank -%}                                     
                                           <a class="dropdown-link {% if sublink.current %}active{% endif %}" href="{{ sublink.url }}">
                                             {{ sublink.title | escape }}
-                                          </a>                                        
+                                          </a>   
+                                        {%- else -%}
+                                          <li class="menu-item dropdown sub_submenu">
+                                            <button class="menu-link dropdown-toggle {% if sublink.current %}active{% endif %}">{{ sublink.title | escape }}</button>
+                                            <ul class="dropdown-menu">
+                                                {%- for sub_sublink in sublink.links -%}
+                                                  <li class="dropdown-item">                                                                                        
+                                                      <a class="dropdown-link {% if sub_sublink.current %}active{% endif %}" href="{{ sub_sublink.url }}">
+                                                        {{ sub_sublink.title | escape }}
+                                                      </a>                                                                                        
+                                                  </li>
+                                                {%- endfor -%}  
+                                            </ul>
+                                          </li>
+                                        {%- endif -%}                                    
                                       </li>
                                     {%- endfor -%}  
                                 </ul>
