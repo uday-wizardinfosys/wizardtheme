@@ -2447,7 +2447,7 @@ button:hover, .btn:hover {
   transition: var(--base-transition);
   z-index: 999;
 }
-.dropdown-menu.active {
+.dropdown-menu {
   transform: translateY(0);
   opacity: 1;
   pointer-events: all;
