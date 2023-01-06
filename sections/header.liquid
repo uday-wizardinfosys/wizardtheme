@@ -54,31 +54,31 @@
                     <a class="menu-link {% if link.current %}active{% endif %}" href="{{ link.url }}">{{ link.title | escape }}</a>
                   </li>
                 {%- else -%}
-                  <li id="dropdown_menu" class="menu-item dropdown">
+                  <li class="menu-item dropdown">
                     <button class="menu-link dropdown-toggle {% if link.current %}active{% endif %}">{{ link.title | escape }}</button>
                     <ul class="dropdown-menu">
-                      {%- for childlink in link.links -%}
-                        {%- if childlink.links == blank -%}                        
-                            <li class="dropdown-item">                           
-                                <a class="dropdown-link {% if childlink.current %}active{% endif %}" href="{{ childlink.url }}">
-                                  {{ childlink.title | escape }}
+                        {%- for childlink in link.links -%}
+                          {%- if childlink.links == blank -%}
+                          <li class="dropdown-item">
+                              <a class="dropdown-link {% if childlink.current %}active{% endif %}" href="{{ childlink.url }}">
+                                {{ childlink.title | escape }}
+                              </a>
+                          </li>
+                            {%- else -%}
+                          <li class="dropdown-item sub_dropdown">
+                            <button class="dropdown-link sub_dropdown-toggle {% if link.current %}active{% endif %}">Women</button>
+                            <ul class="sub_dropdown-menu">
+                              {%- for subchildlink in childlink.links -%}
+                              <li class="sub_dropdown-item">
+                                <a class="sub_dropdown-link {% if subchildlink.current %}active{% endif %}" href="{{ subchildlink.url }}">
+                                  {{ subchildlink.title | escape }}
                                 </a>
-                            </li>    
-                          {%- else -%}  
-                            <li id="dropdown_submenu" class="menu-item dropdown">
-                              <button class="menu-link sub_dropdown-toggle {% if childlink.current %}active{% endif %}">{{ childlink.title | escape }}</button>
-                              <ul class="dropdown-menu">
-                                  {%- for sublink in childlink.links -%}
-                                    <li class="dropdown-item">                                                                          
-                                        <a class="dropdown-link {% if sublink.current %}active{% endif %}" href="{{ sublink.url }}">
-                                          {{ sublink.title | escape }}
-                                        </a>                                                                             
-                                    </li>
-                                  {%- endfor -%}  
-                              </ul>
-                            </li>
-                          {%- endif -%}                      
-                      {%- endfor -%}  
+                              </li>
+                              {%- endfor -%}
+                            </ul>
+                          </li>
+                        {%- endif -%}
+                        {%- endfor -%}  
                     </ul>
                   </li>
                 {%- endif -%}  
