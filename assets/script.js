@@ -30,7 +30,7 @@ var header = document.querySelector('.header-wrapper');
     document.addEventListener('DOMContentLoaded', function() { 
         
         const dropdown = document.querySelectorAll(".dropdown");
-        const subdropdown = document.querySelectorAll(".dropdown");
+        const subdropdown = document.querySelectorAll(".sub_dropdown");
 
         document.body.addEventListener('click', function(){
             document.querySelector('.dropdown-toggle').classList.remove('opened');
@@ -46,13 +46,13 @@ var header = document.querySelector('.header-wrapper');
                 item.querySelector('.dropdown-menu').classList.toggle('active');
             });
         });
-        subdropdown.forEach(function(item){
-            item.addEventListener('click', function (e){
+        subdropdown.forEach(function(items){
+            items.addEventListener('click', function (e){
                 e.stopPropagation();
                 document.querySelector('.sub_dropdown-toggle').classList.remove('opened');
                 document.querySelector('.sub_dropdown-menu').classList.remove('active');
-                item.querySelector('.sub_dropdown-toggle').classList.toggle('opened');
-                item.querySelector('.sub_dropdown-menu').classList.toggle('active');
+                items.querySelector('.sub_dropdown-toggle').classList.toggle('opened');
+                items.querySelector('.sub_dropdown-menu').classList.toggle('active');
             });
         });
         document.querySelector('.dropdown-menu').addEventListener('click', function(e){
