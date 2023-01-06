@@ -974,6 +974,17 @@ button:hover, .btn:hover {
   background-color: var(--button-primary-color);
   border-color: var(--button-primary-color);
 }
+.btn-link {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-dark);
+  text-transform: uppercase;
+}
+.btn-link:hover, .btn-link:focus {
+  text-decoration: underline;
+}
 .fixed-top {
   position: fixed;
   top: 0;
@@ -2434,6 +2445,7 @@ button:hover, .btn:hover {
   pointer-events: none;
   visibility: hidden;
   transition: var(--base-transition);
+  z-index: 999;
 }
 .dropdown-menu.active {
   transform: translateY(0);

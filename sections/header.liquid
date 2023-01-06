@@ -54,31 +54,31 @@
                     <a class="menu-link {% if link.current %}active{% endif %}" href="{{ link.url }}">{{ link.title | escape }}</a>
                   </li>
                 {%- else -%}
-                  <li id="dropdown_menu" class="menu-item dropdown">
+                  <li class="menu-item dropdown">
                     <button class="menu-link dropdown-toggle {% if link.current %}active{% endif %}">{{ link.title | escape }}</button>
                     <ul class="dropdown-menu">
-                      {%- for childlink in link.links -%}
-                        {%- if childlink.links == blank -%}                        
-                            <li class="dropdown-item">                           
-                                <a class="dropdown-link {% if childlink.current %}active{% endif %}" href="{{ childlink.url }}">
-                                  {{ childlink.title | escape }}
+                        {%- for childlink in link.links -%}
+                          {%- if childlink.links == blank -%}
+                          <li class="dropdown-item">
+                              <a class="dropdown-link {% if childlink.current %}active{% endif %}" href="{{ childlink.url }}">
+                                {{ childlink.title | escape }}
+                              </a>
+                          </li>
+                            {%- else -%}
+                          <li class="dropdown-item sub_dropdown">
+                            <button class="dropdown-link sub_dropdown-toggle {% if link.current %}active{% endif %}">Women</button>
+                            <ul class="sub_dropdown-menu">
+                              {%- for subchildlink in childlink.links -%}
+                              <li class="sub_dropdown-item">
+                                <a class="sub_dropdown-link {% if subchildlink.current %}active{% endif %}" href="{{ subchildlink.url }}">
+                                  {{ subchildlink.title | escape }}
                                 </a>
-                            </li>    
-                          {%- else -%}  
-                            <li id="dropdown_submenu" class="menu-item dropdown">
-                              <button class="menu-link sub_dropdown-toggle {% if childlink.current %}active{% endif %}">{{ childlink.title | escape }}</button>
-                              <ul class="dropdown-menu">
-                                  {%- for sublink in childlink.links -%}
-                                    <li class="dropdown-item">                                                                          
-                                        <a class="dropdown-link {% if sublink.current %}active{% endif %}" href="{{ sublink.url }}">
-                                          {{ sublink.title | escape }}
-                                        </a>                                                                             
-                                    </li>
-                                  {%- endfor -%}  
-                              </ul>
-                            </li>
-                          {%- endif -%}                      
-                      {%- endfor -%}  
+                              </li>
+                              {%- endfor -%}
+                            </ul>
+                          </li>
+                        {%- endif -%}
+                        {%- endfor -%}  
                     </ul>
                   </li>
                 {%- endif -%}  
@@ -87,7 +87,7 @@
                 <button class="menu-link megamenu_dropdown-toggle {% if link.current %}active{% endif %}">Shop</button>
                 <div class="megamenu_dropdown_wrap">
                   <div class="page-width">
-                    <div class="grid-row">
+                    <div class="grid-row justify-content-between">
                       <div class="grid-col-lg-3">
                         <div class="megamenu_dropdown_block">
                           <h6 class="megamenu_dropdown_block--title">Rady-to-wear</h6>
@@ -154,36 +154,36 @@
                           <div class="megamenu_dropdown_block_cat_style1">
                             <div class="grid-row">
                               <div class="grid-col-6">
-                                <div class="megamenu_dropdown_block_cat_block">
+                                <a href="#" class="megamenu_dropdown_block_cat_block">
                                   <div class="megamenu_dropdown_block_cat_block--img">
                                     <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/tops.png" alt="tops">
                                   </div>
                                   <h6 class="megamenu_dropdown_block_cat_block--title">Tops</h6>
-                                </div>
+                                </a>
                               </div>
                               <div class="grid-col-6">
-                                <div class="megamenu_dropdown_block_cat_block">
+                                <a href="#" class="megamenu_dropdown_block_cat_block">
                                   <div class="megamenu_dropdown_block_cat_block--img">
                                     <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/skirts.png" alt="Skirts">
                                   </div>
                                   <h6 class="megamenu_dropdown_block_cat_block--title">Skirts</h6>
-                                </div>
+                                </a>
                               </div>
                               <div class="grid-col-6">
-                                <div class="megamenu_dropdown_block_cat_block">
+                                <a href="#" class="megamenu_dropdown_block_cat_block">
                                   <div class="megamenu_dropdown_block_cat_block--img">
                                     <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/denim.png" alt="Denim">
                                   </div>
                                   <h6 class="megamenu_dropdown_block_cat_block--title">Denim</h6>
-                                </div>
+                                </a>
                               </div>
                               <div class="grid-col-6">
-                                <div class="megamenu_dropdown_block_cat_block">
+                                <a href="#" class="megamenu_dropdown_block_cat_block">
                                   <div class="megamenu_dropdown_block_cat_block--img">
                                     <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/active.png" alt="Active">
                                   </div>
                                   <h6 class="megamenu_dropdown_block_cat_block--title">Active</h6>
-                                </div>
+                                </a>
                               </div>
                             </div>
                           </div>
@@ -192,30 +192,55 @@
                       <div class="grid-col-lg-3">
                         <div class="megamenu_dropdown_block">
                           <h6 class="megamenu_dropdown_block--title">Shop by edit</h6>
-                          <div class="megamenu_dropdown_block_cat_style1">
+                          <div class="megamenu_dropdown_block_cat_style2">
+                            <a href="#" class="megamenu_dropdown_block_cat_block">
+                              <div class="megamenu_dropdown_block_cat_block--img">
+                                <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/work_were.png" alt="Workwear">
+                              </div>
+                              <h6 class="megamenu_dropdown_block_cat_block--title">Workwear</h6>
+                            </a>
+                            <a href="#" class="megamenu_dropdown_block_cat_block">
+                              <div class="megamenu_dropdown_block_cat_block--img">
+                                <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/Occasion_wear.png" alt="Occasion wear">
+                              </div>
+                              <h6 class="megamenu_dropdown_block_cat_block--title">Occasion wear</h6>
+                            </a>
+                            <a href="#" class="megamenu_dropdown_block_cat_block">
+                              <div class="megamenu_dropdown_block_cat_block--img">
+                                <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/Wedding.png" alt="Wedding">
+                              </div>
+                              <h6 class="megamenu_dropdown_block_cat_block--title">Wedding</h6>
+                            </a>
+                            <a href="#" class="megamenu_dropdown_block_cat_block">
+                              <div class="megamenu_dropdown_block_cat_block--img">
+                                <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/Modest_fashion.png" alt="Modest fashion">
+                              </div>
+                              <h6 class="megamenu_dropdown_block_cat_block--title">Modest fashion</h6>
+                            </a>
+                            <a href="#" class="megamenu_dropdown_block_cat_block">
+                              <div class="megamenu_dropdown_block_cat_block--img">
+                                <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/Autumn_styles.png" alt="Autumn styles">
+                              </div>
+                              <h6 class="megamenu_dropdown_block_cat_block--title">Autumn styles</h6>
+                            </a>
+                            <a href="#" class="megamenu_dropdown_block_cat_block">
+                              <div class="megamenu_dropdown_block_cat_block--img">
+                                <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/Party_wear.png" alt="Party wear">
+                              </div>
+                              <h6 class="megamenu_dropdown_block_cat_block--title">Party wear</h6>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid-col-lg-3 d-none">
+                        <div class="megamenu_dropdown_block">
+                          <div class="megamenu_dropdown_block_cat_style3">
                             <div class="megamenu_dropdown_block_cat_block">
                               <div class="megamenu_dropdown_block_cat_block--img">
-                                <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/tops.png" alt="tops">
+                                <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/Bomber_Jacket_With_Ribbed_Trims.png" alt="Bomber_Jacket_With_Ribbed_Trims">
                               </div>
-                              <h6 class="megamenu_dropdown_block_cat_block--title">Tops</h6>
-                            </div>
-                            <div class="megamenu_dropdown_block_cat_block">
-                              <div class="megamenu_dropdown_block_cat_block--img">
-                                <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/skirts.png" alt="Skirts">
-                              </div>
-                              <h6 class="megamenu_dropdown_block_cat_block--title">Skirts</h6>
-                            </div>
-                            <div class="megamenu_dropdown_block_cat_block">
-                              <div class="megamenu_dropdown_block_cat_block--img">
-                                <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/denim.png" alt="Denim">
-                              </div>
-                              <h6 class="megamenu_dropdown_block_cat_block--title">Denim</h6>
-                            </div>
-                            <div class="megamenu_dropdown_block_cat_block">
-                              <div class="megamenu_dropdown_block_cat_block--img">
-                                <img src="https://cdn.shopify.com/s/files/1/0618/9232/9644/files/active.png" alt="Active">
-                              </div>
-                              <h6 class="megamenu_dropdown_block_cat_block--title">Active</h6>
+                              <h6 class="megamenu_dropdown_block_cat_block--title">Bomber Jacket With Ribbed Trims</h6>
+                              <a href="#" class="btn-link btn-arrow">Shop now {% render 'icon-arrow-right' %}</a>
                             </div>
                           </div>
                         </div>
