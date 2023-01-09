@@ -76,19 +76,17 @@
     margin-bottom: 15px;
 }
 .price {
-    font-weight: 300;
+    font-weight: 600;
     line-height: 21px;
 }
 .price__regular {
-    color: var(--color-black);
+    color: var(--color-dark);
     margin-right: 10px;
-    font-weight: 500;
 }
 .price__sale {
-    font-family: var(--heading-font-family);
     text-decoration: line-through;
     font-style: italic;
-    opacity: 0.8;
+    opacity: 0.6;
 }
 .product_card__optoins_size, .product_card__optoins_color {
     position: relative;

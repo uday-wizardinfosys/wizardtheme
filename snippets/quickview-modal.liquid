@@ -1,20 +1,20 @@
+{{ 'component-modal.css' | asset_url | stylesheet_tag }}
+
 {% style %}
 
 {% endstyle %}
-
-
-{% comment %} <button type="button" class="btn btn-primary" data-modal-toggle="modal" data-modal-target="#quickviewModal">
+<button type="button" class="btn btn-primary" data-modal-toggle="modal" data-modal-target="#quickviewModal">
     Launch demo modal
-</button> {% endcomment %}
+</button>
   
   <!-- Modal -->
-  <div class="modal fade" id="quickviewModal" tabindex="-1" aria-labelledby="quickviewModalLabel" aria-hidden="true">
-    <div class="modal_container">
+  <div class="modal hidden quickview_modal" id="quickviewModal" tabindex="-1" aria-labelledby="quickviewModalLabel" aria-hidden="true">
+    <div class="modal_container modal_container_centered">
       <div class="modal_inner_wrap">
           <button type="button" class="modal_close" data-modal-dismiss="modal" aria-label="Close"></button>
-        <div class="modal-body">
+        <div class="modal_body">
             <div class="grid-row">
-                <div class="grid-col-lg-7 grid-col-12">
+                <div class="grid-col-lg-6 grid-col-12">
                     <div class="quickview_product_slider_wrap">
                         <div class="quickview_product_slider">
                             <div class="quickview_product_slider_slide">
@@ -23,16 +23,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-col-lg-5 grid-col-12">
+                <div class="grid-col-lg-6 grid-col-12">
                     <div class="quickview_product_content_wrap">
                         <div class="quickview_product_content">
                             <h3 class="quickview_product_title">Morning After Shirt Dress</h3>
                             <div class="quickview_product_price">
                                 <div class="price">
-                                    <span class="price__regular">{{card_product.price | money}}</span>
-                                    {% if card_product.compare_at_price != blank %}
-                                        <span class="price__sale">{{ card_product.compare_at_price | money }}</span>
-                                    {% endif %}    
+                                    <span class="price__regular">Rs. 68.95</span>
+                                    <span class="price__sale">Rs. 69.95</span>
                                 </div>
                             </div>
                             <div class="quickview_product_description">
@@ -46,7 +44,7 @@
                                         <label for="quickviewProductSizeSelectorLabel1" class="quickview_product_size_selector_label">XS</label>
                                     </div>
                                     <div class="quickview_product_size_selector_radio">
-                                        <input id="quickviewProductSizeSelectorLabel2" type="radio" name="size" value="S">
+                                        <input id="quickviewProductSizeSelectorLabel2" type="radio" name="size" value="S" checked>
                                         <label for="quickviewProductSizeSelectorLabel2" class="quickview_product_size_selector_label">S</label>
                                     </div>
                                     <div class="quickview_product_size_selector_radio">
@@ -67,24 +65,24 @@
                                 <div class="quickview_product_color_selector_title">Color: </div>
                                 <div class="quickview_product_color_selector">
                                     <div class="quickview_product_color_selector_radio">
-                                        <input id="quickviewProductColorSelectorLabel1" type="radio" name="color" value="XS">
-                                        <label for="quickviewProductColorSelectorLabel1" class="quickview_product_color_selector_label">XS</label>
+                                        <input id="quickviewProductColorSelectorLabel1" type="radio" name="color" value="XS" checked>
+                                        <label for="quickviewProductColorSelectorLabel1" class="quickview_product_color_selector_label" style="background:#FF7B54;"></label>
                                     </div>
                                     <div class="quickview_product_color_selector_radio">
                                         <input id="quickviewProductColorSelectorLabel2" type="radio" name="color" value="S">
-                                        <label for="quickviewProductColorSelectorLabel2" class="quickview_product_color_selector_label">S</label>
+                                        <label for="quickviewProductColorSelectorLabel2" class="quickview_product_color_selector_label" style="background:#FFB26B;"></label>
                                     </div>
                                     <div class="quickview_product_color_selector_radio">
                                         <input id="quickviewProductColorSelectorLabel3" type="radio" name="color" value="M">
-                                        <label for="quickviewProductColorSelectorLabel3" class="quickview_product_color_selector_label">M</label>
+                                        <label for="quickviewProductColorSelectorLabel3" class="quickview_product_color_selector_label" style="background:#FFD56F;"></label>
                                     </div>
                                     <div class="quickview_product_color_selector_radio">
                                         <input id="quickviewProductColorSelectorLabel4" type="radio" name="color" value="L">
-                                        <label for="quickviewProductColorSelectorLabel4" class="quickview_product_color_selector_label">L</label>
+                                        <label for="quickviewProductColorSelectorLabel4" class="quickview_product_color_selector_label" style="background:#ECA869;"></label>
                                     </div>
                                     <div class="quickview_product_color_selector_radio">
                                         <input id="quickviewProductColorSelectorLabel5" type="radio" name="color" value="XL">
-                                        <label for="quickviewProductColorSelectorLabel5" class="quickview_product_color_selector_label">XL</label>
+                                        <label for="quickviewProductColorSelectorLabel5" class="quickview_product_color_selector_label" style="background:#939B62;"></label>
                                     </div>
                                 </div>
                             </div>
