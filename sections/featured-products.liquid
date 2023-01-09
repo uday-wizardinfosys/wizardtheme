@@ -6,7 +6,7 @@
         <div class="featured_products_top">
             {% if section.settings.title != blank %}
                 <div class="featured_products_title_wrapper">
-                    <h2 class="featured_products_title">{{section.settings.title}}</h2>
+                    <h2 class="featured_products_title">{{ section.settings.title }}</h2>
                 </div>
             {% endif %}
             <div class="featured_products_btns">                
@@ -23,7 +23,7 @@
         </div>
         {% if section.settings.btn-name != blank %}
             <div class="btn_wrap text-center">
-                <a href="{{section.settings.btn-link}}" class="btn btn-transparent btn-arrow">{{section.settings.btn-name}} {% render 'icon-arrow-right' %}</a>
+                <a href="{{ section.settings.btn-link }}" class="btn btn-transparent btn-arrow">{{ section.settings.btn-name }} {% render 'icon-arrow-right' %}</a>
             </div>
         {% endif %}
     </div>

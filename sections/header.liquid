@@ -47,13 +47,185 @@
         {%- if section.settings.menu != blank -%}
           <div class="header-collapse">
             <ul class="menu-wrapper mx-auto">
-              {%- for link in section.settings.menu.links -%}
-                
-                {%- if link.links == blank -%}
-                  <li class="menu-item">
-                    <a class="menu-link {% if link.current %}active{% endif %}" href="{{ link.url }}">{{ link.title | escape }}</a>
-                  </li>
-                {%- else -%}
+              {%- for link in section.settings.menu.links -%} 
+                {%- assign link_name = link.title | downcase | remove:" " -%}        
+                {%- assign megamenu_check = false -%}
+                {%- assign menu_layout = false -%}                
+                {%- assign collections_layout_grid = false -%}
+                {%- assign collections_layout_list = false -%}
+                {%- assign product_layout = false -%}
+                {%- for block in section.blocks -%}
+                   {%- case block.type -%}                   
+                      {%- when 'menu' -%}
+                        {%- assign item_name = block.settings.item-name | downcase | remove:" " -%} 
+                        {%- if link_name == item_name -%}
+                            {%- assign megamenu_check = true -%}
+                            {%- assign menu_layout = true -%}
+                        {%- endif -%}  
+                      {%- when 'collectionsgrid' -%}
+                        {%- assign item_name = block.settings.item-name | downcase | remove:" " -%} 
+                        {%- if link_name == item_name -%}
+                            {%- assign megamenu_check = true -%}
+                            {%- assign collections_layout_grid = true -%}
+                        {%- endif -%}
+                      {%- when 'collectionslist' -%}
+                          {%- assign item_name = block.settings.item-name | downcase | remove:" " -%}
+                          {%- if link_name == item_name -%}
+                              {%- assign megamenu_check = true -%}
+                              {%- assign collections_layout_list = true -%}
+                          {%- endif -%}
+                      {%- when 'product' -%}
+                        {%- assign item_name = block.settings.item-name | downcase | remove:" " -%} 
+                        {%- if link_name == item_name -%}
+                            {%- assign megamenu_check = true -%}
+                            {%- assign product_layout = true -%}
+                        {%- endif -%}                     
+                   {%- endcase -%}
+                {%- endfor -%}
+                {%- if megamenu_check == true -%}     
+                    <li class="menu-item megamenu_dropdown">
+                      <button class="menu-link megamenu_dropdown-toggle {% if link.current %}active{% endif %}">{{ link.title | escape }}</button>
+                      <div class="megamenu_dropdown_wrap">
+                        <div class="page-width">
+                          <div class="grid-row justify-content-between">
+                            
+                            {%- if menu_layout == true -%}
+                              {%- for block in section.blocks -%}
+                                {%- case block.type -%}
+                                    {%- when 'menu' -%}
+                                      {%- assign item_name = block.settings.item-name | downcase | remove:" " -%}
+                                      {% if item_name == link_name %}
+                                        <div class="grid-col-lg-3">
+                                          <div class="megamenu_dropdown_block">
+                                            {% if block.settings.title != blank %}
+                                              <h6 class="megamenu_dropdown_block--title">{{block.settings.title}}</h6>
+                                            {% endif %}
+                                            <ul class="megamenu_dropdown_block--list">
+                                              {%- for link in block.settings.menu-name.links -%}  
+                                                <li class="megamenu_dropdown_block--list-item">
+                                                  <a href="{{ link.url }}" class="megamenu_dropdown_block--list-link">{{ link.title | escape }}</a>
+                                                </li>
+                                              {%- endfor -%}
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      {% endif %}  
+                                    {%- when 'collectionsgrid' -%}
+                                      {%- if collections_layout_grid == true -%}   
+                                        {%- assign item_name = block.settings.item-name | downcase | remove:" " -%}
+                                        {% if item_name == link_name %}                                                                   
+                                          <div class="grid-col-lg-3">
+                                            <div class="megamenu_dropdown_block">
+                                              {% if block.settings.title != blank %}
+                                                <h6 class="megamenu_dropdown_block--title">
+                                                  {{ block.settings.title }}
+                                                </h6>
+                                              {% endif %}
+                                              <div class="megamenu_dropdown_block_cat_style1">
+                                                <div class="grid-row">                                        
+                                                  {% for i in (1..4) %}          
+                                                    {% assign item_name = 'collection' | append : i %}                                                           
+                                                    {% assign collection = block.settings[item_name] %}
+                                                      {% if collection.title != blank %} 
+                                                        <div class="grid-col-6">
+                                                          <a href="{{ collection.url }}" class="megamenu_dropdown_block_cat_block">
+                                                            <div class="megamenu_dropdown_block_cat_block--img">
+                                                            {% if collection.image != blank %}
+                                                              {{ collection.image | image_url : width : 1500 | image_tag :
+                                                                loading: 'lazy',
+                                                                width: collection.image.width ,
+                                                                height: image_height ,
+                                                                widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' ,
+                                                                alt: collection.image.alt | escape
+                                                              }}
+                                                            {% else %}
+                                                                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                                                            {% endif %}   
+                                                            </div>
+                                                            <h6 class="megamenu_dropdown_block_cat_block--title">{{ collection.title | escape }}</h6>
+                                                          </a>
+                                                        </div>
+                                                      {% endif %}
+                                                  {% endfor %}        
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        {% endif %}  
+                                      {%- endif -%}
+                                    {%- when 'collectionslist' -%}
+                                      {%- if collections_layout_list == true -%}
+                                          <div class="grid-col-lg-3">
+                                            <div class="megamenu_dropdown_block">
+                                            {% if block.settings.title != blank %}
+                                              <h6 class="megamenu_dropdown_block--title">
+                                                {{ block.settings.title }}
+                                              </h6>
+                                            {% endif %}  
+                                              <div class="megamenu_dropdown_block_cat_style2">
+                                                <div class="grid-row">                                        
+                                                  {% for i in (1..6) %}
+                                                    {% assign item_name = 'collection' | append : i %}                                                           
+                                                    {% assign collection = block.settings[item_name] %}
+                                                      {% if collection.title != blank %} 
+                                                        <div class="grid-col-6">
+                                                          <a href="{{ collection.url }}" class="megamenu_dropdown_block_cat_block">
+                                                            <div class="megamenu_dropdown_block_cat_block--img">
+                                                            {% if collection.image != blank %}
+                                                              {{ collection.image | image_url : width : 1500 | image_tag :
+                                                                loading: 'lazy',
+                                                                width: collection.image.width ,
+                                                                height: image_height ,
+                                                                widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' ,
+                                                                alt: collection.image.alt | escape
+                                                              }}
+                                                            {% else %}
+                                                                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                                                            {% endif %}   
+                                                            </div>
+                                                            <h6 class="megamenu_dropdown_block_cat_block--title">{{ collection.title | escape }}</h6>
+                                                          </a>
+                                                        </div>
+                                                      {% endif %}                                                    
+                                                  {% endfor %}        
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                      {%- endif -%}
+                                    {%- when 'product' -%}
+                                      {%- assign item_name = block.settings.item-name | downcase | remove:" " -%}
+                                      {% if item_name == link_name %}
+                                        {% assign product = block.settings.product %}
+                                        <div class="grid-col-lg-3">
+                                          <div class="megamenu_dropdown_block">
+                                            <div class="megamenu_dropdown_block_cat_style3">
+                                              <div class="megamenu_dropdown_block_cat_block">
+                                                <div class="megamenu_dropdown_block_cat_block--img">
+                                                    {{ product.featured_image | image_url : width : 1500 | image_tag :
+                                                      loading: 'lazy',
+                                                      width: product.featured_image.width ,
+                                                      height: 'auto' ,
+                                                      widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' ,
+                                                      alt: product.featured_image.alt | escape
+                                                    }}
+                                                </div>
+                                                <h6 class="megamenu_dropdown_block_cat_block--title">{{ product.title | escape }}</h6>
+                                                <a href="{{ product.url }}" class="btn-link btn-arrow">Shop now {% render 'icon-arrow-right' %}</a>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      {% endif %}
+                                {%- endcase -%}
+                              {%- endfor -%}
+                            {%- endif -%}  
+
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                {%- elsif link.links != blank -%}                  
                   <li class="menu-item dropdown">
                     <button class="menu-link dropdown-toggle {% if link.current %}active{% endif %}">{{ link.title | escape }}</button>
                     <ul class="dropdown-menu">
@@ -81,8 +253,13 @@
                         {%- endfor -%}  
                     </ul>
                   </li>
+                {%- else -%}
+                  <li class="menu-item">
+                    <a class="menu-link {% if link.current %}active{% endif %}" href="{{ link.url }}">{{ link.title | escape }}</a>
+                  </li>                 
                 {%- endif -%}  
-              {%- endfor -%}      
+              {%- endfor -%}    
+              {% comment %}   
               <li class="menu-item megamenu_dropdown">
                 <button class="menu-link megamenu_dropdown-toggle {% if link.current %}active{% endif %}">Shop</button>
                 <div class="megamenu_dropdown_wrap">
@@ -232,7 +409,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="grid-col-lg-3 d-none">
+                      <div class="grid-col-lg-3">
                         <div class="megamenu_dropdown_block">
                           <div class="megamenu_dropdown_block_cat_style3">
                             <div class="megamenu_dropdown_block_cat_block">
@@ -248,7 +425,8 @@
                     </div>
                   </div>
                 </div>
-              </li>          
+              </li>      
+              {% endcomment %}    
             </ul>
           </div>
         {% endif %}
@@ -310,6 +488,130 @@
           "label":"t:sections.header.settings.text_color.label",
           "default":"#000000"
         }
+     ],
+     "blocks":[        
+        {
+          "type":"menu",
+          "name":"Menu List",
+          "settings":[
+            {
+              "type":"text",
+              "id":"item-name",
+              "label":"Item Name"
+            },
+            {
+              "type":"text",
+              "id":"title",
+              "label":"Title"
+            },
+            {
+              "type":"link_list",
+              "id":"menu-name",
+              "label":"Select Menu"
+            }
+          ]
+        },
+        {
+          "type":"collectionsgrid",
+          "name":"Collections Grid",
+          "settings":[
+            {
+              "type":"text",
+              "id":"item-name",
+              "label":"Item Name"
+            },
+            {
+              "type":"text",
+              "id":"title",
+              "label":"Title",
+              "default":"Loream ipsum"
+            },            
+            {
+              "type":"collection",
+              "id":"collection1",
+              "label":"Select Collection 1"
+            },
+            {
+              "type":"collection",
+              "id":"collection2",
+              "label":"Select Collection 2"
+            },
+            {
+              "type":"collection",
+              "id":"collection3",
+              "label":"Select Collection 3"
+            },
+            {
+              "type":"collection",
+              "id":"collection4",
+              "label":"Select Collection 4"
+            }            
+          ]
+        },
+        {
+          "type":"collectionslist",
+          "name":"Collections List",
+          "settings":[
+            {
+              "type":"text",
+              "id":"item-name",
+              "label":"Item Name"
+            },    
+            {
+              "type":"text",
+              "id":"title",
+              "label":"Title",
+              "default":"Loream ipsum"
+            },        
+            {
+              "type":"collection",
+              "id":"collection1",
+              "label":"Select Collection 1"
+            },
+            {
+              "type":"collection",
+              "id":"collection2",
+              "label":"Select Collection 2"
+            },
+            {
+              "type":"collection",
+              "id":"collection3",
+              "label":"Select Collection 3"
+            },
+            {
+              "type":"collection",
+              "id":"collection4",
+              "label":"Select Collection 4"
+            },
+            {
+              "type":"collection",
+              "id":"collection5",
+              "label":"Select Collection 5"
+            },
+            {
+              "type":"collection",
+              "id":"collection6",
+              "label":"Select Collection 6"
+            }            
+          ]
+        },
+        {
+          "type":"product",
+          "name":"Product",
+          "settings":[
+            {
+              "type":"text",
+              "id":"item-name",
+              "label":"Item Name"
+            },
+            {
+              "type":"product",
+              "id":"product",
+              "label":"Select Product"
+            }            
+          ]
+        }
      ]
-  }
+     
+  } 
 {% endschema %}

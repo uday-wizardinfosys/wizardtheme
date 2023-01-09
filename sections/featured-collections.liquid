@@ -6,9 +6,9 @@
         <div class="featured_collections_top">
             <div class="featured_collections_title_wrapper">
                 {% if section.settings.title != blank %}
-                    <h2 class="featured_collections_title">{{section.settings.title}}</h2>
+                    <h2 class="featured_collections_title">{{ section.settings.title }}</h2>
                 {% endif %}    
-                {{section.settings.description}}
+                {{ section.settings.description }}
             </div>
             <div class="featured_collections_btns">                
             </div>
@@ -31,7 +31,7 @@
         </div>
         {% if section.settings.btn-title != blank %}
             <div class="btn_wrap text-center">
-                <a href="{{section.settings.btn-link}}" class="btn btn-arrow btn-transparent">{{section.settings.btn-title}}{% render 'icon-arrow-right' %}</a>
+                <a href="{{ section.settings.btn-link }}" class="btn btn-arrow btn-transparent">{{ section.settings.btn-title }}{% render 'icon-arrow-right' %}</a>
             </div>
         {% endif %}
     </div>
