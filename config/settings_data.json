@@ -21,12 +21,68 @@
         "settings": {
           "annoucement-bar-text": "Welcome to our store",
           "annoucement-bar-alignment": "text-center",
-          "annoucement-bar-bg-color": "#FFD7D7",
+          "annoucement-bar-bg-color": "#ffd7d7",
           "annoucement-bar-text-color": "#232323"
         }
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "cf1b640b-62e8-4679-bde9-878c00b4cc7c": {
+            "type": "menu",
+            "settings": {
+              "item-name": "shop",
+              "title": "Rady to wear",
+              "menu-name": "rady-to-wear"
+            }
+          },
+          "334c7ae4-0648-495d-ab58-879d75abfcf9": {
+            "type": "collectionsgrid",
+            "settings": {
+              "item-name": "shop",
+              "title": "Loream ipsum",
+              "collection1": "frontpage",
+              "collection2": "men",
+              "collection3": "women",
+              "collection4": ""
+            }
+          },
+          "68ad803c-6203-4f3f-80e9-facc8faca311": {
+            "type": "collectionslist",
+            "settings": {
+              "item-name": "shop",
+              "title": "Loream ipsum",
+              "collection1": "frontpage",
+              "collection2": "men",
+              "collection3": "women",
+              "collection4": "",
+              "collection5": "",
+              "collection6": ""
+            }
+          },
+          "4d8ef6db-f4a1-405e-b004-5031fc5bf47f": {
+            "type": "product",
+            "settings": {
+              "item-name": "shop",
+              "product": "crochet-mini-dress"
+            }
+          },
+          "101983ad-5a83-4333-b99d-c66ee644204c": {
+            "type": "menu",
+            "settings": {
+              "item-name": "aboutus",
+              "title": "abc",
+              "menu-name": "dresses"
+            }
+          }
+        },
+        "block_order": [
+          "cf1b640b-62e8-4679-bde9-878c00b4cc7c",
+          "334c7ae4-0648-495d-ab58-879d75abfcf9",
+          "68ad803c-6203-4f3f-80e9-facc8faca311",
+          "4d8ef6db-f4a1-405e-b004-5031fc5bf47f",
+          "101983ad-5a83-4333-b99d-c66ee644204c"
+        ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/Kama.png",
           "logo_width": 100,
