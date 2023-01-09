@@ -10,7 +10,7 @@
                         <div class="footer-block">
                            {% if block.settings.title != blank %}
                                 <div class="footer_title_wrap">
-                                    <h6 class="footer_title">{{block.settings.title}}</h6>
+                                    <h6 class="footer_title">{{ block.settings.title }}</h6>
                                 </div>
                             {% endif %}
                             <ul class="list-unstyled">
@@ -26,9 +26,9 @@
                     <div class="grid-col-lg-6 grid-col-12">
                         <div class="footer_newslatter_wrap">
                             {% if block.settings.title != blank %}
-                                <h2 class="footer_newslatter_title">{{block.settings.title}}</h2>
+                                <h2 class="footer_newslatter_title">{{ block.settings.title }}</h2>
                             {% endif %}
-                            {{block.settings.description}}
+                            {{ block.settings.description }}
                             {% form 'customer',class:'newslatter_form' %}
                                 {{ form.errors | default_errors }}
                                 {% if form.posted_successfully? %}
@@ -81,42 +81,42 @@
                         <ul class="list-unstyled d-flex align-items-center">
                             {% if settings.social_facebook_link != blank %}
                                 <li>
-                                    <a href="{{settings.social_facebook_link}}" target="blank">{% render 'icon-facebook' %}</a>
+                                    <a href="{{ settings.social_facebook_link }}" target="blank">{% render 'icon-facebook' %}</a>
                                 </li>
                             {% endif %}
                             {% if settings.social_instagram_link != blank %}
                                 <li>
-                                    <a href="{{settings.social_instagram_link}}" target="blank">{% render 'icon-instagram' %}</a>
+                                    <a href="{{ settings.social_instagram_link }}" target="blank">{% render 'icon-instagram' %}</a>
                                 </li>
                             {% endif %}
                             {% if settings.social_youtube_link != blank %}
                                 <li>
-                                    <a href="{{settings.social_youtube_link}}" target="blank">{% render 'icon-youtube' %}</a>
+                                    <a href="{{ settings.social_youtube_link }}" target="blank">{% render 'icon-youtube' %}</a>
                                 </li>
                             {% endif %}
                             {% if settings.social_twitter_link != blank %}
                                 <li>
-                                    <a href="{{settings.social_twitter_link}}" target="blank">{% render 'icon-twitter' %}</a>
+                                    <a href="{{ settings.social_twitter_link }}" target="blank">{% render 'icon-twitter' %}</a>
                                 </li>
                             {% endif %}
                             {% if settings.social_pinterest_link != blank%}
                                 <li>
-                                    <a href="{{settings.social_pinterest_link}}" target="blank">{% render 'icon-pintrest' %}</a>
+                                    <a href="{{ settings.social_pinterest_link }}" target="blank">{% render 'icon-pintrest' %}</a>
                                 </li>
                             {% endif %}
                             {% if settings.social_linkdin_link != blank %}
                                 <li>
-                                    <a href="{{settings.social_linkdin_link}}" target="blank">{% render 'icon-linkdin' %}</a>
+                                    <a href="{{ settings.social_linkdin_link }}" target="blank">{% render 'icon-linkdin' %}</a>
                                 </li>
                             {% endif %}
                             {% if settings.social_tiktok_link != blank %}
                                 <li>
-                                    <a href="{{settings.social_tiktok_link}}" target="blank">{% render 'icon-tik-tok' %}</a>
+                                    <a href="{{ settings.social_tiktok_link }}" target="blank">{% render 'icon-tik-tok' %}</a>
                                 </li>
                             {% endif %}
                             {% if settings.social_dribble_link != blank %}
                                 <li>
-                                    <a href="{{settings.social_dribble_link}}" target="blank">{% render 'icon-dribble' %}</a>
+                                    <a href="{{ settings.social_dribble_link }}" target="blank">{% render 'icon-dribble' %}</a>
                                 </li>
                             {% endif %}
                         </ul>

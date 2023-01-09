@@ -1,16 +1,16 @@
 {% style %}
 
   .annoucement-bar-wrapper {
-    background-color: {{ section.settings.annoucement-bar-bg-color}};
-    color: {{ section.settings.annoucement-bar-text-color}};
+    background-color: {{ section.settings.annoucement-bar-bg-color }};
+    color: {{ section.settings.annoucement-bar-text-color }};
   }
 {% endstyle %}
 
 {% if section.settings.annoucement-bar-text != blank %}
 <div class="annoucement-bar-wrapper">
   <div class="page-width">
-    <div class="annoucement-bar-content {{section.settings.annoucement-bar-alignment}}">
-      <p>{{section.settings.annoucement-bar-text}}</p>
+    <div class="annoucement-bar-content {{ section.settings.annoucement-bar-alignment }}">
+      <p>{{ section.settings.annoucement-bar-text }}</p>
     </div>
   </div>
 </div>
