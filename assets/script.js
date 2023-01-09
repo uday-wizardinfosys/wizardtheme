@@ -31,6 +31,7 @@ var header = document.querySelector('.header-wrapper');
         
         const dropdown = document.querySelectorAll(".dropdown");
         const subdropdown = document.querySelectorAll(".sub_dropdown");
+        const megamenu_dropdown = document.querySelectorAll(".megamenu_dropdown");
         document.body.addEventListener('click', function(){
             remove_dropdown(dropdown);
             remove_megamenu(megamenu_dropdown);    
