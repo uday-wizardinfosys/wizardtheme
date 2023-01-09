@@ -23,7 +23,7 @@
 {% endstyle %}
 
 <header>
-  <div class="header-wrapper {% if section.settings.enable_sticky_header %}header-fixed header-fixed-bg{% else %}header-unfixed{% endif %}">
+  <div class="header-wrapper {% if template == 'index'%}header-transparent{% endif %}">
     <nav class="header-bar">
       <div class="page-width">
         <a class="header-brand" href="{{ routes.root_url }}">
