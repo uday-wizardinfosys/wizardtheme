@@ -42,6 +42,9 @@ body {
   position: relative;
   width: 100%;
 }
+.noscroll {
+  overflow: hidden;
+}
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -255,7 +258,15 @@ textarea {
   font: inherit;
   -webkit-appearance: button;
 }
-
+.input[type="number"] {
+  appearance: textfield;
+  -webkit-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
 output {
   display: inline-block;
 }
@@ -912,7 +923,7 @@ textarea.form-control {
 /*-=-=- Buttons -=-=-*/
 button, .btn {
   display: inline-block;
-  padding: 17px 25px 15px;
+  padding: 18px 25px 16px;
   font-family: var(--button-font-family);
   font-style: var(--button-font-style);
   font-size: var(--button-font-size);
@@ -948,7 +959,7 @@ button:hover, .btn:hover {
   outline: 0;
 }
 .btn-arrow svg {
-  margin-left: 6px;
+  margin-left: 8px;
   vertical-align: 0.01em;
   transition: var(--base-transition);
 }
@@ -2507,7 +2518,17 @@ button:hover, .btn:hover {
   align-items: center;
   justify-content: space-between;
 }
+/*-=-=- Keyframes -=-=-*/
+@keyframes shadow {
+  from {
+    -webkit-box-shadow: 0 0 0 rgba(255, 255, 255, .25);
+    box-shadow: 0 0 0 rgba(255, 255, 255, .25)
+  }
 
-
+  to {
+    -webkit-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0)
+  }
+}
 
 
