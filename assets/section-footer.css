@@ -9,6 +9,9 @@ footer {
     line-height: 32px;
     color: var(--color-dark);
 }
+.footer_link:hover {
+    text-decoration: underline;
+}
 .footer_top {
     margin-bottom: 40px;
 }
@@ -63,4 +66,7 @@ footer {
 }
 .footer_bottom p:last-child {
     margin-bottom: 0;
+}
+.copyright_text a {
+    color: var(--color-dark);
 }

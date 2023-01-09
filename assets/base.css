@@ -959,7 +959,7 @@ button:hover, .btn:hover {
   outline: 0;
 }
 .btn-arrow svg {
-  margin-left: 6px;
+  margin-left: 8px;
   vertical-align: 0.01em;
   transition: var(--base-transition);
 }
@@ -2518,7 +2518,17 @@ button:hover, .btn:hover {
   align-items: center;
   justify-content: space-between;
 }
+/*-=-=- Keyframes -=-=-*/
+@keyframes shadow {
+  from {
+    -webkit-box-shadow: 0 0 0 rgba(255, 255, 255, .25);
+    box-shadow: 0 0 0 rgba(255, 255, 255, .25)
+  }
 
-
+  to {
+    -webkit-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0)
+  }
+}
 
 
