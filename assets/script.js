@@ -59,10 +59,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
     //Modal js end
-    /* Navigation Menu Dropdown */
 
+
+    /* Navigation Menu Dropdown */
     const dropdown = document.querySelectorAll(".dropdown");
     const subdropdown = document.querySelectorAll(".sub_dropdown");
+    const megamenu_dropdown = document.querySelectorAll(".megamenu_dropdown");
     document.body.addEventListener('click', function () {
         remove_dropdown(dropdown);
         remove_megamenu(megamenu_dropdown);
@@ -82,13 +84,12 @@ document.addEventListener('DOMContentLoaded', function () {
             e.stopPropagation();
         });
     });
-    subdropdown.forEach(function (items) {
-        items.addEventListener('click', function (e) {
+
+    subdropdown.forEach(function (item) {
+        item.addEventListener('click', function (e) {
             e.stopPropagation();
-            document.querySelector('.sub_dropdown-toggle').classList.remove('opened');
-            document.querySelector('.sub_dropdown-menu').classList.remove('active');
-            items.querySelector('.sub_dropdown-toggle').classList.toggle('opened');
-            items.querySelector('.sub_dropdown-menu').classList.toggle('active');
+            item.querySelector('.sub_dropdown-toggle').classList.toggle('opened');
+            item.querySelector('.sub_dropdown-menu').classList.toggle('active');
         });
         item.querySelector('.sub_dropdown-menu').addEventListener('click', function (e) {
             e.stopPropagation();
