@@ -19,11 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
     modalbuttons.forEach(function (modalbutton) {
         modalbutton.addEventListener("click", function (event) {
             event.stopPropagation();
-            var modalId = modalbutton.getAttribute("data-modal-target");
+            var modalId = modalbutton.getAttribute('data-modal-target');
             var modal = document.querySelector(modalId);
-            modal.classList.remove("hidden");
+            document.querySelector('body').classList.add('noscroll');
+            modal.classList.remove('hidden');
             setTimeout(function () {
-                modal.classList.add("open");
+                modal.classList.add('open');
             }, 100)
             clearTimeout();
         });
@@ -33,9 +34,10 @@ document.addEventListener('DOMContentLoaded', function () {
         modalClosebutton.addEventListener("click", function (event) {
             event.stopPropagation();
             var modal = modalClosebutton.closest('.modal.open');
-            modal.classList.remove("open");
+            document.querySelector('body').classList.remove('noscroll');
+            modal.classList.remove('open');
             setTimeout(function () {
-                modal.classList.add("hidden");
+                modal.classList.add('hidden');
             }, 300)
             clearTimeout();
         });
@@ -43,18 +45,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // Close modal when it is clicked outside
-    // document.addEventListener("click", function(event) {
-    //     var modals = document.querySelectorAll('.modal.open');
-    //     modals.forEach(function(modal) {
-    //     if (event.target !== modal && !modal.contains(event.target)) {
-    //         modal.classList.remove("open");
-    //         setTimeout(function(){
-    //             modal.classList.add("hidden");
-    //         },300)
-    //         clearTimeout();
-    //     }
-    //     });
-    // });
+    document.addEventListener("click", function(event) {
+        var modals = document.querySelectorAll('.modal.open');
+        modals.forEach(function(modal) {
+        if (event.target !== modal && !modal.contains(event.target)) {
+            document.querySelector('body').classList.remove('noscroll');
+            modal.classList.remove('open');
+            setTimeout(function () {
+                modal.classList.add('hidden');
+            }, 300)
+            clearTimeout();
+        }
+        });
+    });
 
     //Modal js end
 
