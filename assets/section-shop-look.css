@@ -33,6 +33,7 @@
     animation-timing-function: ease-in-out;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
+    cursor: pointer;
 }
 .look_point_circle {
     display: inline-block;
